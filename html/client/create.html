@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>기업정보등록 | 위플즈</title>
+
+	<script src="../static/js/jquery-3.6.0.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/gsap.min.js"></script>
+	<script defer="defer" src="../static/js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
+	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+	<!--[if lt IE 10]>
+	<div id="legacy-IE">
+		<div class="info">
+		본 사이트는 Internet Explorer 10 기준(웹표준)으로 제작 된 사이트 입니다.
+		현재 고객님이 이용중인 브라우저는 곧 지원이 중단 됩니다.
+		<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">Internet Explorer 최신 버전</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">Chrome</a>과 같은 최신 브라우저를 이용해 주세요.
+		</div>
+	</div>
+	<![endif]-->
+
+	<!-- 건너띄기 링크 -->
+	<dl id="skipNavigation">
+		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
+		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
+		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
+	</dl>
+
+	<header>
+		<div class="container">
+			<span class="logo-wrap"><em class="hidden-txt">로고 이미지</em></span>
+			<hgroup id="h-menu" class="inner-cts clear">
+				<div class="gnb">
+					<ul>
+						<li><a href="#">프리랜서 등록</a></li>
+						<li><a href="#">프로젝트 등록</a></li>
+						<li><a href="#" class="search">프로젝트 검색</a></li>
+					</ul>
+				</div>
+				<div class="member">
+					<ul>
+						<!-- 로그인 전 -->
+						<li><a href="">회원가입</a></li>
+						<li><a href="">로그인</a></li>
+						<!-- 로그인 후 
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">로그아웃</a></li>
+						-->
+					</ul>
+				</div>
+			</hgroup>	
+			<nav class="menu-all">
+				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<ul>
+					<li class="prj-add"><a href="#"><em class="hidden-txt">메뉴추가</em></a></li>
+					<li class="prj-search"><a href="#"><em class="hidden-txt">메뉴검색</em></a></li>
+				</ul>
+				<div>
+					<ul class="member animate fadeInUp">
+						<!-- 로그인 전 -->
+						<li><a href="#">로그인</a></li>
+						<li class="join">
+							<ul>
+								<li><a href="#">프리랜서 가입</a></li>
+								<li><a href="#">기업회원 가입</a></li>
+							</ul>
+						</li>
+						<!-- 로그인 후 
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						-->
+					</ul>
+					<ul class="category animate fadeInUp">
+							<li><a href="#">프로젝트 검색</a></li>
+							<li><a href="#">프로젝트 등록</a></li>
+							<li><a href="#">프리랜서 등록</a></li>
+							<li>
+								<a href="">위플즈 소개</a>
+								<ul class="depth2">
+									<li><a href="#">We:People</a></li>
+									<li><a href="#">We:Project</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">커뮤니티</a>
+								<ul class="depth2">
+									<li><a href="#">1:1문의</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">위플즈 커뮤니티</a></li>
+								</ul>
+							</li>
+						</ul>	
+				</div>
+			</nav>	
+		</div>
+	</header><!-- // header -->
+	
+	<div id="wrap">
+		<h1 class="hidden-txt">기업정보등록</h1>
+		<div class="sub-top-wrap">
+			<h2 class="heading-wrap-02 long-txt v-center">
+				위플즈 기업회원이 되시면 다양한 기업지원 서비스를 받으실 수 있습니다<br/>
+				<span>위플스는 성공적인 프로젝트를 위해 교육훈련지원, 제안서작성 및 프로젝트 전 단계 업무를 지원합니다</span>
+			</h2>
+		</div>
+		<div class="fixed-wrap inner">
+			<div class="form-inline">
+				<ul class="col-2">
+					<li class="service"><span><em>We:Project 기업 서비스</em></span></li>
+					<li class="training"><span><em>맞춤형 교육훈련 요청</em></span></li>
+				</ul>	
+			</div>	
+		</div>	
+		<div class="contents-wrap list-type-02 inner">
+			<div class="contents" id="contents">
+				<form action="" method="post">
+					<!--기본정보-->
+					<div class="contents-head">
+						<strong>기본정보</strong><em class="txt-color-purple txt-rendering">(필수등록)</em>
+					</div>
+					<div class="contents-body">
+						<div class="form-list">
+							<dl class="table">
+								<dt><strong>기업명</strong></dt>
+								<dd>
+									<div class="text-wrap purple">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="길동네트워크" title="기업명 - 예)길동네트워크">
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>사업자등록번호</strong></dt>
+								<dd>
+									<div class="text-wrap purple">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="123-45-67891" title="사업자등록번호 - 예)123-45-67891">
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>기업구분</strong></dt>
+								<dd>
+									<div class="form-wrap">
+										<span>
+											<input id="corporation" name="contract" type="radio" checked>
+											<label for="corporation"><em class="txt-rendering">법인</em></label>
+										</span>
+										<span>
+											<input id="individual" name="contract" type="radio">
+											<label for="individual"><em class="txt-rendering">개인</em></label>
+										</span>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table pd-none">
+								<dt><strong>회사로고등록</strong></dt>
+								<dd>
+									<div class="file-attach-image">
+										<span class="img-wrap client">
+											<label for="imgAttach"><em class="hidden-txt">이미지 첨부</em></label>
+											<input class="hidden-txt" type="file" id="imgAttach" value="" title="이미지 첨부" onchange="commonFunction().fileUpload(this, 'image');">
+											<img src="../static/img/client-default-image.gif" alt="기본 이미지">
+										</span>
+										<em class="txt-rendering">(최적 사진 사이즈 : 200X200px &#47; 권장 파일 포맷 : gif, png, jpg)</em>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>아이디</strong></dt>
+								<dd>
+									<span class="text-wrap has-button">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="6자 이상 등록" title="아이디 - 6자 이상 등록">
+									</span>
+									<span class="btn-wrap-inline">
+										<button type="button" class="btn-type-mid color-darkPurple"><em class="txt-rendering">아이디 중복확인</em></button>
+									</span>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>비밀번호</strong></dt>
+								<dd>
+									<span class="text-wrap half2">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="9~12자 특수문자, 숫자포함 등록" title="비밀번호 - 9~12자 특수문자, 숫자포함 등록">
+									</span>
+									<span class="empty"></span>
+									<span class="text-wrap half2">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="비밀번호 재입력" title="비밀번호 - 비밀번호 재입력">
+									</span>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>전화번호</strong></dt>
+								<dd>
+									<span class="select-wrap col-3">
+										<label for="areaCode"><em class="hidden-txt">전화번호 맨 앞자리 - 지역번호</em></label>
+										<select id="areaCode">
+											<option value="" selected>02</option>
+											<option value="">031</option>
+											<option value="">061</option>
+										</select>
+									</span>
+									<span class="text-wrap col-3">
+										<input type="text" id="phoneNum_1" class="txt-rendering" value="" title="전화번호 중간자리">
+									</span>
+									<span class="text-wrap col-3">
+										<input type="text" id="phoneNum_2" class="txt-rendering" value="" title="전화번호 맨 뒷자리">
+									</span>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>사업자등록증</strong></dt>
+								<dd>
+									<div class="file-attach">
+										<span class="file-wrap">
+											<label for="registration"><em class="txt-rendering">사업자등록증 업로드</em></label>
+											<input class="hidden-txt" type="file" id="registration" value="" title="사업자등록증 첨부" onchange="commonFunction().fileUpload(this);">
+										</span>
+										<em class="fileName txt-rendering txt-color-purple"></em>
+										<b class="v-center right"><em class="txt-rendering">*선택사항 입니다</em></b>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>주소</strong></dt>
+								<dd>
+									<div>
+										<span class="text-wrap has-button">
+											<input type="text" id="" class="txt-rendering" value="" placeholder="우편번호를 검색하세요" title="우편번호 - 예)우편번호를 검색하세요">
+										</span>
+										<span class="btn-wrap-inline">
+											<button type="button" class="btn-type-mid color-darkPurple"><em class="txt-rendering">우편번호 검색</em></button>
+										</span>
+									</div>
+									<div class="text-wrap">
+										<input type="text" id="" class="txt-rendering" value="" placeholder="상세주소를 입력하세요" title="상세주소 - 예)상세주소를 입력하세요">
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>기업소개</strong></dt>
+								<dd>
+									<div class="form-txt-wrap">
+										<textarea name="" id="" placeholder="500자 이내로 입력해주세요"></textarea>
+										<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">500</em></span>
+									</div>
+								</dd>
+							</dl>
+
+						</div>
+					</div><!-- // contents-body (기본정보)-->
+
+					<!--담당자정보-->
+					<div class="contents-head">
+						<strong>담당자정보</strong><em class="txt-color-purple txt-rendering">(필수등록)</em>
+					</div>
+					<div class="contents-body">
+						<div class="form-list">
+							<dl class="table">
+								<dt><strong>담당자명</strong></dt>
+								<dd>
+									<div class="text-wrap">
+										<input type="text" class="txt-rendering" id="" value="" title="담당자명">
+									</div>
+								</dd>
+							</dl>
+							<dl class="table">
+								<dt><strong>직급</strong></dt>
+								<dd>
+									<div class="text-wrap">
+										<input type="text" class="txt-rendering" id="" value="" title="직급">
+									</div>
+								</dd>
+							</dl>
+							<dl class="table">
+								<dt><strong>담당부서</strong></dt>
+								<dd>
+									<div class="text-wrap">
+										<input type="text" class="txt-rendering" id="" value="" title="담당부서">
+									</div>
+								</dd>
+							</dl>
+							<dl class="table">
+								<dt><strong>전화번호</strong></dt>
+								<dd>
+									<span class="select-wrap col-3">
+										<label for="areaCode2"><em class="hidden-txt">전화번호 맨 앞자리 - 지역번호</em></label>
+										<select id="areaCode2">
+											<option value="" selected>02</option>
+											<option value="">031</option>
+											<option value="">061</option>
+										</select>
+									</span>
+									<span class="text-wrap col-3">
+										<input type="text" id="phoneNum2_1" class="txt-rendering" value="" title="전화번호 중간자리">
+									</span>
+									<span class="text-wrap col-3">
+										<input type="text" id="phoneNum2_2" class="txt-rendering" value="" title="전화번호 맨 뒷자리">
+									</span>
+								</dd>
+							</dl>
+							<dl class="table">
+								<dt><strong>휴대폰번호</strong></dt>
+								<dd>
+									<span class="select-wrap col-3">
+										<label for="cellPhoneNum_1"><em class="hidden-txt">휴대전화 맨 앞자리</em></label>
+										<select id="cellPhoneNum_1">
+											<option value="" selected>010</option>
+											<option value="">011</option>
+											<option value="">016</option>
+											<option value="">018</option>
+										</select>
+									</span>
+									<span class="text-wrap col-3">
+										<input type="text" id="cellPhoneNum_2" class="txt-rendering" value="" title="휴대전화 중간자리">
+									</span>
+									<span class="text-wrap col-3">
+										<input type="text" id="cellPhoneNum_3" class="txt-rendering" value="" title="휴대전화 맨 뒷자리">
+									</span>
+								</dd>
+							</dl>
+							<dl class="table">
+								<dt><strong>이메일</strong></dt>
+								<dd>
+									<span class="text-wrap half">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="이메일 아이디" title="이메일 - 이메일 아이디">
+									</span>
+									<span class="email txt-rendering">@</span>
+									<span class="select-wrap half">
+										<label for="email"><em class="hidden-txt">이메일 주소 폼</em></label>
+										<select id="email" class="txt-rendering">
+											<option value="">naver.com</option>
+											<option value="">gmail.com</option>
+											<option value="">hanmail.net</option>
+										</select>
+									</span>
+								</dd>
+							</dl>
+							<dl class="table">
+								<dt><strong>FAX번호</strong></dt>
+								<dd>
+									<span class="select-wrap col-3">
+										<label for="areaCode3"><em class="hidden-txt">FAX 맨 앞자리 - 지역번호</em></label>
+										<select id="areaCode3">
+											<option value="" selected>02</option>
+											<option value="">031</option>
+											<option value="">061</option>
+										</select>
+									</span>
+									<span class="text-wrap col-3">
+										<input type="text" id="faxNum_1" class="txt-rendering" value="" title="FAX 중간자리">
+									</span>
+									<span class="text-wrap col-3">
+										<input type="text" id="faxNum_2" class="txt-rendering" value="" title="FAX 맨 뒷자리">
+									</span>
+								</dd>
+							</dl>
+						</div>	
+					</div><!-- // contents-body (담당자정보)-->
+
+					<div class="btn-wrap align-c">
+						<button type="submit" class="btn-type-lg color-purple anchor-toolTip" data-toolTip=1><em class="txt-rendering ft-md">등록하기</em></button>
+						<button type="button" class="btn-type-sm color-white"><em class="txt-rendering ft-md">취소</em></button>
+					</div>
+				</form>
+
+				<div class="toolTip" id="toolTip-1">
+					<div>
+						<p class="txt-rendering">
+							회원가입을 하시면 <span>무료로 프로젝트 등록</span>을 하실 수 있습니다
+						</p>
+					</div>
+				</div>
+			</div><!-- // contents -->
+		</div><!-- // contents-wrap -->
+	</div><!-- // #wrap -->
+	<footer>
+		<div class="inner-wrap">
+			<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">1:1문의</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#" class="privacy-policy">개인정보처리방침</a></li>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">이벤트</a></li>
+				<li><a href="#">찾아오시는길</a></li>
+			</ul>
+
+			<address>
+				<span>주식회사 위플즈</span>
+				<span>서울특별시 강남구 테헤란로 211 한국고등교육재단빌딩 3층 (주)위플즈</span>
+				<span>사업자등록번호 : 209-81-57303</span>
+				<span>통신판매업신고 : 제2018-서울강남-02337 호</span>
+				<span>직업정보제공사업 신고번호 : J1200020180019</span>
+			</address>
+
+			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
+		</div>
+	</footer><!-- // footer -->
+</body>
+</html>

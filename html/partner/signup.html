@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>프리랜서 회원가입 | 위플즈</title>
+
+	<script src="../static/js/jquery-3.6.0.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/gsap.min.js"></script>
+	<script defer="defer" src="../static/js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
+	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+	<!--[if lt IE 10]>
+	<div id="legacy-IE">
+		<div class="info">
+		본 사이트는 Internet Explorer 10 기준(웹표준)으로 제작 된 사이트 입니다.
+		현재 고객님이 이용중인 브라우저는 곧 지원이 중단 됩니다.
+		<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">Internet Explorer 최신 버전</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">Chrome</a>과 같은 최신 브라우저를 이용해 주세요.
+		</div>
+	</div>
+	<![endif]-->
+
+	<!-- 건너띄기 링크 -->
+	<dl id="skipNavigation">
+		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
+		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
+		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
+	</dl>
+
+	<header>
+		<div class="container">
+			<span class="logo-wrap"><em class="hidden-txt">로고 이미지</em></span>
+			<hgroup id="h-menu" class="inner-cts clear">
+				<div class="gnb">
+					<ul>
+						<li><a href="#" class="selected">프리랜서 등록</a></li>
+						<li><a href="#">프로젝트 등록</a></li>
+						<li><a href="#" class="search">프로젝트 검색</a></li>
+					</ul>
+				</div>
+				<div class="member">
+					<ul>
+						<!-- 로그인 전 -->
+						<li><a href="">회원가입</a></li>
+						<li><a href="">로그인</a></li>
+						<!-- 로그인 후 
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">로그아웃</a></li>
+						-->
+					</ul>
+				</div>
+			</hgroup>	
+			<nav class="menu-all">
+				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<ul>
+					<li class="prj-add"><a href="#"><em class="hidden-txt">메뉴추가</em></a></li>
+					<li class="prj-search"><a href="#"><em class="hidden-txt">메뉴검색</em></a></li>
+				</ul>
+				<div>
+					<ul class="member animate fadeInUp">
+						<!-- 로그인 전 -->
+						<li><a href="#">로그인</a></li>
+						<li class="join">
+							<ul>
+								<li><a href="#">프리랜서 가입</a></li>
+								<li><a href="#">기업회원 가입</a></li>
+							</ul>
+						</li>
+						<!-- 로그인 후 
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						-->
+					</ul>
+					<ul class="category animate fadeInUp">
+							<li><a href="#">프로젝트 검색</a></li>
+							<li><a href="#">프로젝트 등록</a></li>
+							<li><a href="#">프리랜서 등록</a></li>
+							<li>
+								<a href="">위플즈 소개</a>
+								<ul class="depth2">
+									<li><a href="#">We:People</a></li>
+									<li><a href="#">We:Project</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">커뮤니티</a>
+								<ul class="depth2">
+									<li><a href="#">1:1문의</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">위플즈 커뮤니티</a></li>
+								</ul>
+							</li>
+						</ul>	
+				</div>
+			</nav>	
+		</div>
+	</header><!-- // header -->
+	
+	<div id="wrap">
+		<h1 class="hidden-txt">프리랜서 회원가입</h1>
+		<div class="sub-top-wrap">
+			<h2 class="heading-wrap-02 long-txt v-center">
+				위플즈 회원이 되시면 다양한 활동지원 서비스를 받으실 수 있습니다<br/>
+				<span>프리랜서 여러분에게 금융지원, 복지지원, 법률상담, 세무대행 서비스를 제공합니다</span>
+			</h2>
+		</div>
+		<div class="fixed-wrap inner">
+			<div class="form-inline">
+				<ul class="col-1">
+					<li class="benefit"><span><em>We:People 프리랜서 혜택</em></span></li>
+				</ul>	
+			</div>	
+		</div>	
+		<div class="contents-wrap inner">
+			<div class="contents" id="contents">
+				<div class="contents-head">
+					<strong>개인회원가입</strong>
+				</div>
+				<div class="contents-body">
+					<div class="terms-of-use">
+						<div class="subject">
+							<strong>서비스 이용약관 동의</strong>
+						</div>
+					  <div class="terms-box">
+					  	<div class="txt-contents">
+					  		<h4 class="heading-wrap-04">
+					  			<strong>제 1장 환영합니다!</strong>
+					  		</h4>
+					  		<p>&nbsp;</p>
+					  		<p>&nbsp;</p>
+					  		<dl>
+					  			<dt>제 1조 (목적)</dt>
+					  			<dd>
+					  				주식회사 위플스(이하 &lsquo;회사&rsquo;)가 제공하는 서비스를 이용해 주셔서 감사합니다. 회사는 여러분이 다양한 인터넷과 모바일 서비스를 좀 더 편리하게 이용할 수 있도록 회사 또는 관계사의 개별 서비스에 모두 접속 가능한 통합로그인계정 체계를 만들고 그에 적용되는 위플스 약관(이하 &lsquo;본 약관&rsquo;)을 마련하였습니다. 본 약관은 여러분이 위플스 서비스를 이용하는 데 필요한 권리, 의무 및 책임사항, 이용조건 및 절차 등 기본적인 사항을 규정하고 있으므로 조금만 시간을 내서 주의 깊게 읽어주시기 바랍니다.
+					  			</dd>
+					  		</dl>
+					  		<dl>
+					  			<dt>제 2조 (약관의 효력 및 변경)</dt>
+					  			<dd>
+					  				<ol>
+					  					<li>①본 약관의 내용은 위플스 웹사이트 또는 개별 서비스의 화면에 게시하거나 기타의 방법으로 공지하고, 본 약관에 동의한 여러분 모두에게 그 효력이 발생합니다.</li>
+					  				</ol>
+					  			</dd>
+					  		</dl>
+					  	</div>	
+					  </div>
+					  <div class="chk-wrap align-c">
+					  	<em class="txt-rendering">회원서비스 이용을 위한 이용약관에 동의하시겠습니까?</em>
+							<span>
+								<input id="dev_01" type="checkbox">
+								<label for="dev_01"><em class="txt-rendering">동의하기</em></label>
+							</span>
+						</div>
+					</div>
+					<div class="btn-wrap align-c">
+						<button type="button" class="btn-type-lg color-purple"><em class="txt-rendering ft-md">실명인증하기</em></button>
+						<button type="button" class="btn-type-sm color-white"><em class="txt-rendering ft-md">취소</em></button>
+					</div>
+				</div><!-- // contents-body -->
+
+			</div><!-- // contents -->
+		</div><!-- // contents-wrap -->
+	</div><!-- // #wrap -->
+	<footer>
+		<div class="inner-wrap">
+			<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">1:1문의</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#" class="privacy-policy">개인정보처리방침</a></li>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">이벤트</a></li>
+				<li><a href="#">찾아오시는길</a></li>
+			</ul>
+
+			<address>
+				<span>주식회사 위플즈</span>
+				<span>서울특별시 강남구 테헤란로 211 한국고등교육재단빌딩 3층 (주)위플즈</span>
+				<span>사업자등록번호 : 209-81-57303</span>
+				<span>통신판매업신고 : 제2018-서울강남-02337 호</span>
+				<span>직업정보제공사업 신고번호 : J1200020180019</span>
+			</address>
+
+			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
+		</div>
+	</footer><!-- // footer -->
+</body>
+</html>

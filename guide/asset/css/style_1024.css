@@ -1,0 +1,90 @@
+@charset 'utf-8';
+
+/*-----------------------------------------------------------------*/
+/* max-width : 1024px
+/*-----------------------------------------------------------------*/
+
+
+/** Layout **/
+.web {display:none;}
+.container {padding:0 1.2rem;}
+
+[class*=col-] ul li {text-align:center;}
+.col-1 ul li,
+.col-2 ul li,
+.col-2-1 ul li,
+.col-4-2 ul li,
+.col-5-2 ul li {text-align:left;}
+
+#wrapper .wrap--box01 ul li {width:48%; margin:0;}
+#wrapper .wrap--box01 ul li + li {margin-left:4%;}
+
+#wrapper .wrap--box02 ul li {width:100%; min-height:auto; margin:0;}
+#wrapper .wrap--box02 ul li + li {margin-left:0; margin-top:20px;}
+#wrapper .wrap--box02 ul li	a {padding:20px 20px 20px 50%; text-align:left;}
+#wrapper .wrap--box02 ul li	a:before {width:50%; height:100%;}
+#wrapper .wrap--box02 ul li dl {width:auto;}
+#wrapper .wrap--box02 ul li span br {display:none;}
+
+#wrapper section[class*=ssq-] > div dl {padding:45px 35px;}
+#wrapper section[class*=ssq-] > div dl dd {padding:0;}
+
+#wrapper section.ssq-mn > div > div dl {padding:30px;}
+
+#wrapper.print .container section .chartArea {width:70%;}
+#wrapper.print .container section .table-style-sm {width:28%; margin-left:2%;}
+#wrapper.print .container section .table-style-sm table td {padding:7px;}
+#wrapper.print .container section .caption.top {position:absolute;}
+#wrapper.print .container section .caption.top + div {margin-top:20px;}
+
+/** Table Style **/
+.table-style01 table colgroup col:nth-of-type(1) {width:8% !important;}
+.table-style01 table colgroup col:nth-of-type(2) {width:21% !important;}
+.table-style01 table colgroup col:nth-of-type(3) {width:32% !important;}
+.table-style01 table colgroup col:nth-of-type(4) {width:auto !important;}
+
+.table-style02 table colgroup col:nth-of-type(1) {width:8% !important;}
+.table-style02 table colgroup col:nth-of-type(2) {width:auto !important;}
+.table-style02 table colgroup col:nth-of-type(3) {width:15% !important;}
+.table-style02 table colgroup col:nth-of-type(4) {width:24% !important;}
+.table-style02 table colgroup col:nth-of-type(5) {width:24% !important;}
+
+.table-style03 table {table-layout:fixed;}
+.table-style03 table colgroup col:nth-of-type(1) {width:33% !important;}
+.table-style03 table colgroup col:nth-of-type(2) {width:34% !important;}
+.table-style03 table colgroup col:nth-of-type(3) {width:auto !important;}
+
+.table-style04 table colgroup col:nth-of-type(1) {width:33% !important;}
+.table-style04 table colgroup col:nth-of-type(2) {width:auto !important;}
+
+/** Table Layout **/
+[class^=table-layout] .col dl {display:block;}
+[class^=table-layout] .col dl dt,
+[class^=table-layout] .col dl dd {display:inline-block; width:21%; height:45px; line-height:43px; border-width:1px 1px 1px 0; vertical-align:top;}
+[class^=table-layout] .col dl dt:nth-of-type(1),
+[class^=table-layout] .col dl dt:nth-of-type(3) {border-left:1px solid #ccc;}
+[class^=table-layout] .col dl dd,
+[class^=table-layout] .col dl dd:nth-of-type(1) {width:29%;}
+[class^=table-layout] .col dl dt:nth-of-type(3),
+[class^=table-layout] .col dl dt:nth-of-type(4),
+[class^=table-layout] .col dl dd:nth-of-type(3),
+[class^=table-layout] .col dl dd:nth-of-type(4) {margin-top:5px;}
+[class^=table-layout] .col dl dt *,
+[class^=table-layout] .col dl dd * {line-height:inherit;}
+
+
+/** Contents Style **/
+.caption.top {position:static; margin-bottom:25px;}
+.caption.bottom {position:static; margin-top:25px;}
+
+.btn-wrap-inline.bottom {position:static; width:100%;}
+
+@media only screen and (max-width:816px){
+	#wrapper section.interview .flow--chart > div {width:100% !important;}
+	#wrapper section.interview .flow--chart > div.thumnail {text-align:left; margin-top:80px;}
+}
+
+@media only screen and (orientation:landscape) and (max-width:812px) {
+	.lpop .pop-body {height:58vh;}
+	#searchAgency dl dd > div.search--result ul {max-height:30vh;}
+}

@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>프로젝트 등록 | 위플즈</title>
+
+	<script src="../static/js/jquery-3.6.0.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/gsap.min.js"></script>
+	<script defer="defer" src="../static/js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
+	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+</head>
+<body>
+	<!--[if lt IE 10]>
+	<div id="legacy-IE">
+		<div class="info">
+		본 사이트는 Internet Explorer 10 기준(웹표준)으로 제작 된 사이트 입니다.
+		현재 고객님이 이용중인 브라우저는 곧 지원이 중단 됩니다.
+		<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">Internet Explorer 최신 버전</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">Chrome</a>과 같은 최신 브라우저를 이용해 주세요.
+		</div>
+	</div>
+	<![endif]-->
+
+	<!-- 건너띄기 링크 -->
+	<dl id="skipNavigation">
+		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
+		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
+		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
+	</dl>
+
+	<header>
+		<div class="container">
+			<span class="logo-wrap"><em class="hidden-txt">로고 이미지</em></span>
+			<hgroup id="h-menu" class="inner-cts clear">
+				<div class="gnb">
+					<ul>
+						<li><a href="#">프리랜서 등록</a></li>
+						<li><a href="#" class="selected">프로젝트 등록</a></li>
+						<li><a href="#" class="search">프로젝트 검색</a></li>
+					</ul>
+				</div>
+				<div class="member">
+					<ul>
+						<!-- 로그인 전 -->
+						<li><a href="">회원가입</a></li>
+						<li><a href="">로그인</a></li>
+						<!-- 로그인 후 
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">로그아웃</a></li>
+						-->
+					</ul>
+				</div>
+			</hgroup>	
+			<nav class="menu-all">
+				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<ul>
+					<li class="prj-add"><a href="#"><em class="hidden-txt">메뉴추가</em></a></li>
+					<li class="prj-search"><a href="#"><em class="hidden-txt">메뉴검색</em></a></li>
+				</ul>
+				<div>
+					<ul class="member animate fadeInUp">
+						<!-- 로그인 전 -->
+						<li><a href="#">로그인</a></li>
+						<li class="join">
+							<ul>
+								<li><a href="#">프리랜서 가입</a></li>
+								<li><a href="#">기업회원 가입</a></li>
+							</ul>
+						</li>
+						<!-- 로그인 후 
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						-->
+					</ul>
+					<ul class="category animate fadeInUp">
+							<li><a href="#">프로젝트 검색</a></li>
+							<li><a href="#">프로젝트 등록</a></li>
+							<li><a href="#">프리랜서 등록</a></li>
+							<li>
+								<a href="">위플즈 소개</a>
+								<ul class="depth2">
+									<li><a href="#">We:People</a></li>
+									<li><a href="#">We:Project</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">커뮤니티</a>
+								<ul class="depth2">
+									<li><a href="#">1:1문의</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">위플즈 커뮤니티</a></li>
+								</ul>
+							</li>
+						</ul>	
+				</div>
+			</nav>	
+		</div>
+	</header><!-- // header -->
+	
+	<div id="wrap">
+		<h1 class="hidden-txt">프로젝트 등록</h1>
+		<div class="sub-top-wrap">
+			<h2 class="heading-wrap-02 long-txt v-center">
+				귀사의 소중한 프로젝트에 최적의 인재&#47;기업을 추천해드립니다<br/>
+				<span>위플스는 5인 이상 투입인력 요청 시 프로젝트에 맞춤형 교육훈련을 실시합니다</span>
+			</h2>
+		</div>
+		<div class="fixed-wrap inner">
+			<div class="form-inline">
+				<ul class="col-2">
+					<li class="service"><span><em>We:Project 기업 서비스</em></span></li>
+					<li class="training on"><span><em>맞춤형 교육훈련 요청</em></span></li>
+				</ul>	
+			</div>	
+		</div>	
+		<div class="contents-wrap list-type-01 inner">
+			<div class="contents" id="contents">
+				<div class="contents-head">
+					<strong>프로젝트 등록하기</strong>
+				</div><!-- // contents-head -->
+
+				<div class="contents-body">
+					<div class="form-list">
+						<form action="" method="post">
+							<dl class="table pd-none">
+								<dt><strong>계약방식</strong><br/><em class="txt-rendering">(검토 후 진행)</em></dt>
+								<dd>
+									<div class="form-wrap">
+										<span>
+											<input id="contract_01" name="contract" type="radio" checked>
+											<label for="contract_01"><em class="txt-rendering">위플즈와 계약</em></label>
+										</span>
+										<span>
+											<input id="contract_02" name="contract" type="radio">
+											<label for="contract_02"><em class="txt-rendering">프리랜서와 직접 계약</em></label>
+										</span>
+									</div>
+									<p class="description txt-rendering">* 프리랜서와 직접 계약이 가능한 수요기관 단독진행 프로젝트는 전체 사업비 2,000만원 이하일 경우 진행가능합니다.</p>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>프로젝트명</strong></dt>
+								<dd>
+									<div class="text-wrap">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="50자 이내로 입력해주세요" title="프로젝트명 - 50자 이내로 입력해주세요">
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>프로젝트 홍보</strong></dt>
+								<dd>
+									<div class="text-wrap">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="50자 이내로 입력해주세요 (프로젝트 명 위에 노출이 되며 좋은 인력 유치를 위한 홍보 문구를 입력해주세요)" title="프로젝트 홍보 - 50자 이내로 입력해주세요 (프로젝트 명 위에 노출이 되며 좋은 인력 유치를 위한 홍보 문구를 입력해주세요)">
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>프로젝트 기간</strong></dt>
+								<dd>
+									<span class="text-wrap half">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="날짜를 선택하세요" title="프로젝트 기간(시작) - 날짜를 선택하세요">
+									</span>
+									<span class="etc">-</span>
+									<span class="text-wrap half">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="날짜를 선택하세요" title="프로젝트 기간(종료) - 날짜를 선택하세요">
+									</span>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>접수기간</strong></dt>
+								<dd>
+									<span class="text-wrap half">
+										<input type="text" id="" class="datePick startDate txt-rendering" value="" placeholder="날짜를 선택하세요" title="접수기간(시작) - 날짜를 선택하세요">
+									</span>
+									<span class="etc">-</span>
+									<span class="text-wrap half">
+										<input type="text" id="" class="datePick endDate txt-rendering" value="" placeholder="날짜를 선택하세요" title="접수기간(종료) - 날짜를 선택하세요">
+									</span>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>프로젝트 예산</strong></dt>
+								<dd>
+									<div>
+										<div class="select-wrap">
+											<label for="prj"><em class="hidden-txt">프로젝트 예산</em></label>
+											<select id="prj">
+												<option value="">전체</option>
+												<option value="">1</option>
+												<option value="">2</option>
+											</select>
+										</div>
+										<div>
+											<span class="text-wrap half unit">
+												<input type="text" class="txt-rendering" id="" value="" title="프로젝트 예산 최저금액">
+											</span>
+											<span class="etc">-</span>
+											<span class="text-wrap half unit">
+												<input type="text" class="txt-rendering" id="" value="" title="프로젝트 예산 최고금액">
+											</span>	
+										</div>
+									</div>	
+									<div>
+										<div class="form-wrap">
+											<span>
+												<input id="confer" name="" type="checkbox" checked>
+												<label for="confer"><em class="txt-rendering">협의 후 결정</em></label>
+											</span>
+										</div>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table pd-none">
+								<dt><strong>모집분야&middot;인원</strong></dt>
+								<dd>
+									<div class="recruitment dropDown">
+										<div>
+											<div class="form-wrap task">
+												<span>
+													<input id="task01" name="" type="checkbox" checked>
+													<label for="task01"><em class="txt-rendering">프로그램 개발</em></label>
+												</span>
+											</div>
+											<div>
+												<span class="select-wrap">
+													<label for="prj"><em class="hidden-txt">모집 인원</em></label>
+													<select id="prj">
+														<option value="">0</option>
+														<option value="">1</option>
+														<option value="">2</option>
+														<option value="">3</option>
+														<option value="">4</option>
+														<option value="">5</option>
+														<option value="">6</option>
+														<option value="">7</option>
+														<option value="">8</option>
+														<option value="">9</option>
+														<option value="">10</option>
+													</select>
+												</span>
+												<span class="txt-rendering">명</span>
+											</div>
+										</div>
+										<div class="skill dropDown-list">
+											<div class="table">
+												<strong class="txt-rendering">필요기술</strong>
+												<div class="chk-wrap">
+													<span>
+														<input id="dev_01" type="checkbox">
+														<label for="dev_01"><em class="txt-rendering">JAVA/JSP</em></label>
+													</span>
+													<span>
+														<input id="dev_02" type="checkbox">
+														<label for="dev_02"><em class="txt-rendering">PHP</em></label>
+													</span>
+													<span>
+														<input id="dev_03" type="checkbox">
+														<label for="dev_03"><em class="txt-rendering">ASP</em></label>
+													</span>
+													<span>
+														<input id="dev_04" type="checkbox">
+														<label for="dev_04"><em class="txt-rendering">C&#47;C#</em></label>
+													</span>
+													<span>
+														<input id="dev_05" type="checkbox">
+														<label for="dev_05"><em class="txt-rendering">기타</em></label>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="recruitment dropDown">
+										<div>
+											<div class="form-wrap task">
+												<span>
+													<input id="task02" name="" type="checkbox">
+													<label for="task02"><em class="txt-rendering">디자인</em></label>
+												</span>
+											</div>
+											<div>
+												<span class="select-wrap">
+													<label for="prj"><em class="hidden-txt">모집 인원</em></label>
+													<select id="prj">
+														<option value="">0</option>
+														<option value="">1</option>
+														<option value="">2</option>
+														<option value="">3</option>
+														<option value="">4</option>
+														<option value="">5</option>
+														<option value="">6</option>
+														<option value="">7</option>
+														<option value="">8</option>
+														<option value="">9</option>
+														<option value="">10</option>
+													</select>
+												</span>
+												<span class="txt-rendering">명</span>
+											</div>
+										</div>
+										<div class="skill dropDown-list">
+											<div class="table">
+												<strong class="txt-rendering">필요기술</strong>
+												<div class="chk-wrap">
+													<span>
+														<input id="des_01" type="checkbox">
+														<label for="des_01"><em class="txt-rendering">JAVA/JSP</em></label>
+													</span>
+													<span>
+														<input id="des_02" type="checkbox">
+														<label for="des_02"><em class="txt-rendering">PHP</em></label>
+													</span>
+													<span>
+														<input id="des_03" type="checkbox">
+														<label for="des_03"><em class="txt-rendering">ASP</em></label>
+													</span>
+													<span>
+														<input id="des_04" type="checkbox">
+														<label for="des_04"><em class="txt-rendering">C&#47;C#</em></label>
+													</span>
+													<span>
+														<input id="des_05" type="checkbox">
+														<label for="des_05"><em class="txt-rendering">기타</em></label>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="recruitment dropDown">
+										<div>
+											<div class="form-wrap task">
+												<span>
+													<input id="task03" name="" type="checkbox">
+													<label for="task03"><em class="txt-rendering">퍼블리싱</em></label>
+												</span>
+											</div>
+											<div>
+												<span class="select-wrap">
+													<label for="prj"><em class="hidden-txt">모집 인원</em></label>
+													<select id="prj">
+														<option value="">0</option>
+														<option value="">1</option>
+														<option value="">2</option>
+														<option value="">3</option>
+														<option value="">4</option>
+														<option value="">5</option>
+														<option value="">6</option>
+														<option value="">7</option>
+														<option value="">8</option>
+														<option value="">9</option>
+														<option value="">10</option>
+													</select>
+												</span>
+												<span class="txt-rendering">명</span>
+											</div>
+										</div>
+										<div class="skill dropDown-list">
+											<div class="table">
+												<strong class="txt-rendering">필요기술</strong>
+												<div class="chk-wrap">
+													<span>
+														<input id="pub_01" type="checkbox">
+														<label for="pub_01"><em class="txt-rendering">JAVA/JSP</em></label>
+													</span>
+													<span>
+														<input id="pub_02" type="checkbox">
+														<label for="pub_02"><em class="txt-rendering">PHP</em></label>
+													</span>
+													<span>
+														<input id="pub_03" type="checkbox">
+														<label for="pub_03"><em class="txt-rendering">ASP</em></label>
+													</span>
+													<span>
+														<input id="pub_04" type="checkbox">
+														<label for="pub_04"><em class="txt-rendering">C&#47;C#</em></label>
+													</span>
+													<span>
+														<input id="pub_05" type="checkbox">
+														<label for="pub_05"><em class="txt-rendering">기타</em></label>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="recruitment dropDown">
+										<div>
+											<div class="form-wrap task">
+												<span>
+													<input id="task04" name="" type="checkbox">
+													<label for="task04"><em class="txt-rendering">기획</em></label>
+												</span>
+											</div>
+											<div>
+												<span class="select-wrap">
+													<label for="prj"><em class="hidden-txt">모집 인원</em></label>
+													<select id="prj">
+														<option value="">0</option>
+														<option value="">1</option>
+														<option value="">2</option>
+														<option value="">3</option>
+														<option value="">4</option>
+														<option value="">5</option>
+														<option value="">6</option>
+														<option value="">7</option>
+														<option value="">8</option>
+														<option value="">9</option>
+														<option value="">10</option>
+													</select>
+												</span>
+												<span class="txt-rendering">명</span>
+											</div>
+										</div>
+										<div class="skill dropDown-list">
+											<div class="table">
+												<strong class="txt-rendering">필요기술</strong>
+												<div class="chk-wrap">
+													<span>
+														<input id="plan_01" type="checkbox">
+														<label for="plan_01"><em class="txt-rendering">JAVA/JSP</em></label>
+													</span>
+													<span>
+														<input id="plan_02" type="checkbox">
+														<label for="plan_02"><em class="txt-rendering">PHP</em></label>
+													</span>
+													<span>
+														<input id="plan_03" type="checkbox">
+														<label for="plan_03"><em class="txt-rendering">ASP</em></label>
+													</span>
+													<span>
+														<input id="plan_04" type="checkbox">
+														<label for="plan_04"><em class="txt-rendering">C&#47;C#</em></label>
+													</span>
+													<span>
+														<input id="plan_05" type="checkbox">
+														<label for="plan_05"><em class="txt-rendering">기타</em></label>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="recruitment dropDown">
+										<div>
+											<div class="form-wrap task">
+												<span>
+													<input id="task05" name="" type="checkbox">
+													<label for="task05"><em class="txt-rendering">PM</em></label>
+												</span>
+											</div>
+											<div>
+												<span class="select-wrap">
+													<label for="prj"><em class="hidden-txt">모집 인원</em></label>
+													<select id="prj">
+														<option value="">0</option>
+														<option value="">1</option>
+														<option value="">2</option>
+														<option value="">3</option>
+														<option value="">4</option>
+														<option value="">5</option>
+														<option value="">6</option>
+														<option value="">7</option>
+														<option value="">8</option>
+														<option value="">9</option>
+														<option value="">10</option>
+													</select>
+												</span>
+												<span class="txt-rendering">명</span>
+											</div>
+										</div>
+										<div class="skill dropDown-list">
+											<div class="table">
+												<strong class="txt-rendering">필요기술</strong>
+												<div class="chk-wrap">
+													<span>
+														<input id="pm_01" type="checkbox">
+														<label for="pm_01"><em class="txt-rendering">JAVA/JSP</em></label>
+													</span>
+													<span>
+														<input id="pm_02" type="checkbox">
+														<label for="pm_02"><em class="txt-rendering">PHP</em></label>
+													</span>
+													<span>
+														<input id="pm_03" type="checkbox">
+														<label for="pm_03"><em class="txt-rendering">ASP</em></label>
+													</span>
+													<span>
+														<input id="pm_04" type="checkbox">
+														<label for="pm_04"><em class="txt-rendering">C&#47;C#</em></label>
+													</span>
+													<span>
+														<input id="pm_05" type="checkbox">
+														<label for="pm_05"><em class="txt-rendering">기타</em></label>
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>근무형태</strong></dt>
+								<dd>
+									<div class="form-wrap">
+										<span>
+											<input id="work_type01" name="work_type" type="radio">
+											<label for="work_type01"><em class="txt-rendering">도급(비상주)</em></label>
+										</span>
+										<span>
+											<input id="work_type02" name="work_type" type="radio" checked>
+											<label for="work_type02"><em class="txt-rendering">상주근무</em></label>
+										</span>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>근무지</strong></dt>
+								<dd class="add-list-wrap place-list">
+									<div class="list-item">
+										<span class="select-wrap">
+											<label for="area1_1"><em class="hidden-txt">근무지</em></label>
+											<select id="area1_1">
+												<option value="">선택하세요</option>
+												<option value="" selected>서울</option>
+												<option value="">경기</option>
+												<option value="">인천</option>
+												<option value="">강원</option>
+												<option value="">충남</option>
+												<option value="">대전</option>
+												<option value="">충북</option>
+												<option value="">세종</option>
+												<option value="">부산</option>
+												<option value="">울산</option>
+												<option value="">대구</option>
+												<option value="">경북</option>
+												<option value="">경남</option>
+												<option value="">전남</option>
+												<option value="">광주</option>
+												<option value="">전북</option>
+												<option value="">제주</option>
+											</select>
+										</span>
+										<span class="select-wrap">
+											<label for="area2_1"><em class="hidden-txt">근무지 상세</em></label>
+											<select id="area2_1">
+												<option value="">선택하세요</option>
+												<option value="" selected>여의도</option>
+												<option value="">마포구</option>
+												<option value="">강남구</option>
+												<option value="">강동구</option>
+											</select>
+										</span>
+										<span class="btn-wrap-inline">
+											<button type="button" class="btn-type-icon add add-list" onclick="commonFunction().addList(this);"><em class="txt-rendering">근무지 추가</em></button>
+											<button type="button" class="btn-type-icon delete delete-list" onclick="commonFunction().removeList(this);"><em class="txt-rendering">근무지 삭제</em></button>
+										</span>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table pd-none">
+								<dt><strong>프로젝트 개요</strong></dt>
+								<dd>
+									<div class="form-txt-wrap">
+										<textarea name="" id="" placeholder="2,000자 이내로 입력해주세요"></textarea>
+										<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">200</em></span>
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table pd-none">
+								<dt><strong>수행업무 상세</strong></dt>
+								<dd>
+									<div class="form-txt-wrap">
+										<textarea name="" id="" placeholder="2,000자 이내로 입력해주세요"></textarea>
+										<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">200</em></span>
+									</div>
+								</dd>
+							</dl>
+
+							<div class="btn-wrap align-c">
+								<button type="submit" class="btn-type-lg color-purple anchor-toolTip" data-toolTip=1><em class="txt-rendering ft-md">등록하기</em></button>
+								<button type="button" class="btn-type-sm color-white"><em class="txt-rendering ft-md">취소</em></button>
+							</div>
+						</form>
+
+						<div class="toolTip" id="toolTip-1">
+							<div>
+								<p class="txt-rendering">
+									프로젝트 등록을 하시면 <span>1일 이내 위플즈 담당 매니저가 연락</span>을 드리겠습니다.<br/>
+									(담당 매니저의 승인이 완료되면 프로젝트 공개됩니다)
+								</p>
+							</div>
+						</div>
+					</div>
+				</div><!-- // contents-body -->
+
+			</div><!-- // contents -->
+		</div><!-- // contents-wrap -->
+	</div><!-- // #wrap -->
+	<footer>
+		<div class="inner-wrap">
+			<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">1:1문의</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#" class="privacy-policy">개인정보처리방침</a></li>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">이벤트</a></li>
+				<li><a href="#">찾아오시는길</a></li>
+			</ul>
+
+			<address>
+				<span>주식회사 위플즈</span>
+				<span>서울특별시 강남구 테헤란로 211 한국고등교육재단빌딩 3층 (주)위플즈</span>
+				<span>사업자등록번호 : 209-81-57303</span>
+				<span>통신판매업신고 : 제2018-서울강남-02337 호</span>
+				<span>직업정보제공사업 신고번호 : J1200020180019</span>
+			</address>
+
+			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
+		</div>
+	</footer><!-- // footer -->
+</body>
+</html>

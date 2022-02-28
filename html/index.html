@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ko" class="main">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>위플즈</title>
+
+	<script src="static/js/jquery-3.6.0.min.js"></script>
+	<script src="static/js/jquery-ui.min.js"></script>
+	<script src="static/js/scrolloverflow.min.js"></script>
+	<script src="static/js/jquery.fullpage.extensions.min.js"></script>
+	<script src="static/js/swiper.min.js"></script>
+	<script src="static/js/gsap.min.js"></script>
+	<script defer="defer" src="static/js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="static/css/base.css"> <!-- reset -->
+	<link rel="stylesheet" type="text/css" href="static/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	<!-- <link rel="stylesheet" media="all and (max-width:1280px)" type="text/css" href="static/css/style_m.css"> --> <!-- 모바일 -->
+</head>
+<body>
+	<!--[if lt IE 10]>
+	<div id="legacy-IE">
+		<div class="info">
+		본 사이트는 Internet Explorer 10 기준(웹표준)으로 제작 된 사이트 입니다.
+		현재 고객님이 이용중인 브라우저는 곧 지원이 중단 됩니다.
+		<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">Internet Explorer 최신 버전</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">Chrome</a>과 같은 최신 브라우저를 이용해 주세요.
+		</div>
+	</div>
+	<![endif]-->
+
+	<!-- 건너띄기 링크 -->
+	<dl id="skipNavigation">
+		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
+		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
+		<dd><a href="#main"><em>본문으로 바로가기</em></a></dd>
+	</dl>
+
+	<header>
+		<div class="container">
+			<span class="logo-wrap"><em class="hidden-txt">로고 이미지</em></span>
+			<hgroup id="h-menu" class="inner-cts clear">
+				<div class="gnb">
+					<ul>
+						<li><a href="#">프리랜서 등록</a></li>
+						<li><a href="#">프로젝트 등록</a></li>
+						<li><a href="#" class="search">프로젝트 검색</a></li>
+					</ul>
+				</div>
+				<div class="member">
+					<ul>
+						<!-- 로그인 전 -->
+						<li><a href="">회원가입</a></li>
+						<li><a href="">로그인</a></li>
+						<!-- 로그인 후 
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">로그아웃</a></li>
+						-->
+					</ul>
+				</div>
+			</hgroup>	
+			<nav class="menu-all">
+				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<ul>
+					<li class="prj-add"><a href="#"><em class="hidden-txt">메뉴추가</em></a></li>
+					<li class="prj-search"><a href="#"><em class="hidden-txt">메뉴검색</em></a></li>
+				</ul>
+				<div>
+					<ul class="member animate fadeInUp">
+						<!-- 로그인 전 -->
+						<li><a href="#">로그인</a></li>
+						<li class="join">
+							<ul>
+								<li><a href="#">프리랜서 가입</a></li>
+								<li><a href="#">기업회원 가입</a></li>
+							</ul>
+						</li>
+						<!-- 로그인 후 
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						-->
+					</ul>
+					<ul class="category animate fadeInUp">
+							<li><a href="#">프로젝트 검색</a></li>
+							<li><a href="#">프로젝트 등록</a></li>
+							<li><a href="#">프리랜서 등록</a></li>
+							<li>
+								<a href="">위플즈 소개</a>
+								<ul class="depth2">
+									<li><a href="#">We:People</a></li>
+									<li><a href="#">We:Project</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">커뮤니티</a>
+								<ul class="depth2">
+									<li><a href="#">1:1문의</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">위플즈 커뮤니티</a></li>
+								</ul>
+							</li>
+						</ul>	
+				</div>
+			</nav>	
+		</div>
+	</header><!-- // header -->
+	
+	<main id="main">
+		<h1 class="hidden-txt">메인페이지</h1>
+		<section class="section-view">
+			<div class="main-section-wrap-01">
+				<h2 class="hidden-txt">위플스</h2>
+				<div class="txt-rotateX">
+					<strong>Weple's</strong><span>wepeople's</span>
+				</div>
+				<div class="inner-wrap presentation">
+					<div class="inner-cts">
+						<div class="swiper-wrapper">
+							<dl class="swiper-slide">
+								<dt class="txt-square"><span>We :</span>People</dt>
+								<dd>
+									<div class="info-01 txt-serif">
+										<b class="txt-underline">국내 최초 프리랜서 활동 지원 플랫폼</b>으로<br />
+										당신이 원하는 일과 생활의 균형을 누리세요
+									</div>
+									<div class="info-02">
+										<em class="txt-rendering">퇴직금, 대출에서 각종 복지, 교육, 법률, 세무 지원까지<br/> 지속적인 프리랜서 활동에 필요한 다양한 업무지원 서비스 제공</em><br />
+										<ul>
+											<li><span><img src="./static/img/icon/ico-support-01.png" alt="금융지원"></span><br /><em class="txt-rendering">금융지원</em></li>
+											<li><span><img src="./static/img/icon/ico-support-02.png" alt="복지지원"></span><br /><em class="txt-rendering">복지지원</em></li>
+											<li><span><img src="./static/img/icon/ico-support-03.png" alt="교육지원"></span><br /><em class="txt-rendering">교육지원</em></li>
+											<li><span><img src="./static/img/icon/ico-support-04.png" alt="법률지원"></span><br /><em class="txt-rendering">법률지원</em></li>
+											<li><span><img src="./static/img/icon/ico-support-05.png" alt="세무지원"></span><br /><em class="txt-rendering">세무지원</em></li>
+										</ul>
+									</div>
+									<div class="btn-wrap-inline button-area align-r">
+										<button type="button" class="btn-type-customed benefit"><em class="txt-rendering">프리랜서 혜택보기</em></button><br/>
+										<button type="button" class="btn-type-icon search"><em class="txt-rendering">프로젝트 검색</em></button><br/>
+										<button type="button" class="btn-type-icon enrollment"><em class="txt-rendering">프로젝트 등록</em></button>
+									</div>
+								</dd>
+							</dl> 
+
+							<dl class="swiper-slide">
+								<dt class="txt-square"><span>We :</span>Project</dt>
+								<dd>
+									<div class="info-01 txt-serif">
+										<b class="txt-underline">국내 최초 프리랜서 활동 지원 플랫폼</b>으로<br />
+										당신이 원하는 일과 생활의 균형을 누리세요
+									</div>
+									<div class="info-02">
+										<em class="txt-rendering">성공적인 프로젝트를 위해 고객의 시스템과 업무를 이해하는 맞춤형 인재 제공<br /> 프로젝트 투입 전 자체 교육기관에서 교육훈련 후 투입</em><br />
+										<ul class="step">
+											<li><span><img src="./static/img/icon/ico-prj-01.png" alt="교육훈련"></span><br /><em class="txt-rendering">교육훈련</em></li>
+											<li><span><img src="./static/img/icon/ico-prj-02.png" alt="프로젝트 투입"></span><br /><em class="txt-rendering">프로젝트 투입</em></li>
+											<li><span><img src="./static/img/icon/ico-prj-03.png" alt="프로젝트 완수"></span><br /><em class="txt-rendering">프로젝트 완수</em></li>
+										</ul>
+									</div>
+									<div class="btn-wrap-inline button-area align-r">
+										<button type="button" class="btn-type-customed benefit"><em class="txt-rendering">기업회원 혜택보기</em></button><br/>
+										<button type="button" class="btn-type-icon prj-enrollment"><em class="txt-rendering">프로젝트 등록</em></button>
+									</div>
+								</dd>
+							</dl>
+							
+							<dl class="swiper-slide">
+								<dt class="txt-square"><span>We :</span>Player</dt>
+								<dd>
+									<div class="info-01 txt-serif">
+										<b class="txt-underline">국내 최초 프리랜서 활동 지원 플랫폼</b>으로<br />
+										당신이 원하는 일과 생활의 균형을 누리세요
+									</div>
+									<div class="info-02">
+										<em class="txt-rendering">자신의 일을 즐길 줄 아는 프로들의 모임<br /> 위플즈 커뮤니티에서 정보도 얻고 블라블라</em><br />
+										<ul class="step">
+											<li><span><img src="./static/img/icon/ico-prj-01.png" alt="교육훈련"></span><br /><em class="txt-rendering">교육훈련</em></li>
+											<li><span><img src="./static/img/icon/ico-prj-02.png" alt="프로젝트 투입"></span><br /><em class="txt-rendering">프로젝트 투입</em></li>
+											<li><span><img src="./static/img/icon/ico-prj-03.png" alt="프로젝트 완수"></span><br /><em class="txt-rendering">프로젝트 완수</em></li>
+										</ul>
+									</div>
+									<div class="btn-wrap-inline button-area align-r">
+										<button type="button" class="btn-type-customed dialog"><em class="txt-rendering">커뮤니티 바로가기</em></button>
+									</div>
+								</dd>
+							</dl> 
+
+							<dl class="swiper-slide">
+								<dt class="txt-square"><span>We :</span>Present</dt>
+								<dd>
+									<div class="info-01 txt-serif">
+										<b class="txt-underline">국내 최초 프리랜서 활동 지원 플랫폼</b>으로<br />
+										당신이 원하는 일과 생활의 균형을 누리세요
+									</div>
+									<div class="info-02">
+										<em class="txt-rendering">다양한 이벤트가 있다는 내용<br /> 위플즈 오픈 이벤트</em><br />
+										<ul class="step">
+											<li><span><img src="./static/img/icon/ico-prj-01.png" alt="교육훈련"></span><br /><em class="txt-rendering">교육훈련</em></li>
+											<li><span><img src="./static/img/icon/ico-prj-02.png" alt="프로젝트 투입"></span><br /><em class="txt-rendering">프로젝트 투입</em></li>
+											<li><span><img src="./static/img/icon/ico-prj-03.png" alt="프로젝트 완수"></span><br /><em class="txt-rendering">프로젝트 완수</em></li>
+										</ul>
+									</div>
+									<div class="btn-wrap-inline button-area align-r">
+										<button type="button" class="btn-type-customed event"><em class="txt-rendering">이벤트 바로가기</em></button>
+									</div>
+								</dd>
+							</dl>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</section><!-- // section-view 01 -->
+
+		<section class="section-view">
+			<div class="main-section-wrap-02">
+				<h2 class="hidden-txt">project</h2>
+				<div class="bg-wrap">
+					<button class="scroll" type="button"><em class="hidden-txt">프로젝트 리스트로 이동</em></button>
+					<div class="project inner-wrap">
+						<div class="project-list center">
+							<h3 class="heading-wrap-03">Weple’s Project List <span>위플스가 엄선한 프로젝트를 만나보세요.</span></h3>
+							<div>
+								<ul class="swiper-wrapper">
+									<li class="swiper-slide">
+										<article>
+											<div class="scrollable">
+												<div class="tag-wrap">
+													<span class="icon-tag green"><em>신규</em></span>
+												</div>
+												<div class="info">
+													<h4 class="heading-wrap-04">
+														<span>성과측정을 통한 보너스 지급</span><br/>
+														<strong>미래에셋생명 퇴직연금 플랫폼 구축 프로젝트 개발자 모집</strong>
+													</h4>
+													<div>
+														<dl>
+															<dt><strong>지원현황</strong></dt>
+															<dd>
+																<ul>
+																	<li><b>개발</b><br /><span><b class="applicant">21</b> &#47; <em>6</em></span></li>
+																</ul>
+															</dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트기간</strong></dt>
+															<dd><span>2021.01.10. ~ 2021.12.20</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>예상금액</strong></dt>
+															<dd><span>550~600만원 (월)</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트 장소</strong></dt>
+															<dd><span>서울 &gt; 여의도</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>접수마감일</strong></dt>
+															<dd><span>2021. 02. 17.</span></dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+											<div class="btn-wrap">
+												<button class="btn-type-half color-purple"><em>상세보기</em></button>
+												<button class="btn-type-half color-darkPurple"><em>즉시 지원하기</em></button>
+											</div>
+										</article>
+									</li>
+									<li class="swiper-slide">
+										<article>
+											<div class="scrollable">
+												<div class="tag-wrap">
+													<span class="icon-tag red"><em>긴급</em></span>
+													<span class="icon-tag green"><em>신규</em></span>
+												</div>
+												<div class="info">
+													<h4 class="heading-wrap-04">
+														<span>지방근무에 따른 숙식 제공</span><br/>
+														<strong>KT&G 담배인삼공제회 홈페이지 운영 사업</strong>
+													</h4>
+													<div>
+														<dl>
+															<dt><strong>지원현황</strong></dt>
+															<dd>
+																<ul>
+																	<li><b>디자인</b><br /><span><b class="applicant">23</b> &#47; <em>4</em></span></li>
+																	<li><b>개발</b><br /><span><b class="applicant">27</b> &#47; <em>12</em></span></li>
+																</ul>
+															</dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트기간</strong></dt>
+															<dd><span>2021.01.10. ~ 2021.12.2</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>예상금액</strong></dt>
+															<dd><span>550~600만원 (월)</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트 장소</strong></dt>
+															<dd><span>대전 &gt; 유성구, 서울 &gt; 강남구, 세종 &gt; 세종시</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>접수마감일</strong></dt>
+															<dd><span>2021. 01. 20</span></dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+											<div class="btn-wrap">
+												<button class="btn-type-half color-purple"><em>상세보기</em></button>
+												<button class="btn-type-half color-darkPurple"><em>즉시 지원하기</em></button>
+											</div>
+										</article>
+									</li>
+									<li class="swiper-slide">
+										<article>
+											<div class="scrollable">
+												<div class="tag-wrap">
+													<span class="icon-tag red"><em>긴급</em></span>
+													<span class="icon-tag orange"><em>마감임박</em></span>
+												</div>
+												<div class="info">
+													<h4 class="heading-wrap-04">
+														<span>신뢰도 5등급 기업에서 발주</span><br/>
+														<strong>서울시 도시 정보 시스템 구축 사업</strong>
+													</h4>
+													<div>
+														<dl>
+															<dt><strong>지원현황</strong></dt>
+															<dd>
+																<ul>
+																	<li><b>PM</b><br /><span><b class="applicant">3</b> &#47; <em>1</em></span></li>
+																	<li><b>기획</b><br /><span><b class="applicant">12</b> &#47; <em>2</em></span></li>
+																	<li><b>디자인</b><br /><span><b class="applicant">6</b> &#47; <em>2</em></span></li>
+																	<li><b>퍼블리싱</b><br /><span><b class="applicant">6</b> &#47; <em>2</em></span></li>
+																	<li><b>개발</b><br /><span><b class="applicant">21</b> &#47; <em>6</em></span></li>
+																</ul>
+															</dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트기간</strong></dt>
+															<dd><span>2021.01.10. ~ 2021.12.20</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>예상금액</strong></dt>
+															<dd><span>2000만원</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트 장소</strong></dt>
+															<dd><span>서울 &gt; 마포구</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>접수마감일</strong></dt>
+															<dd><span>2021. 01. 18.</span></dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+											<div class="btn-wrap">
+												<button class="btn-type-half color-purple"><em>상세보기</em></button>
+												<button class="btn-type-half color-darkPurple"><em>즉시 지원하기</em></button>
+											</div>
+										</article>
+									</li>
+									<li class="swiper-slide">
+										<article>
+											<div class="scrollable">
+												<div class="tag-wrap">
+													<span class="icon-tag darkGray"><em>마감</em></span>
+													<span class="icon-tag purple"><em>단독</em></span>
+												</div>
+												<div class="info">
+													<h4 class="heading-wrap-04">
+														<span>성과측정을 통한 보너스 지급</span><br/>
+														<strong>LG화학 구매포털 플랫폼 구축 프로젝트 인력 모집</strong>
+													</h4>
+													<div>
+														<dl>
+															<dt><strong>지원현황</strong></dt>
+															<dd>
+																<ul>
+																	<li><b>기획</b><br /><span><b class="applicant">2</b> &#47; <em>5</em></span></li>
+																	<li><b>디자인</b><br /><span><b class="applicant">3</b> &#47; <em>2</em></span></li>
+																	<li><b>개발</b><br /><span><b class="applicant">12</b> &#47; <em>6</em></span></li>
+																</ul>
+															</dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트기간</strong></dt>
+															<dd><span>2021.01.10. ~ 2021.12.20</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>예상금액</strong></dt>
+															<dd><span>550~600만원 (월)</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트 장소</strong></dt>
+															<dd><span>서울 &gt; 여의도</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>접수마감일</strong></dt>
+															<dd><span>2021. 01. 01.</span></dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+											<div class="btn-wrap">
+												<button class="btn-type-half color-purple"><em>상세보기</em></button>
+												<button class="btn-type-half color-darkPurple"><em>즉시 지원하기</em></button>
+											</div>
+										</article>
+									</li>
+									<li class="swiper-slide">
+										<article>
+											<div class="scrollable">
+												<div class="tag-wrap">
+													<span class="icon-tag green"><em>신규</em></span>
+												</div>
+												<div class="info">
+													<h4 class="heading-wrap-04">
+														<span>성과측정을 통한 보너스 지급</span><br/>
+														<strong>미래에셋생명 퇴직연금 플랫폼 구축 프로젝트 개발자 모집</strong>
+													</h4>
+													<div>
+														<dl>
+															<dt><strong>지원현황</strong></dt>
+															<dd>
+																<ul>
+																	<li><b>개발</b><br /><span><b class="applicant">21</b> &#47; <em>6</em></span></li>
+																</ul>
+															</dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트기간</strong></dt>
+															<dd><span>2021.01.10. ~ 2021.12.20</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>예상금액</strong></dt>
+															<dd><span>550~600만원 (월)</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트 장소</strong></dt>
+															<dd><span>서울 &gt; 여의도</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>접수마감일</strong></dt>
+															<dd><span>2021. 02. 17.</span></dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+											<div class="btn-wrap">
+												<button class="btn-type-half color-purple"><em>상세보기</em></button>
+												<button class="btn-type-half color-darkPurple"><em>즉시 지원하기</em></button>
+											</div>
+										</article>
+									</li>
+									<li class="swiper-slide">
+										<article>
+											<div class="scrollable">
+												<div class="tag-wrap">
+													<span class="icon-tag red"><em>긴급</em></span>
+													<span class="icon-tag green"><em>신규</em></span>
+												</div>
+												<div class="info">
+													<h4 class="heading-wrap-04">
+														<span>지방근무에 따른 숙식 제공</span><br/>
+														<strong>KT&G 담배인삼공제회 홈페이지 운영 사업</strong>
+													</h4>
+													<div>
+														<dl>
+															<dt><strong>지원현황</strong></dt>
+															<dd>
+																<ul>
+																	<li><b>디자인</b><br /><span><b class="applicant">23</b> &#47; <em>4</em></span></li>
+																	<li><b>개발</b><br /><span><b class="applicant">27</b> &#47; <em>12</em></span></li>
+																</ul>
+															</dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트기간</strong></dt>
+															<dd><span>2021.01.10. ~ 2021.12.2</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>예상금액</strong></dt>
+															<dd><span>550~600만원 (월)</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트 장소</strong></dt>
+															<dd><span>대전 &gt; 유성구, 서울 &gt; 강남구, 세종 &gt; 세종시</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>접수마감일</strong></dt>
+															<dd><span>2021. 01. 20</span></dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+											<div class="btn-wrap">
+												<button class="btn-type-half color-purple"><em>상세보기</em></button>
+												<button class="btn-type-half color-darkPurple"><em>즉시 지원하기</em></button>
+											</div>
+										</article>
+									</li>
+									<li class="swiper-slide">
+										<article>
+											<div class="scrollable">
+												<div class="tag-wrap">
+													<span class="icon-tag red"><em>긴급</em></span>
+													<span class="icon-tag orange"><em>마감임박</em></span>
+												</div>
+												<div class="info">
+													<h4 class="heading-wrap-04">
+														<span>신뢰도 5등급 기업에서 발주</span><br/>
+														<strong>서울시 도시 정보 시스템 구축 사업</strong>
+													</h4>
+													<div>
+														<dl>
+															<dt><strong>지원현황</strong></dt>
+															<dd>
+																<ul>
+																	<li><b>PM</b><br /><span><b class="applicant">3</b> &#47; <em>1</em></span></li>
+																	<li><b>기획</b><br /><span><b class="applicant">12</b> &#47; <em>2</em></span></li>
+																	<li><b>디자인</b><br /><span><b class="applicant">6</b> &#47; <em>2</em></span></li>
+																	<li><b>퍼블리싱</b><br /><span><b class="applicant">6</b> &#47; <em>2</em></span></li>
+																	<li><b>개발</b><br /><span><b class="applicant">21</b> &#47; <em>6</em></span></li>
+																</ul>
+															</dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트기간</strong></dt>
+															<dd><span>2021.01.10. ~ 2021.12.20</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>예상금액</strong></dt>
+															<dd><span>2000만원</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트 장소</strong></dt>
+															<dd><span>서울 &gt; 마포구</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>접수마감일</strong></dt>
+															<dd><span>2021. 01. 18.</span></dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+											<div class="btn-wrap">
+												<button class="btn-type-half color-purple"><em>상세보기</em></button>
+												<button class="btn-type-half color-darkPurple"><em>즉시 지원하기</em></button>
+											</div>
+										</article>
+									</li>
+									<li class="swiper-slide">
+										<article>
+											<div class="scrollable">
+												<div class="tag-wrap">
+													<span class="icon-tag darkGray"><em>마감</em></span>
+													<span class="icon-tag purple"><em>단독</em></span>
+												</div>
+												<div class="info">
+													<h4 class="heading-wrap-04">
+														<span>성과측정을 통한 보너스 지급</span><br/>
+														<strong>LG화학 구매포털 플랫폼 구축 프로젝트 인력 모집</strong>
+													</h4>
+													<div>
+														<dl>
+															<dt><strong>지원현황</strong></dt>
+															<dd>
+																<ul>
+																	<li><b>기획</b><br /><span><b class="applicant">2</b> &#47; <em>5</em></span></li>
+																	<li><b>디자인</b><br /><span><b class="applicant">3</b> &#47; <em>2</em></span></li>
+																	<li><b>개발</b><br /><span><b class="applicant">12</b> &#47; <em>6</em></span></li>
+																</ul>
+															</dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트기간</strong></dt>
+															<dd><span>2021.01.10. ~ 2021.12.20</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>예상금액</strong></dt>
+															<dd><span>550~600만원 (월)</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>프로젝트 장소</strong></dt>
+															<dd><span>서울 &gt; 여의도</span></dd>
+														</dl>
+														<dl class="table">
+															<dt><strong>접수마감일</strong></dt>
+															<dd><span>2021. 01. 01.</span></dd>
+														</dl>
+													</div>
+												</div>
+											</div>
+											<div class="btn-wrap">
+												<button class="btn-type-half color-purple"><em>상세보기</em></button>
+												<button class="btn-type-half color-darkPurple"><em>즉시 지원하기</em></button>
+											</div>
+										</article>
+									</li>
+								</ul>
+								<div class="swiper-pagination2"></div>
+								<div class="swiper-nav">
+									<button type="button" class="swiper-prev"><em class="hidden-txt">이전</em></button>
+									<button type="button" class="swiper-nxt"><em class="hidden-txt">다음</em></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main-section-wrap-03">
+				<h2 class="hidden-txt">partners</h2>
+				<div class="partners inner-wrap">
+					<div class="partners-list">
+						<h3 class="heading-wrap-03">Weple’s Partners</h3>
+						<ul>
+							<li><img src="./static/img/icon/ico-bi-01.png" alt="bi-01"></li>
+							<li><img src="./static/img/icon/ico-bi-02.png" alt="bi-02"></li>
+							<li><img src="./static/img/icon/ico-bi-03.png" alt="bi-03"></li>
+							<li><img src="./static/img/icon/ico-bi-04.png" alt="bi-04"></li>
+							<li><img src="./static/img/icon/ico-bi-05.png" alt="bi-05"></li>
+							<li><img src="./static/img/icon/ico-bi-06.png" alt="bi-06"></li>
+							<li><img src="./static/img/icon/ico-bi-07.png" alt="bi-07"></li>
+							<li><img src="./static/img/icon/ico-bi-08.png" alt="bi-08"></li>
+							<li><img src="./static/img/icon/ico-bi-09.png" alt="bi-09"></li>
+							<li><img src="./static/img/icon/ico-bi-10.png" alt="bi-010"></li>
+							<li><img src="./static/img/icon/ico-bi-11.png" alt="bi-011"></li>
+							<li><img src="./static/img/icon/ico-bi-12.png" alt="bi-012"></li>
+							<li><img src="./static/img/icon/ico-bi-13.png" alt="bi-013"></li>
+							<li><img src="./static/img/icon/ico-bi-14.png" alt="bi-014"></li>
+							<li><img src="./static/img/icon/ico-bi-15.png" alt="bi-015"></li>
+							<li><img src="./static/img/icon/ico-bi-16.png" alt="bi-016"></li>
+							<li><img src="./static/img/icon/ico-bi-17.png" alt="bi-017"></li>
+							<li><img src="./static/img/icon/ico-bi-18.png" alt="bi-018"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="main-section-wrap-04">
+				<div class="contact inner-wrap">
+					<div class="contact-list">
+						<h2 class="heading-wrap-02"><strong class="h-center">Perfect Project<br/> with Weple’s</strong></h2>
+						<ul>
+							<li>
+								<dl>
+									<dt><strong>1:1 문의</strong></dt>
+									<dd><span class="txt-rendering">프리랜서 &middot; 기업/공공기관 &middot; 제휴 등을<br/> 위플즈에게 문의하세요.</span></dd>
+								</dl>
+								<button class="btn-type-arrow"><em class="hidden-txt">바로가기</em></button>
+							</li>
+							<li>
+								<dl>
+									<dt><strong>FAQ</strong></dt>
+									<dd><span class="txt-rendering">위플즈에게 자주 물어보는 질문에 대한<br/> 답변을 확인하세요.</span></dd>
+								</dl>
+								<button class="btn-type-arrow"><em class="hidden-txt">바로가기</em></button>
+							</li>
+							<li>
+								<dl>
+									<dt><strong>Contact Us</strong></dt>
+									<dd>
+										<span class="phone-number txt-rendering">02-6925-4849 (10:00-18:00, 공휴일 제외</span><br/>
+										<span class="e-mail txt-rendering">help@weples.com</span>
+									</dd>
+								</dl>
+								<button class="btn-type-arrow"><em class="hidden-txt">바로가기</em></button>
+							</li>
+						</ul>
+
+						<dl>
+							<dt><strong>Notice</strong></dt>
+							<dd>
+								<div class="notice-swiper">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide">
+											<span><a href="#">위플즈가 오픈하였습니다.</a></span>
+											<span class="date">2021-06-02</span>
+										</li>
+										<li class="swiper-slide">
+											<span><a href="#">...</a></span>
+											<span class="date">2021-06-02</span>
+										</li>
+										<li class="swiper-slide">
+											<span><a href="#">...</a></span>
+											<span class="date">2021-06-02</span>
+										</li>
+										<li class="swiper-slide">
+											<span><a href="#">...</a></span>
+											<span class="date">2021-06-02</span>
+										</li>
+										<li class="swiper-slide">
+											<span><a href="#">...</a></span>
+											<span class="date">2021-06-02</span>
+										</li>
+										<li class="swiper-slide">
+											<span><a href="#">...</a></span>
+											<span class="date">2021-06-02</span>
+										</li>
+									</ul>
+									<div class="swiper-nav2">
+										<button type="button" class="swiper-prev"><em class="hidden-txt">이전</em></button>
+										<button type="button" class="swiper-nxt"><em class="hidden-txt">다음</em></button>
+									</div>
+								</div>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="inner-wrap">
+					<ul>
+						<li><a href="#">회사소개</a></li>
+						<li><a href="#">1:1문의</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">이용약관</a></li>
+						<li><a href="#" class="privacy-policy">개인정보처리방침</a></li>
+						<li><a href="#">공지사항</a></li>
+						<li><a href="#">이벤트</a></li>
+						<li><a href="#">찾아오시는길</a></li>
+					</ul>
+
+					<address>
+						<span>주식회사 위플즈</span>
+						<span>서울특별시 강남구 테헤란로 211 한국고등교육재단빌딩 3층 (주)위플즈</span>
+						<span>사업자등록번호 : 209-81-57303</span>
+						<span>통신판매업신고 : 제2018-서울강남-02337 호</span>
+						<span>직업정보제공사업 신고번호 : J1200020180019</span>
+					</address>
+
+					<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
+				</div>
+			</footer>
+		</section><!-- // section-view 02 -->
+	</main><!-- // #main -->
+
+	<script>
+		$(function(){
+			commonFunction().mainSwiper();
+			commonFunction().prjSwiper();
+			commonFunction().ntcSwiper();
+			commonFunction().wheelStart();
+
+			document.querySelector('.scroll').addEventListener('click', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+
+				$.fn.fullpage.moveSectionDown();
+			});
+		});
+	</script>
+</body>
+</html>

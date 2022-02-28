@@ -1,0 +1,236 @@
+@charset 'utf-8';
+
+/*-----------------------------------------------------------------*/
+/* max-width : 640px
+/*-----------------------------------------------------------------*/
+
+h1 {font-size:2.286rem;}
+
+/** Layout **/
+#wrapper.member .btn-type-md {width:48%; min-width:auto;}
+#wrapper.member .btn-type-md + .btn-type-md {margin-left:4%;}
+
+.col-2 ul li {width:50%;}
+.col-2 ul li:nth-of-type(3) {margin-top:20px;}
+.col-4-2 ul li,
+.col-5-2 ul li {width:50%;}
+.col-4-2 ul li:nth-of-type(2) ~ li,
+.col-5-2 ul li:nth-of-type(2) ~ li {margin-top:20px;}
+
+[class^=wrap--box] {margin-top:60px;}
+
+#wrapper section[class*=ssq-] > div dl dt,
+#wrapper section.interview > div > div dl dt {font-size:1.3rem;}
+#wrapper section[class*=ssq-] > div dl dt strong,
+#wrapper section.interview > div > div dl dt strong {font-size:1.7rem; top:-1px;}
+#wrapper section.interview > div dl.len03 dt strong {top:2px;}
+
+#wrapper section.interview > div {padding-right:20px; padding-left:20px;}
+#wrapper section.interview > div > div dl dt, 
+#wrapper section.interview > div > div dl dd {padding-left:25px;}
+#wrapper section.interview > div h4 {font-size:1.429rem;}
+#wrapper section.interview .result h4 span {top:-4px;}
+#wrapper section.interview.A6 > div > div.table dl,
+#wrapper section.interview.A7 > div > div.table dl {display:inline-block;}
+#wrapper section.interview.A6 > div > div.table dl dt,
+#wrapper section.interview.A6 > div > div.table dl dd,
+#wrapper section.interview.A7 > div > div.table dl dt,
+#wrapper section.interview.A7 > div > div.table dl dd {display:inline-block; width:100%;}
+#wrapper section.interview.A6 > div > div.table dl dd,
+#wrapper section.interview.A7 > div > div.table dl dd {margin-top:20px;}
+#wrapper section.interview.A7 > div > div.table dl dd .radio-group {text-align:left;}
+#wrapper section.interview.A6 > div > div.table dl dd .input {text-align:left;}
+
+#wrapper section.interview.pre > div > div.table dl dt {vertical-align:top;}
+
+#wrapper section .input > .form-line span {min-width:auto;}
+#wrapper section .input > .form-line span + span {margin-left:20px;}
+#wrapper section .input > .form-line span input {width:85px;}
+
+#wrapper section.ssq-mn > div > div.manual02 table th {width:24% !important;}
+
+#wrapper.location .container h2 br {display:none;}
+#wrapper.location .container h2 em {line-height:1.7;}
+#wrapper.location .help dl dd ul li {width:100%;}
+#wrapper.location .help dl dd ul li + li {margin-top:20px;}
+
+#wrapper.report .container section .score .dot-list li {font-size:1.143rem;}
+
+#wrapper.print .container section .chartArea,
+#wrapper.print .container section .table-style-sm {width:100%; margin:0;}
+#wrapper.print .container section .table-style-sm {margin-top:60px;}
+
+/** Table Layout **/
+[class^=table-layout] .col dl {border-bottom:1px solid #ccc;}
+[class^=table-layout] .col dl dt,
+[class^=table-layout] .col dl dd {display:inline-block; width:50%; border-width:1px 1px 0 0;}
+[class^=table-layout] .col dl dt {border-left:1px solid #ccc;}
+[class^=table-layout] .col dl dd,
+[class^=table-layout] .col dl dd:nth-of-type(1) {width:50%;}
+[class^=table-layout] .col dl dt:nth-of-type(3),
+[class^=table-layout] .col dl dt:nth-of-type(4),
+[class^=table-layout] .col dl dd:nth-of-type(3),
+[class^=table-layout] .col dl dd:nth-of-type(4) {margin-top:0;}
+
+/** Table Style **/
+[class*=table-style] table th,
+[class*=table-style] table td {padding:10px 7px; font-size:1rem;}
+
+/** Form Style **/
+.form-group span {width:125px;}
+.form-group.inline.search {width:100%; max-width:395px;}
+
+.radio-group[class*=col-].type01 span input[type=radio] {left:50%; margin-left:-10px;}
+.radio-group[class*=col-].type01 span input[type=radio] + label {padding:40px 0 0 0;}
+.radio-group[class*=col-].type01 span input[type=radio] + label:before {left:50%; margin-left:-6px;}
+.radio-group[class*=col-].type01 span input[type=radio] + label:after {left:50%; margin-left:-9px;}
+
+/** Contents Style **/
+.description.bottom {max-width:320px;}
+
+/** Button Style **/
+.btn-type-md + .btn-type-md {margin-left:4%;}
+
+/** Layer Popup **/
+.lpop {width:95%; padding:25px 20px;}
+.lpop .lpop-close {top:7px; right:9px;}
+
+@media only screen and (max-width:561px){
+	#wrapper section.interview .final-report > div ul.half li {width:49%;}
+	#wrapper section.ssq-mn > div > div dl {padding:20px;}
+	#wrapper section.ssq-mn > div > div dl dt span {margin-right:10px;}
+
+	/** Table Layout **/
+	[class^=table-layout] .col2 dl {display:block; border-bottom:1px solid #ccc;}
+	[class^=table-layout] .col2 dl dt,
+	[class^=table-layout] .col2 dl dd {display:inline-block; width:50%; border-width:1px 1px 0 0; line-height:38px;}
+	[class^=table-layout] .col2 dl dt {border-left:1px solid #ccc;}
+	[class^=table-layout] .col2 dl dt:nth-of-type(3),
+	[class^=table-layout] .col2 dl dd,
+	[class^=table-layout] .col2 dl dd:nth-of-type(1) {width:50%;}
+	[class^=table-layout] .col2 dl dt *,
+	[class^=table-layout] .col2 dl dd * {line-height:inherit;}
+}
+
+@media only screen and (max-width:516px){
+	/** Layout **/
+	.col-3 ul li {width:33.3%;}
+	.col-2-1 ul li {width:100%;}
+	.col-2-1 ul li + li {margin-top:20px;}
+	
+	#wrapper.login {padding-top:190px;}
+	#wrapper.login:before {height:510px; background-size:auto 100%;}
+	#wrapper.login .container h1 + div {margin-top:230px;}
+	#wrapper.login .container h1 + div ul li strong {width:25%;}
+
+	#wrapper.member .container p {line-height:1.4;}
+	#wrapper.member .container p + p {margin-top:0;}
+	#wrapper.member .container p em {padding-top:20px;}
+	#wrapper.member .container .memberInfo ul .form-group {display:block; height:auto;}
+	#wrapper.member .container .memberInfo ul li span,
+	#wrapper.member .container .memberInfo ul li strong {display:inline-block; width:100%; vertical-align:middle;}
+	#wrapper.member .container .memberInfo ul li span {margin-top:15px; height:45px;}
+	#wrapper.member .container .btn-type-lg {max-width:none; height:45px; line-height:43px;}
+	
+	#wrapper .wrap--box01 ul li span {font-size:1.714rem;}
+
+	#wrapper .wrap--box02 ul li	a {padding-left:40%;}
+	#wrapper .wrap--box02 ul li	a:before {width:40%;}
+	#wrapper .wrap--box02 ul li span {font-size:1.714rem;}
+	#wrapper .wrap--box02 ul li dl {margin-top:40px;}
+
+	#wrapper section.interview .flow--chart {padding:20px;}
+	#wrapper section.interview .flow--chart > div.thumnail img {width:100%;}
+	#wrapper section.interview .flow--chart ol li {font-size:1.143rem;}
+
+	#wrapper section.interview .result .form-group .customed-select {width:125px;}
+
+	/** Form Style **/
+	.form-group > div {width:100%;}
+	.form-group > div + div {margin-left:0; margin-top:10px;}
+	.form-group span {width:100%;}
+	.form-group .calendar span {width:calc((100% - 15px) / 2);}
+	.form-group span.auto.btn {width:100%;}
+	.form-group span .btn-type-sm {width:100%;}
+	.form-group.inline.search {width:100%; max-width:none;}
+	.form-group.inline.search div:first-child {width:100%;}
+
+	.form-group.detail div:first-of-type span + span,
+	.form-group.detail span.auto.btn {margin-left:0; margin-top:10px;}
+
+	/** Contents Style **/
+	.ft-xlg {font-size: 2.714rem !important;}
+	.ft-xlg * {line-height:1.3;}
+	.ft-lg {font-size: 2rem !important;}
+	.ft-lg * {line-height:1.3;}
+}
+
+@media only screen and (max-width:448px){
+	h2 {font-size:1.7rem;}
+
+	/** Layout **/
+	#wrapper.login {padding-top:110px;}
+	#wrapper.login:before {height:320px;}
+	#wrapper.login .container h1 + div {margin-top:135px;}
+	#wrapper.login h1 {padding:0 20px;}
+	#wrapper.login h1 span {font-size:3.214rem;}
+
+	#wrapper.location .map--area {min-height:430px;}
+
+	#wrapper .wrap--box01 ul li + li {margin-top:30px;}
+	#wrapper .wrap--box01 ul li a {padding-top:105px; padding-bottom:20px;}
+	#wrapper .wrap--box01 ul li a:before {height:105px;}
+	#wrapper .wrap--box01 ul li span {font-size:1.286rem;}
+
+	#wrapper .wrap--box02 ul li	a {padding:100px 30px 30px 30px; text-align:center;}
+	#wrapper .wrap--box02 ul li	a:before {width:100%; height:100px; background-size:45px auto;}
+	#wrapper .wrap--box02 ul li dl {height:auto; padding:12px 15px; margin-top:30px;}
+	#wrapper .wrap--box02 ul li span {font-size:1.286rem;}
+
+	#wrapper .wrap--box03 ul li a:before {background-size:62px auto;}
+	#wrapper .wrap--box03 p + a {margin-top:45px;}
+
+	#wrapper section[class*=ssq-] > div dl {padding: 30px 15px;}
+	#wrapper section[class*=ssq-] > div dl dd {margin-top:25px;}
+	#wrapper section .input > .form-line span input {width:42px;} 
+	#wrapper section .input.type01 > div {float:left; width:100%;}
+
+	#wrapper section.interview.A7 > div > div.table dl dd {padding-left:0;}
+	#wrapper section.interview.A7 > div > div.table dl dd ul li {width:48%;}
+	#wrapper section.interview.A7 > div > div.table dl dd ul li + li {margin-left:4%;}
+
+	#wrapper section.interview .final-report {padding:0 20px;}
+	#wrapper section.interview.pre > div > div.table dl dt {width:140px;}
+
+	/** Top Menu **/
+	#header .topMenu .infoTxt {top:17px;}
+	#header .topMenu .infoTxt, #header .topMenu .infoTxt * {font-size:1.143rem;}
+
+	/** Form Style **/
+	.radio-group[class*=col-] span {font-size: 1rem;}
+	.radio-group[class*=col-].type01 span input[type=radio] + label {padding:30px 0 0 0;}
+
+	/** Contents Style **/
+	.ft-2xlg {font-size:4.286rem !important;}
+	.btn-wrap-half .btn-type-md {width:48%; min-width:auto;}
+	.btn-wrap-half .btn-type-md + .btn-type-md {margin-left:4%;}
+
+	/** Button Style **/
+	[class^=btn-type-].next,
+	[class^=btn-type-].prev,
+	[class^=btn-type-].finish {min-width:auto; width:48%; margin:0 !important;}
+
+	/** sort **/
+	.sort {right:8px; width:8px; height:17px; margin-top:-8px;}
+	.sort:before, .sort:after {width:8px; height:7px;}
+}
+
+@media only screen and (max-width:376px){
+	#wrapper.member .container .chk-group a em,
+	#wrapper.member .container .chk-group label em {font-size:1rem;}
+
+	#wrapper section.interview > div > div.table dl dt {width:190px;}
+	#wrapper section.interview .final-report > div ul.half li {width:100%;}
+	#wrapper section.interview .final-report > div ul.half li + li {margin-top:12px;}
+	#wrapper section.interview .final-report > div ul.half li:nth-child(even) {margin-left:0;}
+} 

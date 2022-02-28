@@ -1,0 +1,56 @@
+/*
+----------------------------
+Font
+----------------------------
+*/
+
+@charset "utf-8";
+
+/**Noto Serif KR**/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400&display=swap');
+
+
+/**NanumSquare**/
+@font-face{
+font-family:'NanumSquare';
+font-style:normal;
+font-weight:300;
+src:local('※'),
+    url('../font/NanumSquareL.eot?#iefix') format('embedded-opentype'),
+    url('../font/woff2/NanumSquareL.woff2') format('woff2'),
+    url('../font/woff/NanumSquareL.woff') format('woff'),
+    url('../font/NanumSquareL.ttf') format('truetype');
+}
+
+@font-face{
+font-family:'NanumSquare';
+font-style:normal;
+font-weight:400;
+src:local('※'),
+    url('../font/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+    url('../font/woff2/NanumSquareR.woff2') format('woff2'),
+    url('../font/woff/NanumSquareR.woff') format('woff'),
+    url('../font/NanumSquareR.ttf') format('truetype');
+}
+
+@font-face{
+font-family:'NanumSquare';
+font-style:normal;
+font-weight:700;
+src:local('※'),
+    url('../font/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+    url('../font/woff2/NanumSquareB.woff2') format('woff2'),
+    url('../font/woff/NanumSquareB.woff') format('woff'),
+    url('../font/NanumSquareB.ttf') format('truetype');
+}
+
+@font-face{
+font-family:'NanumSquare';
+font-style:normal;
+font-weight:800;
+src:local('※'),
+    url('../font/NanumSquareEB.eot?#iefix') format('embedded-opentype'),
+    url('../font/woff2/NanumSquareEB.woff2') format('woff2'),
+    url('../font/woff/NanumSquareEB.woff') format('woff'),
+    url('../font/NanumSquareEB.ttf') format('truetype');
+}
