@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
 	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1680px)" type="text/css" href="../static/css/style_m.css">
 </head>
 <body>
 	<!--[if lt IE 10]>
@@ -108,7 +109,7 @@
 	<div id="wrap">
 		<h1 class="hidden-txt">기업정보등록</h1>
 		<div class="sub-top-wrap">
-			<h2 class="heading-wrap-02 long-txt v-center">
+			<h2 class="heading-wrap-02 long-txt">
 				위플즈 기업회원이 되시면 다양한 기업지원 서비스를 받으실 수 있습니다<br/>
 				<span>위플스는 성공적인 프로젝트를 위해 교육훈련지원, 제안서작성 및 프로젝트 전 단계 업무를 지원합니다</span>
 			</h2>
@@ -116,8 +117,8 @@
 		<div class="fixed-wrap inner">
 			<div class="form-inline">
 				<ul class="col-2">
-					<li class="service"><span><em>We:Project 기업 서비스</em></span></li>
-					<li class="training"><span><em>맞춤형 교육훈련 요청</em></span></li>
+					<li class="service"><a href="#"><em>We:Project 기업 서비스</em></a></li>
+					<li class="training"><a href="#"><em>맞춤형 교육훈련 요청</em></a></li>
 				</ul>	
 			</div>	
 		</div>	
@@ -185,7 +186,7 @@
 										<input type="text" class="txt-rendering" id="" value="" placeholder="6자 이상 등록" title="아이디 - 6자 이상 등록">
 									</span>
 									<span class="btn-wrap-inline">
-										<button type="button" class="btn-type-mid color-darkPurple"><em class="txt-rendering">아이디 중복확인</em></button>
+										<button type="button" class="btn-type-sm darkPurple"><em class="txt-rendering">아이디 중복확인</em></button>
 									</span>
 								</dd>
 							</dl>
@@ -245,7 +246,7 @@
 											<input type="text" id="" class="txt-rendering" value="" placeholder="우편번호를 검색하세요" title="우편번호 - 예)우편번호를 검색하세요">
 										</span>
 										<span class="btn-wrap-inline">
-											<button type="button" class="btn-type-mid color-darkPurple"><em class="txt-rendering">우편번호 검색</em></button>
+											<button type="button" class="btn-type-sm darkPurple"><em class="txt-rendering">우편번호 검색</em></button>
 										</span>
 									</div>
 									<div class="text-wrap">
@@ -376,12 +377,12 @@
 					</div><!-- // contents-body (담당자정보)-->
 
 					<div class="btn-wrap align-c">
-						<button type="submit" class="btn-type-lg color-purple anchor-toolTip" data-toolTip=1><em class="txt-rendering ft-md">등록하기</em></button>
-						<button type="button" class="btn-type-sm color-white"><em class="txt-rendering ft-md">취소</em></button>
+						<button type="submit" class="btn-type-lg purple"><em class="txt-rendering ft-md">등록하기</em></button>
+						<button type="button" class="btn-type-mid"><em class="txt-rendering ft-md">취소</em></button>
 					</div>
 				</form>
 
-				<div class="toolTip" id="toolTip-1">
+				<div class="toolTip block up">
 					<div>
 						<p class="txt-rendering">
 							회원가입을 하시면 <span>무료로 프로젝트 등록</span>을 하실 수 있습니다

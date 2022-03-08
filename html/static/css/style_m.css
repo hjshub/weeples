@@ -1,0 +1,56 @@
+@charset 'utf-8';
+
+/*-----------------------------------------------------------------*/
+/* style_m (mobile)
+/*-----------------------------------------------------------------*/
+
+.main .container {padding: 0 25px;}
+
+header .logo-wrap {left:25px;}
+header .menu-all > a,
+header .menu-all > ul {right:25px;}
+
+@media only screen and (max-width:1200px){
+	.toolTip#grade--info > div {padding:20px;}
+}
+@media only screen and (max-width:921px){
+	.toolTip#grade--info {max-width:440px; margin-left:18px;}
+	.toolTip#grade--info > div {padding:20px; max-width:440px;}
+	
+	.toolTip:not(.block).up {transform:translate(-100%, 100%); -webkit-transform:translate(-100%, 100%); -moz-transform:translate(-100%, 100%); -ms-transform:translate(-100%, 100%);}
+	.toolTip:not(.block).down {transform:translate(-100%, -100%); -webkit-transform:translate(-100%, -100%); -moz-transform:translate(-100%, -100%); -ms-transform:translate(-100%, -100%);}
+	.toolTip:not(.block) > div:before,
+	.toolTip:not(.block) > div:after {left:auto; right:0; margin-right:10px; transform:rotate(45deg); background-color:#fff; border-style:solid; border-color:#ccc;}
+}
+@media only screen and (max-width:768px){
+	.inner-wrap {padding:0 25px;}
+	.txt-rotateX {display:none;}
+	.pc-only {display:none !important;}
+	.mob-only {display:block !important;}
+
+	header {bottom:0; top:auto;}
+  header #h-menu {opacity:0; visibility: hidden;}
+
+  .activeScroll header {background:#fff;}
+	.activeScroll header .logo-wrap {background:url('../img/logo.png') 0 0 no-repeat;}
+	.activeScroll header .menu-all > a,
+	.activeScroll header .menu-all.open > a {color:#000;}
+
+	.main-section-wrap-01 .presentation {padding-top:0;}
+	.main-section-wrap-01 .presentation dl {padding-left:0;}
+	.main-section-wrap-01 .presentation dl dt span {position:static;}
+	.main-section-wrap-01 .presentation dl dd {padding-bottom:300px;}
+
+	#main .swiper-pagination {display:none;}
+}
+@media only screen and (max-width:480px){
+  html {font-size:40%;}
+  .txt-underline {text-decoration-thickness:12px; text-underline-offset:-12px;}
+
+  [class ^= main-section-wrap] {padding-top:30px;}
+  .main-section-wrap-01 {
+    height: -webkit-calc(100vh - 100px);
+    height: -moz-calc(100vh - 100px);
+    height: calc(100vh - 100px);
+    padding-bottom: 100px;
+}

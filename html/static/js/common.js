@@ -9,20 +9,19 @@
 var _gb = function(){
 	this.wW =  window.innerWidth;
 	this.wH =  window.innerHeight;
-	this.window =  $(window);
 	this.html =  $('html');
 	this.body =  $('body');
 	this.main = $('#main');
 	this.header = $('header');
 	this.menuAll = $('.menu-all');
 	this.filter = $('.filter');
-	this.dropDown = $('.dropDown'),
-	this.tabMenu = $('.tab-menu'),
-	this.tabCtsWrap = $('.tabCts-wrap'),
+	this.sideMenu = $('.side-menu');
+	this.dropDown = $('.dropDown');
+	this.dropDown2 = $('.dropDown2');
+	this.tabMenu = $('.tab--active');
+	this.tabCtsWrap = $('.tabCts-wrap');
 	this.dimmed = $('<div class="dimmed"></div>');
-	this.fpCreated = false;
-	this.isMobile = window.outerWidth <= 768 ? true : false;
-	this.isMain = this.main.length;
+	this.isMobile = this.wW <= 850 ? true : false;
 },
 
 gb = new _gb();
@@ -49,7 +48,7 @@ function commonFunction(){
 				if(gb.menuAll.hasClass('open')){
 					gb.menuAll.find('> div')
 					.stop().fadeIn('300', function(){
-						if(gb.isMain){
+						if(gb.main.length){
 							$.fn.fullpage.setAllowScrolling(false);
 						}else{
 							gb.body.css({
@@ -63,7 +62,7 @@ function commonFunction(){
 				}else {
 					gb.menuAll.find('> div')
 					.stop().fadeOut('300', function(){
-						if(gb.isMain){
+						if(gb.main.length){
 							$.fn.fullpage.setAllowScrolling(true);
 						}else{
 							gb.body.css({
@@ -95,30 +94,46 @@ function commonFunction(){
 			});
 		},
 
-		filterOn = function(){ // 프로젝트 리스트 필터
-			gb.filter.find('dt > a').on('click', function(){
-				var trg = $(this);
+		filter = function(){ // 프로젝트 리스트 필터
+			var radio = gb.filter.find('.sort-wrap input[type=radio]'),
+			checkbox = gb.filter.find('.sort-wrap input[type=checkbox]');
 
-				if(trg.hasClass('active')){
-					trg
-					.removeClass('active')
-					.closest('dt').next('dd').stop().slideUp(300);
-				}else {
-					trg
-					.addClass('active')
-					.closest('dt').next('dd').stop().slideDown(300);
+			gb.workArea = new Array;
 
-					gb.filter.find('dt > a').not(trg)
-					.removeClass('active')
-					.closest('dt').next('dd').stop().slideUp(300);
+			radio.each(function(){
+				var trg = $(this),
+				txt_value = trg.next('label').text();
+				if(trg.prop('checked')){
+					trg.closest('dl').find('dt em').html(txt_value);
 				}
+
+				trg.on('change', function(){
+					txt_value = trg.next('label').text();
+					if(trg.prop('checked')){
+						trg.closest('dl').find('dt em').html(txt_value);
+					}
+				});
 			});
 
-			gb.filter.find('li a').on('click', function(){
-				$(this).closest('li').addClass('selected');
+			checkbox.each(function(){
+				var trg = $(this),
+				txt_value = trg.next('label').text();
 
-				if(!$(this).closest('ul').hasClass('work-area')) 
-					$(this).closest('li').siblings().removeClass('selected');
+				if(trg.prop('checked')){
+					gb.workArea.push(txt_value);
+				}
+				trg.closest('dl').find('dt em').html(gb.workArea.join(', '));
+
+				trg.on('change', function(){
+					txt_value = trg.next('label').text();
+					if(trg.prop('checked')){
+						gb.workArea.push(txt_value);
+					}else{
+						var idx = gb.workArea.indexOf(txt_value);
+						gb.workArea.splice(idx, 1);
+					}
+					trg.closest('dl').find('dt em').html(gb.workArea.join(', '));
+				});
 			});
 		},
 
@@ -137,6 +152,26 @@ function commonFunction(){
 						trg.find('.dropDown-list').stop().slideUp(300);
 					}
 				});
+			});
+		},
+
+		dropDown2 = function(){
+			gb.dropDown2.find('dt > a').on('click', function(){
+				var trg = $(this);
+
+				if(trg.hasClass('active')){
+					trg
+					.removeClass('active')
+					.closest('dt').next('dd').stop().slideUp(300);
+				}else {
+					trg
+					.addClass('active')
+					.closest('dt').next('dd').stop().slideDown(300);
+
+					gb.dropDown2.find('dt > a').not(trg)
+					.removeClass('active')
+					.closest('dt').next('dd').stop().slideUp(300);
+				}
 			});
 		},
 
@@ -194,7 +229,7 @@ function commonFunction(){
 					}
 				});
 
-				$(document).find("input.datePick").removeClass('hasDatepicker').datepicker();  
+				$(document).find("input.datePick").removeClass('hasDatepicker').datepicker();
 			},100);
 		},
 
@@ -247,49 +282,81 @@ function commonFunction(){
 		},
 
 		toolTip = function(){ // 툴팁
-			$('.anchor-toolTip').on('mouseenter focusin', function(){
-				var trgAnchor = $(this),
-				dataToolTip = trgAnchor.attr('data-toolTip'),
-				currentToolTip = $('#toolTip-' + dataToolTip),
-				anchorOffsetTop = trgAnchor.offset().top,
-				anchorOffsetLeft = trgAnchor.offset().left,
-				currentScrollTop = document.documentElement.scrollTop,
-				clientHeight = document.documentElement.clientHeight,
-				scrollHeight = currentScrollTop + clientHeight,
-				_clientY = anchorOffsetTop - currentScrollTop,
-				clientY = scrollHeight - anchorOffsetTop,
-				clientX = anchorOffsetLeft + trgAnchor.width() / 2;
+			$('.anchor-toolTip').on({
+				'mouseenter focusin' : function(){
+					var trgAnchor = $(this),
+					dataToolTip = trgAnchor.attr('data-toolTip'),
+					currentToolTip = $('.toolTip#' + dataToolTip),
+					anchorOffsetTop = trgAnchor.offset().top,
+					anchorOffsetLeft = trgAnchor.offset().left,
+					currentScrollTop = document.documentElement.scrollTop,
+					clientHeight = document.documentElement.clientHeight,
+					scrollHeight = currentScrollTop + clientHeight,
+					_clientY = anchorOffsetTop - currentScrollTop,
+					clientY = scrollHeight - anchorOffsetTop,
+					clientX = anchorOffsetLeft + trgAnchor.width() / 2;
 
-				if(_clientY >= clientY){
-					currentToolTip
-					.removeClass('up')
-					.addClass('down')
-					.css({
-						'top' : _clientY - 40 + 'px',
-						'bottom' : 'auto',
-						'left' : clientX + 'px'
-					})
-					.stop().fadeIn(300);
-				}else {
-					currentToolTip
-					.removeClass('down')
-					.addClass('up')
-					.css({
-						'bottom' : clientY - (trgAnchor.height() + 40) + 'px',
-						'top' : 'auto',
-						'left' : clientX + 'px'
-					})
-					.stop().fadeIn(300);
+					if(_clientY >= clientY){
+						currentToolTip
+						.removeClass('up')
+						.addClass('down')
+						.css({
+							'top' : _clientY - 20 + 'px',
+							'bottom' : 'auto',
+							'left' : clientX + 'px'
+						})
+						.stop().fadeIn(300);
+					}else {
+						currentToolTip
+						.removeClass('down')
+						.addClass('up')
+						.css({
+							'bottom' : clientY - (trgAnchor.height() + 20) + 'px',
+							'top' : 'auto',
+							'left' : clientX + 'px'
+						})
+						.stop().fadeIn(300);
+					}
+				},
+				'mouseleave focusout' : function(){
+					var trgAnchor_ = $(this),
+					dataToolTip_ = trgAnchor_.attr('data-toolTip'),
+					currentToolTip_ = $('.toolTip#' + dataToolTip_);
+
+					currentToolTip_.stop().fadeOut(300);
 				}
 			});
+		},
 
-			$('.anchor-toolTip').on('mouseleave focusout', function(){
-				var trgAnchor_ = $(this),
-				dataToolTip_ = trgAnchor_.attr('data-toolTip'),
-				currentToolTip_ = $('#toolTip-' + dataToolTip_);
+		motion = function(){
+			gsap.to(".bg-area", {width:0, opacity:0, duration:0.7});
+			gsap.fromTo("h2", {opacity:0, y:100, scale:1.3}, {opacity:1, duration:1.5, delay:0.7});
+			gsap.delayedCall(1.5, addMotion);
 
-				currentToolTip_.stop().fadeOut(300);
-			});
+			function addMotion(){
+				gsap.to("h2", {y:0, scale:1});
+				gsap.fromTo(".section-wrap-01 dl dt", {
+					opacity:0, 
+					y:100
+				}, {
+					opacity:1, 
+					y:0, 
+					duration:1, 
+					delay:0.4, 
+					onComplete:function(){
+						$('.section-wrap-01 dl dt').addClass('active')
+					}
+				});
+				gsap.fromTo(".section-wrap-01 dl dd", {
+					opacity:0,
+					y:100
+				}, {
+					opacity:1, 
+					y:0, 
+					duration:1, 
+					delay:0.4
+				});
+			}
 		},
 
 		mainSwiper = function(){ // 메인 스와이퍼
@@ -314,11 +381,13 @@ function commonFunction(){
 					debugger: true, // Enable debugger
 
 					// Auto play
-					autoplay: {
+					/*
+						autoplay: {
 						delay: 3000,
 						disableOnInteraction : false,
 						pauseOnMouseEnter : true
 					},
+					*/
 				});
 			}
 		},
@@ -380,54 +449,52 @@ function commonFunction(){
 		},
 
 		wheelStart = function(){ // 메인 fullpage 호출
-			if(!gb.fpCreated){
-				gb.main.fullpage({
-					//이동
-					lockAnchors: true,
-					navigation: false,
-					showActiveTooltip: false,
-					slidesNavigation: false,
+			gb.main.fullpage({
+				//이동
+				lockAnchors: true,
+				navigation: false,
+				showActiveTooltip: false,
+				slidesNavigation: false,
 
-					//스크롤
-					css3: true,
-					scrollingSpeed: 700,
-					autoScrolling: true,
-					scrollOverflow: true,
-					scrollBar: false,
-					fitToSection: true,
-					fitToSectionDelay: 1000,
-					easing: 'easeInOutCubic',
-					easingcss3: 'ease-in-out',
-					//dragAndMove: false,
-					offsetSection:true,
-					normalScrollElements:'.scrollable',
-					resetSliders: false,
-					touchSensitivity: 15,
-					bigSectionsDestination: null,
-					resize:false,
-			 
-					//접근성
-					keyboardScrolling: true,
-					animateAnchor: true,
-					recordHistory: true,
-			 
-					//디자인
-					controlArrows: true,
-					verticalCentered: false,
-					responsiveWidth: 0,
-					responsiveHeight: 0,
-					responsiveSlides: false,
-			 
-					//맞춤 선택자
-					sectionSelector: '.section-view',
-					slideSelector: '.slide-view',
+				//스크롤
+				css3: true,
+				scrollingSpeed: 700,
+				autoScrolling: true,
+				scrollBar: false,
+				fitToSection: false,
+				fitToSectionDelay: 1000,
+				easing: 'easeInOutCubic',
+				easingcss3: 'ease-in-out',
+				offsetSection:true,
+				resetSliders: false,
+				touchSensitivity: 15,
+				bigSectionsDestination: null,
+				resize:false,
+		 
+				//접근성
+				keyboardScrolling: true,
+				animateAnchor: true,
+				recordHistory: true,
+		 
+				//디자인
+				controlArrows: true,
+				verticalCentered: false,
+				responsiveWidth: 850,
+				responsiveHeight: 0,
+				responsiveSlides: false,
+		 
+				//맞춤 선택자
+				sectionSelector: '.section-view',
+				slideSelector: '.slide-view',
 
-					lazyLoading: false,
-			 
-					//이벤트
-					onLeave: function(origin, destination, direction){
-						if(destination != 1){
-							$('.main-section-wrap-02').addClass('motion');
+				lazyLoading: false,
+		 
+				//이벤트
+				onLeave: function(origin, destination, direction){
+					if(destination != 1){
+						if(!gb.html.hasClass('activeScroll')){
+							gb.html.addClass('activeScroll');
+
 							if(!gb.isMobile){
 								gsap.set(gb.header,{top:0, bottom:'auto'});
 								gsap.from(gb.header, 0.5,{
@@ -439,52 +506,23 @@ function commonFunction(){
 									bottom:'-90px'
 								});
 							}
-							
 							setTimeout(function(){
-								gb.html.addClass('activeScroll');
-							},500);
-						}else{
-							setTimeout(function(){
-								gb.html.removeClass('activeScroll');
-								$('.main-section-wrap-02').removeClass('motion');
-							},700);
+								$('.main-section-wrap-02').addClass('motion');
+							},300);
 						}
-					},
+					}else {
+						gb.html.removeClass('activeScroll');
+						$('.main-section-wrap-02').removeClass('motion');
+					}
 
-					afterRender: function(){
-						gb.fpCreated = true;
-
-						window.addEventListener('resize', function(){
-							var section2offSet = $('.main-section-wrap-02').offset().top;
-
-							if(gb.fpCreated){
-								gb.fpCreated = false;
-								$.fn.fullpage.destroy('all');
-							}else {
-								setTimeout(function(){
-									commonFunction().wheelStart();
-									gb.fpCreated = true;
-									gb.isMobile = window.outerWidth <= 768 ? true : false;
-								}, 100);
-							}
-
-							if(document.documentElement.scrollTop >= section2offSet){
-								gb.html.addClass('activeScroll');
-								$('.main-section-wrap-02').addClass('motion');	
-							}else {
-								gb.html.removeClass('activeScroll');
-								$('.main-section-wrap-02').removeClass('motion');
-							}
-						});
-					},
-					//afterLoad: function(origin, destination, direction){},
-					// afterResize: function(width, height){},
-					// afterReBuild: function(){},
-					// afterResponsive: function(isResponsive){},
-					// afterSlideLoad: function(section, origin, destination, direction){},
-					// onSlideLeave: function(section, origin, destination, direction){}
-				})
-			}
+					if(destination != 5){
+						$('.main-section-wrap-0' + origin).find('.animate').removeClass('animation--start');
+						setTimeout(function(){
+							$('.main-section-wrap-0' + destination).find('.animate').addClass('animation--start');
+						},500);
+					}
+				}
+			})
 		},
 
 		contextMenu_cancel = function(){ // 우 클릭, 드래그 방지
@@ -495,8 +533,9 @@ function commonFunction(){
 
 		init = function(){
 			menuOn();
-			filterOn();
+			filter();
 			dropDown();
+			dropDown2();
 			calendar();
 			toolTip();
 			tabMenu();
@@ -511,21 +550,64 @@ function commonFunction(){
 			ntcSwiper : ntcSwiper,
 			addList : addList,
 			removeList : removeList,
-			fileUpload : fileUpload
+			fileUpload : fileUpload,
+			motion : motion
 		}
 	}
+	/*
+	window.addEventListener('resize', function(){
+		gb.isMobile = window.innerWidth <= 850 ? true : false;
 
-	if(!gb.isMain){
+		if(!gb.isMobile){
+			gsap.set(gb.header,{top:0, bottom:'auto'});
+			gsap.from(gb.header, 0.5,{
+				top:'-90px'
+			});
+		}else{
+			gsap.set(gb.header,{bottom:0, top:'auto'});
+			gsap.from(gb.header, 0.5,{
+				bottom:'-90px'
+			});
+		}
+	});
+	*/
+
+	if(!gb.main.length){
 		window.addEventListener('scroll', function(){
-			if(document.documentElement.scrollTop >= $('.contents-wrap').offset().top - gb.header.height()){
+			if(document.documentElement.scrollTop >= gb.header.height()){
 				gb.html.addClass('activeScroll');
-				$('.side-menu').addClass('l-fixed');
-			}else{
+			}else {
 				gb.html.removeClass('activeScroll');
-				$('.side-menu').removeClass('l-fixed');
 			}
 		});
-	}	
+	}
+
+	if(gb.sideMenu.length){
+		window.addEventListener('scroll', function(){
+			if(document.documentElement.scrollTop >= $('.contents-wrap').offset().top - gb.header.height()){
+				gb.sideMenu.addClass('l-fixed');
+			}else{
+				gb.sideMenu.removeClass('l-fixed');
+			}
+		});
+	}
+
+	if(gb.html.hasClass('motion')){
+		$('.animate').each(function(){
+			var trg = $(this);
+
+			window.addEventListener('scroll', function(){
+				var trgTop = trg.offset().top;
+
+				if(document.documentElement.scrollTop + document.documentElement.clientHeight - gb.header.height() >= trgTop){
+					trg.addClass('animation--start');
+				}else {
+					trg.removeClass('animation--start');
+				}
+			});
+		});	
+	}
+
 })(jQuery);
 
 // 쿠키설정

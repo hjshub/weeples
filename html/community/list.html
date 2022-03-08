@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>커뮤니티 리스트 | 위플즈</title>
+
+	<script src="../static/js/jquery-3.6.0.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/gsap.min.js"></script>
+	<script defer="defer" src="../static/js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
+	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1680px)" type="text/css" href="../static/css/style_m.css">
+</head>
+<body>
+	<!--[if lt IE 10]>
+	<div id="legacy-IE">
+		<div class="info">
+		본 사이트는 Internet Explorer 10 기준(웹표준)으로 제작 된 사이트 입니다.
+		현재 고객님이 이용중인 브라우저는 곧 지원이 중단 됩니다.
+		<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">Internet Explorer 최신 버전</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">Chrome</a>과 같은 최신 브라우저를 이용해 주세요.
+		</div>
+	</div>
+	<![endif]-->
+
+	<!-- 건너띄기 링크 -->
+	<dl id="skipNavigation">
+		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
+		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
+		<dd><a href="#side-menu"><em>사이드 메뉴 바로가기</em></a></dd>
+		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
+	</dl>
+
+	<header>
+		<div class="container">
+			<span class="logo-wrap"><em class="hidden-txt">로고 이미지</em></span>
+			<hgroup id="h-menu" class="inner-cts clear">
+				<div class="gnb">
+					<ul>
+						<li><a href="#">프리랜서 등록</a></li>
+						<li><a href="#">프로젝트 등록</a></li>
+						<li><a href="#" class="search">프로젝트 검색</a></li>
+					</ul>
+				</div>
+				<div class="member">
+					<ul>
+						<!-- 로그인 전 -->
+						<li><a href="">회원가입</a></li>
+						<li><a href="">로그인</a></li>
+						<!-- 로그인 후 
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">로그아웃</a></li>
+						-->
+					</ul>
+				</div>
+			</hgroup>	
+			<nav class="menu-all">
+				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<ul>
+					<li class="prj-add"><a href="#"><em class="hidden-txt">메뉴추가</em></a></li>
+					<li class="prj-search"><a href="#"><em class="hidden-txt">메뉴검색</em></a></li>
+				</ul>
+				<div>
+					<ul class="member animate fadeInUp">
+						<!-- 로그인 전 -->
+						<li><a href="#">로그인</a></li>
+						<li class="join">
+							<ul>
+								<li><a href="#">프리랜서 가입</a></li>
+								<li><a href="#">기업회원 가입</a></li>
+							</ul>
+						</li>
+						<!-- 로그인 후 
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						-->
+					</ul>
+					<ul class="category animate fadeInUp">
+							<li><a href="#">프로젝트 검색</a></li>
+							<li><a href="#">프로젝트 등록</a></li>
+							<li><a href="#">프리랜서 등록</a></li>
+							<li>
+								<a href="">위플즈 소개</a>
+								<ul class="depth2">
+									<li><a href="#">We:People</a></li>
+									<li><a href="#">We:Project</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">커뮤니티</a>
+								<ul class="depth2">
+									<li><a href="#">1:1문의</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">위플즈 커뮤니티</a></li>
+								</ul>
+							</li>
+						</ul>	
+				</div>
+			</nav>	
+		</div>
+	</header><!-- // header -->
+	
+	<div id="wrap" class="community">
+		<h1 class="hidden-txt">커뮤니티</h1>
+		<div class="sub-top-wrap">
+			<h2 class="heading-wrap-02">
+				Weple's Community<br/>
+				<span>위플즈 회원이 되시면 누구나 커뮤니티를 이용하실 수 있습니다</span>
+			</h2>
+		</div>
+		<div class="fixed-wrap inner">
+			<div class="form-inline">
+				<span class="select-wrap wide">
+					<label for="community"><em class="hidden-txt">커뮤니티명</em></label>
+					<select id="community">
+						<option value="">전체</option>
+						<option value="">구인&#47;구직</option>
+						<option value="">개발자모임</option>
+						<option value="">디자이너모임</option>
+						<option value="">퍼블리셔모임</option>
+						<option value="">기획자모임</option>
+						<option value="">PM모임</option>
+						<option value="">자유게시판</option>
+					</select>
+				</span>
+				<span class="text-wrap wide">
+					<input type="text" value="" autocomplete="off" placeholder="검색어를 입력해 주세요" title="검색어 입력 - 예)검색어를 입력해 주세요">
+				</span>
+				<span><button type="button" class="btn-type-icon2 search darkPurple"><em class="hidden-txt">검색</em></button></span>
+			</div>	
+		</div>	
+		<div class="contents-wrap visible inner">
+			<div class="contents" id="contents">
+				<div class="contents-head tab-menu">
+					<ul>
+						<li class="selected"><a href="#">전체</a></li>
+						<li><a href="#">구인&#47;구직</a></li>
+						<li><a href="#">개발자모임</a></li>
+						<li><a href="#">디자이너모임</a></li>
+						<li><a href="#">퍼블리셔모임</a></li>
+						<li><a href="#">기획자모임</a></li>
+						<li><a href="#">PM모임</a></li>
+						<li><a href="#">자유게시판</a></li>
+					</ul>
+					<div class="btn-wrap-inline regist"><button class="btn-type-sm purple"><em class="txt-rendering">글등록</em></button></div>
+				</div><!-- // contents-head -->
+
+				<div class="contents-body">
+					<div class="table-style01">
+						<table>
+							<caption>커뮤니티 리스트</caption>
+							<colgroup>
+								<col style="width:auto;"/>
+								<col style="width:10%;"/>
+								<col style="width:14%;"/>
+							</colgroup>
+							<thead class="hidden-txt">
+								<tr>
+									<th scope="col">내용</th>
+									<th scope="col">회원아이디</th>
+									<th scope="col">게시일</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="align-l"><b class="txt-ellipsis"><a href="#">위플즈 오픈 축하합니다. 너무 좋네요~~~위플즈 오픈 축하합니다. 너무 좋네요~~~위플즈 오픈 축하합니다. 너무 좋네요~~~위플즈 오픈 축하합니다. 너무 좋네요~~~위플즈 오픈 축하합니다. 너무 좋네요~~~</a></b></td>
+									<td><span>songc</span></td>
+									<td><span>2021-12-06</span></td>
+								</tr>
+								<tr>
+									<td class="align-l"><b class="txt-ellipsis"><a href="#">아티스트의 갬성이란 참으로 어렵습니다</a></b></td>
+									<td><span>songc</span></td>
+									<td><span>2021-12-06</span></td>
+								</tr>
+								<tr>
+									<td class="align-l"><b class="txt-ellipsis"><a href="#">1인 외주기업 차리려면..아무것도 몰라서 그러는데 답변 좀 부탁드립니다</a></b></td>
+									<td><span>songc</span></td>
+									<td><span>2021-12-06</span></td>
+								</tr>
+								<tr>
+									<td class="align-l"><b class="txt-ellipsis"><a href="#">위플즈 오픈 축하합니다. 너무 좋네요~~~</a></b></td>
+									<td><span>songc</span></td>
+									<td><span>2021-12-06</span></td>
+								</tr>
+								<tr>
+									<td class="align-l"><b class="txt-ellipsis"><a href="#">아티스트의 갬성이란 참으로 어렵습니다</a></b></td>
+									<td><span>songc</span></td>
+									<td><span>2021-12-06</span></td>
+								</tr>
+								<tr>
+									<td class="align-l"><b class="txt-ellipsis"><a href="#">1인 외주기업 차리려면..아무것도 몰라서 그러는데 답변 좀 부탁드립니다</a></b></td>
+									<td><span>songc</span></td>
+									<td><span>2021-12-06</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="paging pc-only">
+						<a href="#" class="first"><span>첫 페이지</span></a>
+						<a href="#" class="prev"><span>이전 페이지</span></a>
+						<strong title="현재 페이지">1</strong>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+						<a href="#">8</a>
+						<a href="#">9</a>
+						<a href="#">10</a>
+						<a href="#" class="next"><span>다음 페이지</span></a>
+						<a href="#" class="last"><span>마지막 페이지</span></a>
+					</div>
+					<div class="btn-wrap-inline regist"><button class="btn-type-sm purple"><em class="txt-rendering">글등록</em></button></div>
+					<div class="btn-wrap mob-only">
+						<button type="button" class="btn-type-wide"><em>더보기</em></button>
+					</div>
+
+				</div><!-- // contents-body -->
+
+			</div><!-- // contents -->
+		</div><!-- // contents-wrap -->
+	</div><!-- // #wrap -->
+	<footer>
+		<div class="inner-wrap">
+			<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">1:1문의</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#" class="privacy-policy">개인정보처리방침</a></li>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">이벤트</a></li>
+				<li><a href="#">찾아오시는길</a></li>
+			</ul>
+
+			<address>
+				<span>주식회사 위플즈</span>
+				<span>서울특별시 강남구 테헤란로 211 한국고등교육재단빌딩 3층 (주)위플즈</span>
+				<span>사업자등록번호 : 209-81-57303</span>
+				<span>통신판매업신고 : 제2018-서울강남-02337 호</span>
+				<span>직업정보제공사업 신고번호 : J1200020180019</span>
+			</address>
+
+			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
+		</div>
+	</footer><!-- // footer -->
+</body>
+</html>

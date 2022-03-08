@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>마이페이지_개인회원 | 위플즈</title>
+
+	<script src="../static/js/jquery-3.6.0.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/gsap.min.js"></script>
+	<script defer="defer" src="../static/js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
+	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1680px)" type="text/css" href="../static/css/style_m.css">
+</head>
+<body>
+	<!--[if lt IE 10]>
+	<div id="legacy-IE">
+		<div class="info">
+		본 사이트는 Internet Explorer 10 기준(웹표준)으로 제작 된 사이트 입니다.
+		현재 고객님이 이용중인 브라우저는 곧 지원이 중단 됩니다.
+		<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">Internet Explorer 최신 버전</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">Chrome</a>과 같은 최신 브라우저를 이용해 주세요.
+		</div>
+	</div>
+	<![endif]-->
+
+	<!-- 건너띄기 링크 -->
+	<dl id="skipNavigation">
+		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
+		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
+		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
+	</dl>
+
+	<header>
+		<div class="container">
+			<span class="logo-wrap"><em class="hidden-txt">로고 이미지</em></span>
+			<hgroup id="h-menu" class="inner-cts clear">
+				<div class="gnb">
+					<ul>
+						<li><a href="#">프리랜서 등록</a></li>
+						<li><a href="#">프로젝트 등록</a></li>
+						<li><a href="#" class="search">프로젝트 검색</a></li>
+					</ul>
+				</div>
+				<div class="member">
+					<ul>
+						<!-- 로그인 전 -->
+						<li><a href="">회원가입</a></li>
+						<li><a href="">로그인</a></li>
+						<!-- 로그인 후 
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">로그아웃</a></li>
+						-->
+					</ul>
+				</div>
+			</hgroup>	
+			<nav class="menu-all">
+				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<ul>
+					<li class="prj-add"><a href="#"><em class="hidden-txt">메뉴추가</em></a></li>
+					<li class="prj-search"><a href="#"><em class="hidden-txt">메뉴검색</em></a></li>
+				</ul>
+				<div>
+					<ul class="member animate fadeInUp">
+						<!-- 로그인 전 -->
+						<li><a href="#">로그인</a></li>
+						<li class="join">
+							<ul>
+								<li><a href="#">프리랜서 가입</a></li>
+								<li><a href="#">기업회원 가입</a></li>
+							</ul>
+						</li>
+						<!-- 로그인 후 
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						-->
+					</ul>
+					<ul class="category animate fadeInUp">
+							<li><a href="#">프로젝트 검색</a></li>
+							<li><a href="#">프로젝트 등록</a></li>
+							<li><a href="#">프리랜서 등록</a></li>
+							<li>
+								<a href="">위플즈 소개</a>
+								<ul class="depth2">
+									<li><a href="#">We:People</a></li>
+									<li><a href="#">We:Project</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">커뮤니티</a>
+								<ul class="depth2">
+									<li><a href="#">1:1문의</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">위플즈 커뮤니티</a></li>
+								</ul>
+							</li>
+						</ul>	
+				</div>
+			</nav>	
+		</div>
+	</header><!-- // header -->
+	
+	<div id="wrap" class="mypage">
+		<h1 class="hidden-txt">마이페이지(개인회원)</h1>
+		<div class="sub-top-wrap">
+			<h2 class="heading-wrap-02 long-txt">
+				<span class="thumbnail"><img src="../static/img/partners-thumbnail.jpg" alt="프리랜서 프로필 사진"></span><br/>
+				홍길동 <em>회원님 반갑습니다!</em><br/>
+				<span>회원님은 <b>2021년 5월 21일 현재 위플즈 회원</b>으로 <b>총 3개의 프로젝트에 420일 동안 활동 중</b>에 있습니다<br/>
+				<em class="txt-rendering">(위플즈와 직접 계약 후 진행한 프로젝트에 대한 활동내역 입니다)</em></span>
+			</h2>
+		</div>
+		<div class="fixed-wrap inner">
+			<div class="form-inline">
+				<ul class="col-4">
+					<li class="activities"><a href="#"><em>프로젝트 활동내역</em></a></li>
+					<li class="wish"><a href="#"><em>관심 프로젝트</em></a></li>
+					<li class="modified"><a href="#"><em>개인정보수정</em></a></li>
+					<li class="inquiry"><a href="#"><em>1:1 문의</em></a></li>
+				</ul>	
+			</div>	
+		</div>	
+		<div class="contents-wrap inner">
+			<div class="contents" id="contents">
+				<div class="terms-box">
+					<div class="feature">
+						<figure>
+							<img src="../static/img/grade-bronze.gif" alt="회원등급">
+							<figcaption class="hidden-txt">회원등급</figcaption>
+						</figure>
+						<p><strong>홍길동</strong>님의 회원등급은 <b class="member-grade bronze">Bronze</b>입니다 <span class="anchor-toolTip help" data-toolTip="grade--info"><em>?</em></span></p>
+						<div>
+							<dl class="table">
+								<dt>고객평가점수(평균) : </dt>
+								<dd><strong>92</strong>점</dd>
+							</dl>
+							<dl class="table">
+								<dt>보유퇴직금 : </dt>
+								<dd><strong>650만원</strong>(담보대출가능)</dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="contents-head">
+					<strong>프리랜서 활동지원 서비스</strong>
+					<div class="btn-wrap-inline">
+						<button type="button" class="btn-type-icon benefit"><em class="txt-rendering">We:People 프리랜서 혜택보기</em></button>
+					</div>
+				</div>
+				<div class="contents-body">
+					<div class="info">
+						<p>위플즈 회원으로 가입 후 365일 이상 프로젝트에 투입을 하신 이력이 있으면 하기 서비스를 제공받으실 수 있습니다.</p>
+						<p>단, 교육신청은 누구나 할 수 있으며 교육이 필요하신 회원은 아래 서비스 메뉴에서 신청해주세요.</p>
+					</div>
+					<ul class="partners-benefit">
+						<li><a href="#"><span>퇴직금 신청</span></a></li>
+						<li><a href="#"><span>대출&#47;재테크 상담</span></a></li>
+						<li><a href="#"><span>복지서비스</span></a></li>
+						<li><a href="#"><span>교육신청</span></a></li>
+						<li><a href="#"><span>법률&#47;세무상담</span></a></li>
+					</ul>
+					<dl class="dot-list">
+						<dt><strong class="txt-rendering">퇴직금제도 안내</strong></dt>
+						<dd><span class="txt-rendering">위플즈에서 지급한 총 급여의 10%를 퇴사시(회원탈퇴) 일괄 지급(프로젝트 총 투입이력이 1년 이상 일 경우 지급조건을 충족함)</span></dd>
+						<dd><span class="txt-rendering">회원탈퇴 시 1년 간 재가입이 불가함으로 지속적인 활동이 필요한 회원은 퇴직금 담보대출 제도를 이용해주시기 바랍니다.</span></dd>
+					</dl>
+				</div><!-- // contents-body-->
+
+				<div class="toolTip" id="grade--info">
+					<div>
+						<div class="grade-standard">
+							<div class="title"><strong>회원등급 기준</strong><span>(회원등급은 매년 1월 1일에 업데이트가 됩니다)</span></div>
+							<ul>
+								<li><strong>Diamond</strong><span>활동이력 5년 이상 and 고객평가점수(평균) 90점 이상</span></li>
+								<li><strong>Gold</strong><span>활동이력 3년 이상 and 고객평가점수(평균) 80점 이상</span></li>
+								<li><strong>Silver</strong><span>활동이력 1년 이상 and 고객평가점수(평균) 70점 이상</span></li>
+								<li><strong>Bronze</strong><span>신입회원</span></li>
+							</ul>
+							<div class="description">
+								<p class="txt-rendering">두가지 조건 중 하나의 조건만 충족할 경우는 한단계 낮은 등급으로 회원등급이 분류가 됩니다.</p>
+								<p class="txt-rendering">(회원등급은 1년에 한번씩 갱신이 되며 이전 년도에 활동이 없거나 기준에 미달될 경우 회원등급은 강등될 수 있습니다)</p>
+							</div>
+						</div>
+						<div class="grade-benefit">
+							<div class="title"><strong>등급 별 혜택</strong></div>
+							<ul>
+								<li><strong>Diamond</strong><span>대출이율 2%, 복지포인트 매년 100포인트 제공</span></li>
+								<li><strong>Gold</strong><span>대출이율 3%, 복지포인트 매년 50포인트 제공</span></li>
+								<li><strong>Silver</strong><span>대출이율 4%, 복지포인트 매년 30포인트 제공</span></li>
+								<li><strong>Bronze</strong><span>대출 불가, 복지포인트 미지급</span></li>
+							</ul>
+							<div class="description">
+								<p class="txt-rendering">복지포인트는 1포인트가 1만원에 해당 되며, 100포인트 제공 시 100만원 상당의 복지서비스를 제공받으실 수 있습니다.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- // contents -->
+		</div><!-- // contents-wrap -->
+	</div><!-- // #wrap -->
+	<footer>
+		<div class="inner-wrap">
+			<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">1:1문의</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#" class="privacy-policy">개인정보처리방침</a></li>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">이벤트</a></li>
+				<li><a href="#">찾아오시는길</a></li>
+			</ul>
+
+			<address>
+				<span>주식회사 위플즈</span>
+				<span>서울특별시 강남구 테헤란로 211 한국고등교육재단빌딩 3층 (주)위플즈</span>
+				<span>사업자등록번호 : 209-81-57303</span>
+				<span>통신판매업신고 : 제2018-서울강남-02337 호</span>
+				<span>직업정보제공사업 신고번호 : J1200020180019</span>
+			</address>
+
+			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
+		</div>
+	</footer><!-- // footer -->
+</body>
+</html>

@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
 	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1680px)" type="text/css" href="../static/css/style_m.css">
 </head>
 <body>
 	<!--[if lt IE 10]>
@@ -109,7 +110,7 @@
 	<div id="wrap">
 		<h1 class="hidden-txt">프로젝트 검색</h1>
 		<div class="sub-top-wrap">
-			<h2 class="heading-wrap-02 v-center">
+			<h2 class="heading-wrap-02">
 				Weple's Project<br/>
 				<span>다년간의 경험을 통해 검증된 프로젝트만 선별 등록되어 있습니다.</span>
 			</h2>
@@ -129,64 +130,10 @@
 				<span class="text-wrap wide">
 					<input type="text" value="" autocomplete="off" placeholder="검색어를 입력해 주세요" title="검색어 입력 - 예)검색어를 입력해 주세요">
 				</span>
-				<span><button type="button" class="btn-type-icon2 search color-darkPurple"><em class="hidden-txt">검색</em></button></span>
+				<span><button type="button" class="btn-type-icon2 search darkPurple"><em class="hidden-txt">검색</em></button></span>
 			</div>	
 		</div>	
 		<div class="contents-wrap side inner">
-			<aside class="side-menu" id="side-menu">
-				<div class="title-wrap"><strong>Project&nbsp;&nbsp;I.N.G</strong></div>
-				<div class="project-filter filter">
-					<div class="sub-title-wrap"><strong>프로젝트 필터</strong></div>
-					<dl>
-						<dt><a href="javascript:void(0);"><span>정렬기준&nbsp;:&nbsp;&nbsp;<em>최신등록순</em></span></a></dt>
-						<dd>
-							<ul>
-								<li class="selected"><a href="javascript:void(0);"><span>최신등록순</span></a></li>
-								<li><a href="javascript:void(0);"><span>마감임박순</span></a></li>
-								<li><a href="javascript:void(0);"><span>예상금액순</span></a></li>
-							</ul>
-						</dd>
-					</dl>
-					<dl>
-						<dt><a href="javascript:void(0);"><span>근무형태&nbsp;:&nbsp;&nbsp;<em>도급(비상주)</em></span></a></dt>
-						<dd>
-							<ul>
-								<li class="selected"><a href="javascript:void(0);"><span>상주</span></a></li>
-								<li><a href="javascript:void(0);"><span>도급(비상주)</span></a></li>
-							</ul>
-						</dd>
-					</dl>
-					<dl>
-						<dt><a href="javascript:void(0);"><span>근무지역&nbsp;:&nbsp;&nbsp;<em>경기, 제주</em></span></a></dt>
-						<dd>
-							<ul class="work-area half">
-								<li><a href="javascript:void(0);"><span>전국</span></a></li>
-								<li><a href="javascript:void(0);"><span>서울</span></a></li>
-								<li><a href="javascript:void(0);"><span>경기</span></a></li>
-								<li><a href="javascript:void(0);"><span>인천</span></a></li>
-								<li><a href="javascript:void(0);"><span>강원</span></a></li>
-								<li><a href="javascript:void(0);"><span>충남</span></a></li>
-								<li><a href="javascript:void(0);"><span>대전</span></a></li>
-								<li><a href="javascript:void(0);"><span>충북</span></a></li>
-								<li><a href="javascript:void(0);"><span>세종</span></a></li>
-								<li><a href="javascript:void(0);"><span>부산</span></a></li>
-								<li><a href="javascript:void(0);"><span>울산</span></a></li>
-								<li><a href="javascript:void(0);"><span>대구</span></a></li>
-								<li><a href="javascript:void(0);"><span>경북</span></a></li>
-								<li><a href="javascript:void(0);"><span>경남</span></a></li>
-								<li><a href="javascript:void(0);"><span>전남</span></a></li>
-								<li><a href="javascript:void(0);"><span>광주</span></a></li>
-								<li><a href="javascript:void(0);"><span>전북</span></a></li>
-								<li><a href="javascript:void(0);"><span>제주</span></a></li>
-							</ul>
-						</dd>
-					</dl>
-				</div>
-				<ul class="sub-menu">
-					<li><a href="#">마이페이지</a></li>
-					<li><a href="#">위플스 프리랜서 혜택 더보기</a></li>
-				</ul>
-			</aside><!-- // side-menu -->
 			<div class="contents" id="contents">
 				<div class="contents-head tab-menu">
 					<ul>
@@ -204,13 +151,229 @@
 				</div><!-- // contents-head -->
 
 				<div class="contents-body">
+					<aside class="side-menu" id="side-menu">
+						<div class="title-wrap"><strong>Project&nbsp;&nbsp;I.N.G</strong></div>
+						<div class="project-filter filter dropDown2">
+							<div class="sub-title-wrap"><strong>프로젝트 필터</strong></div>
+							<dl>
+								<dt><a href="javascript:void(0);"><span>정렬기준&nbsp;:&nbsp;&nbsp;<em></em></span></a></dt>
+								<dd>
+									<ul>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="sort_by_1" type="radio" name="sort_by" checked>
+													<label for="sort_by_1"><em class="txt-rendering">최신등록순</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="sort_by_2" type="radio" name="sort_by">
+													<label for="sort_by_2"><em class="txt-rendering">마감임박순</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="sort_by_3" type="radio" name="sort_by">
+													<label for="sort_by_3"><em class="txt-rendering">예상금액순</em></label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><a href="javascript:void(0);"><span>근무형태&nbsp;:&nbsp;&nbsp;<em></em></span></a></dt>
+								<dd>
+									<ul>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_type_1" type="radio" name="work_type" checked>
+													<label for="work_type_1"><em class="txt-rendering">상주</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_type_2" type="radio" name="work_type">
+													<label for="work_type_2"><em class="txt-rendering">도급(비상주)</em></label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+							<dl>
+								<dt><a href="javascript:void(0);"><span>근무지역&nbsp;:&nbsp;&nbsp;<em></em></span></a></dt>
+								<dd>
+									<ul class="work-area col-3">
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_1" type="checkbox" name="work_area">
+													<label for="work_area_1"><em class="txt-rendering">전국</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_2" type="checkbox" name="work_area">
+													<label for="work_area_2"><em class="txt-rendering">서울</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_3" type="checkbox" name="work_area" checked>
+													<label for="work_area_3"><em class="txt-rendering">경기</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_4" type="checkbox" name="work_area">
+													<label for="work_area_4"><em class="txt-rendering">인천</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_5" type="checkbox" name="work_area">
+													<label for="work_area_5"><em class="txt-rendering">강원</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_6" type="checkbox" name="work_area">
+													<label for="work_area_6"><em class="txt-rendering">충남</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_7" type="checkbox" name="work_area">
+													<label for="work_area_7"><em class="txt-rendering">대전</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_8" type="checkbox" name="work_area">
+													<label for="work_area_8"><em class="txt-rendering">충북</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_9" type="checkbox" name="work_area">
+													<label for="work_area_9"><em class="txt-rendering">세종</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_10" type="checkbox" name="work_area">
+													<label for="work_area_10"><em class="txt-rendering">부산</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_11" type="checkbox" name="work_area">
+													<label for="work_area_11"><em class="txt-rendering">울산</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_12" type="checkbox" name="work_area">
+													<label for="work_area_12"><em class="txt-rendering">대구</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_13" type="checkbox" name="work_area">
+													<label for="work_area_13"><em class="txt-rendering">경북</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_14" type="checkbox" name="work_area">
+													<label for="work_area_14"><em class="txt-rendering">경남</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_15" type="checkbox" name="work_area">
+													<label for="work_area_15"><em class="txt-rendering">전남</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_16" type="checkbox" name="work_area">
+													<label for="work_area_16"><em class="txt-rendering">광주</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_17" type="checkbox" name="work_area">
+													<label for="work_area_17"><em class="txt-rendering">전북</em></label>
+												</span>
+											</div>
+										</li>
+										<li>
+											<div class="sort-wrap">
+												<span>
+													<input id="work_area_18" type="checkbox" name="work_area" checked>
+													<label for="work_area_18"><em class="txt-rendering">제주</em></label>
+												</span>
+											</div>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<ul class="sub-menu">
+							<li><a href="#">마이페이지</a></li>
+							<li><a href="#">위플스 프리랜서 혜택 더보기</a></li>
+						</ul>
+					</aside><!-- // side-menu -->
+					
 					<div class="project-info">
 						<div class="list">
 							<div class="tag-wrap">
 								<span class="icon-tag green"><em>신규</em></span>
 							</div>
 							<h4 class="heading-wrap-04">
-								<span>성과측정을 통한 보너스 지급</span><br/>
+								<span class="txt-color-purple2">성과측정을 통한 보너스 지급</span><br/>
 								<strong>미래에셋생명 퇴직연금 플랫폼 구축 프로젝트 개발자 모집</strong>
 							</h4>
 							<div class="info">
@@ -240,8 +403,8 @@
 								</dl>
 							</div>
 							<div class="btn-wrap align-l">
-								<button type="button" class="btn-type-mid color-purple"><em class="txt-rendering">상세보기</em></button>
-								<button type="button" class="btn-type-mid color-darkPurple"><em class="txt-rendering">즉시지원</em></button>
+								<button type="button" class="btn-type-sm purple"><em class="txt-rendering">상세보기</em></button>
+								<button type="button" class="btn-type-sm darkPurple"><em class="txt-rendering">즉시지원</em></button>
 								<button type="button" class="btn-type-icon2 xs wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 							</div>
 						</div>
@@ -252,7 +415,7 @@
 								<span class="icon-tag green"><em>신규</em></span>
 							</div>
 							<h4 class="heading-wrap-04">
-								<span>지방근무에 따른 숙식 제공</span><br/>
+								<span class="txt-color-purple2">지방근무에 따른 숙식 제공</span><br/>
 								<strong>KT&G 담배인삼공제회 홈페이지 운영 사업</strong>
 							</h4>
 							<div class="info">
@@ -286,9 +449,9 @@
 								</dl>
 							</div>
 							<div class="btn-wrap align-l">
-								<button type="button" class="btn-type-mid color-purple"><em class="txt-rendering">상세보기</em></button>
-								<button type="button" class="btn-type-mid color-darkPurple"><em class="txt-rendering">즉시지원</em></button>
-								<button type="button" class="btn-type-icon2 xs wish color-white"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
+								<button type="button" class="btn-type-sm purple"><em class="txt-rendering">상세보기</em></button>
+								<button type="button" class="btn-type-sm darkPurple"><em class="txt-rendering">즉시지원</em></button>
+								<button type="button" class="btn-type-icon2 xs wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 							</div>
 						</div>
 
@@ -298,7 +461,7 @@
 								<span class="icon-tag orange"><em>마감임박</em></span>
 							</div>
 							<h4 class="heading-wrap-04">
-								<span>신뢰도 5등급 기업에서 발주</span><br/>
+								<span class="txt-color-purple2">신뢰도 5등급 기업에서 발주</span><br/>
 								<strong>서울시 도시 정보 시스템 구축 사업</strong>
 							</h4>
 							<div class="info">
@@ -331,9 +494,9 @@
 								</dl>
 							</div>
 							<div class="btn-wrap align-l">
-								<button type="button" class="btn-type-mid color-purple"><em class="txt-rendering">상세보기</em></button>
-								<button type="button" class="btn-type-mid color-darkPurple"><em class="txt-rendering">즉시지원</em></button>
-								<button type="button" class="btn-type-icon2 xs wish color-white"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
+								<button type="button" class="btn-type-sm purple"><em class="txt-rendering">상세보기</em></button>
+								<button type="button" class="btn-type-sm darkPurple"><em class="txt-rendering">즉시지원</em></button>
+								<button type="button" class="btn-type-icon2 xs wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 							</div>
 						</div>
 
@@ -343,7 +506,7 @@
 								<span class="icon-tag darkGray"><em>마감</em></span>
 							</div>
 							<h4 class="heading-wrap-04">
-								<span>성과측정을 통한 보너스 지급</span><br/>
+								<span class="txt-color-purple2">성과측정을 통한 보너스 지급</span><br/>
 								<strong>LG화학 구매포털 플랫폼 구축 프로젝트 인력 모집</strong>
 							</h4>
 							<div class="info">
@@ -374,9 +537,9 @@
 								</dl>
 							</div>
 							<div class="btn-wrap align-l">
-								<button type="button" class="btn-type-mid color-purple"><em class="txt-rendering">상세보기</em></button>
-								<button type="button" class="btn-type-mid color-darkPurple"><em class="txt-rendering">즉시지원</em></button>
-								<button type="button" class="btn-type-icon2 xs wish color-white"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
+								<button type="button" class="btn-type-sm purple"><em class="txt-rendering">상세보기</em></button>
+								<button type="button" class="btn-type-sm darkPurple"><em class="txt-rendering">즉시지원</em></button>
+								<button type="button" class="btn-type-icon2 xs wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 							</div>
 						</div>
 
@@ -386,7 +549,7 @@
 								<span class="icon-tag darkGray"><em>마감</em></span>
 							</div>
 							<h4 class="heading-wrap-04">
-								<span>성과측정을 통한 보너스 지급</span><br/>
+								<span class="txt-color-purple2">성과측정을 통한 보너스 지급</span><br/>
 								<strong>LG화학 구매포털 플랫폼 구축 프로젝트 인력 모집</strong>
 							</h4>
 							<div class="info">
@@ -417,9 +580,9 @@
 								</dl>
 							</div>
 							<div class="btn-wrap align-l">
-								<button type="button" class="btn-type-mid color-purple"><em class="txt-rendering">상세보기</em></button>
-								<button type="button" class="btn-type-mid color-darkPurple"><em class="txt-rendering">즉시지원</em></button>
-								<button type="button" class="btn-type-icon2 xs wish color-white"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
+								<button type="button" class="btn-type-sm purple"><em class="txt-rendering">상세보기</em></button>
+								<button type="button" class="btn-type-sm darkPurple"><em class="txt-rendering">즉시지원</em></button>
+								<button type="button" class="btn-type-icon2 xs wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 							</div>
 						</div>
 					</div><!-- // project-info -->

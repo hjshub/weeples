@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>커뮤니티 상세 | 위플즈</title>
+
+	<script src="../static/js/jquery-3.6.0.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/gsap.min.js"></script>
+	<script defer="defer" src="../static/js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
+	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1680px)" type="text/css" href="../static/css/style_m.css">
+</head>
+<body>
+	<!--[if lt IE 10]>
+	<div id="legacy-IE">
+		<div class="info">
+		본 사이트는 Internet Explorer 10 기준(웹표준)으로 제작 된 사이트 입니다.
+		현재 고객님이 이용중인 브라우저는 곧 지원이 중단 됩니다.
+		<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">Internet Explorer 최신 버전</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">Chrome</a>과 같은 최신 브라우저를 이용해 주세요.
+		</div>
+	</div>
+	<![endif]-->
+
+	<!-- 건너띄기 링크 -->
+	<dl id="skipNavigation">
+		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
+		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
+		<dd><a href="#side-menu"><em>사이드 메뉴 바로가기</em></a></dd>
+		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
+	</dl>
+
+	<header>
+		<div class="container">
+			<span class="logo-wrap"><em class="hidden-txt">로고 이미지</em></span>
+			<hgroup id="h-menu" class="inner-cts clear">
+				<div class="gnb">
+					<ul>
+						<li><a href="#">프리랜서 등록</a></li>
+						<li><a href="#">프로젝트 등록</a></li>
+						<li><a href="#" class="search">프로젝트 검색</a></li>
+					</ul>
+				</div>
+				<div class="member">
+					<ul>
+						<!-- 로그인 전 -->
+						<li><a href="">회원가입</a></li>
+						<li><a href="">로그인</a></li>
+						<!-- 로그인 후 
+						<li><a href="">마이페이지</a></li>
+						<li><a href="">로그아웃</a></li>
+						-->
+					</ul>
+				</div>
+			</hgroup>	
+			<nav class="menu-all">
+				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<ul>
+					<li class="prj-add"><a href="#"><em class="hidden-txt">메뉴추가</em></a></li>
+					<li class="prj-search"><a href="#"><em class="hidden-txt">메뉴검색</em></a></li>
+				</ul>
+				<div>
+					<ul class="member animate fadeInUp">
+						<!-- 로그인 전 -->
+						<li><a href="#">로그인</a></li>
+						<li class="join">
+							<ul>
+								<li><a href="#">프리랜서 가입</a></li>
+								<li><a href="#">기업회원 가입</a></li>
+							</ul>
+						</li>
+						<!-- 로그인 후 
+						<li><a href="#">로그아웃</a></li>
+						<li><a href="#">마이페이지</a></li>
+						-->
+					</ul>
+					<ul class="category animate fadeInUp">
+							<li><a href="#">프로젝트 검색</a></li>
+							<li><a href="#">프로젝트 등록</a></li>
+							<li><a href="#">프리랜서 등록</a></li>
+							<li>
+								<a href="">위플즈 소개</a>
+								<ul class="depth2">
+									<li><a href="#">We:People</a></li>
+									<li><a href="#">We:Project</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">커뮤니티</a>
+								<ul class="depth2">
+									<li><a href="#">1:1문의</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">위플즈 커뮤니티</a></li>
+								</ul>
+							</li>
+						</ul>	
+				</div>
+			</nav>	
+		</div>
+	</header><!-- // header -->
+	
+	<div id="wrap" class="community">
+		<h1 class="hidden-txt">커뮤니티</h1>
+		<div class="sub-top-wrap">
+			<h2 class="heading-wrap-02">
+				Weple's Community<br/>
+				<span>위플즈 회원이 되시면 누구나 커뮤니티를 이용하실 수 있습니다</span>
+			</h2>
+		</div>
+		<div class="fixed-wrap inner">
+			<div class="form-inline">
+				<span class="select-wrap wide">
+					<label for="community"><em class="hidden-txt">커뮤니티명</em></label>
+					<select id="community">
+						<option value="">전체</option>
+						<option value="">구인&#47;구직</option>
+						<option value="">개발자모임</option>
+						<option value="">디자이너모임</option>
+						<option value="">퍼블리셔모임</option>
+						<option value="">기획자모임</option>
+						<option value="">PM모임</option>
+						<option value="">자유게시판</option>
+					</select>
+				</span>
+				<span class="text-wrap wide">
+					<input type="text" value="" autocomplete="off" placeholder="검색어를 입력해 주세요" title="검색어 입력 - 예)검색어를 입력해 주세요">
+				</span>
+				<span><button type="button" class="btn-type-icon2 search darkPurple"><em class="hidden-txt">검색</em></button></span>
+			</div>	
+		</div>	
+		<div class="contents-wrap visible inner">
+			<div class="contents" id="contents">
+				<div class="board-contents">
+					<div class="contents-head">
+						<div class="subject"><strong>어도피 xd 관련해서요ㅠ 프로토타입 실무에서 많이 사용하나요?</strong></div>
+						<ul>
+							<li><strong>작성자</strong><span>songc</span></li>
+							<li><strong>작성일</strong><span>2021-12-06</span></li>
+							<li><strong>조회수</strong><span>1,342</span></li>
+						</ul>
+					</div>
+					<div class="contents-body">
+						<!-- 내용 -->
+						<p style="text-align:center;"><img src="../static/img/view_sample.jpg" alt="샘플이미지"></p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>코로나19 팬데믹에 극장 개봉이 아닌 OTT 플랫폼 공개를 택했지만 전 세계 영화팬 사이에서 조용히 흥행하는 작품들이 하나둘 늘고 있다. DC 코믹스 대표 영웅들을 한데 모은 영화 &lt;잭스나이더의 저스티스 리그&gt;도 그중 하나다.</p>
+						<p>이미 2017년 극장 개봉한 &lt;저스티스 리그&gt;가 있었지만 당시 감독이었던 잭 스나이더의 이름을 새삼스럽게 넣은 이유는 알려진 대로 2017년 작품은 잭 스나이더가 아닌 조스 웨던의 인장이 강하게 찍혀 있기 때문. 딸의 사망으로 잭 스나이더가 작품에서 하차하고 &lt;어벤져스&gt; 시리즈로 인기를 구가하던 조스 웨던이 당시 프로젝트를 마무리했는데 잭 스나이더가 촬영한 분량 중 약 4분의 1만 활용하고 나머진 새로 찍은 결과물이었다.</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>HBO맥스를 통해 공개된 &lt;잭스나이더의 저스티스 리그&gt;는 DC 코믹스 및 영화팬들의 강한 요구에 잭 스나이더 감독이 감응한 결과물이다. 지구에 흩어져 있는 일종의 유기체 무기인 마더박스를 모아 세상을 정복하려는 우주 빌런 다크사이드를 대항해 메타휴먼들로 이뤄진 팀을 결성하려는 배트맨(벤 애플렉), 그리고 하나둘 모이기 시작한 초인들의 활약을 그리고 있다.</p>
+					</div>
+					<div class="btn-wrap align-c"><button type="button" class="btn-type-sm purple"><em class="txt-rendering">목록보기</em></button></div>
+				</div>
+			</div><!-- // contents -->
+		</div><!-- // contents-wrap -->
+	</div><!-- // #wrap -->
+	<footer>
+		<div class="inner-wrap">
+			<ul>
+				<li><a href="#">회사소개</a></li>
+				<li><a href="#">1:1문의</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#" class="privacy-policy">개인정보처리방침</a></li>
+				<li><a href="#">공지사항</a></li>
+				<li><a href="#">이벤트</a></li>
+				<li><a href="#">찾아오시는길</a></li>
+			</ul>
+
+			<address>
+				<span>주식회사 위플즈</span>
+				<span>서울특별시 강남구 테헤란로 211 한국고등교육재단빌딩 3층 (주)위플즈</span>
+				<span>사업자등록번호 : 209-81-57303</span>
+				<span>통신판매업신고 : 제2018-서울강남-02337 호</span>
+				<span>직업정보제공사업 신고번호 : J1200020180019</span>
+			</address>
+
+			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
+		</div>
+	</footer><!-- // footer -->
+</body>
+</html>

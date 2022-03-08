@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
 	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<link rel="stylesheet" media="all and (max-width:1680px)" type="text/css" href="../static/css/style_m.css">
 </head>
 <body>
 	<!--[if lt IE 10]>
@@ -108,7 +109,7 @@
 	<div id="wrap">
 		<h1 class="hidden-txt">프로젝트 등록</h1>
 		<div class="sub-top-wrap">
-			<h2 class="heading-wrap-02 long-txt v-center">
+			<h2 class="heading-wrap-02 long-txt">
 				귀사의 소중한 프로젝트에 최적의 인재&#47;기업을 추천해드립니다<br/>
 				<span>위플스는 5인 이상 투입인력 요청 시 프로젝트에 맞춤형 교육훈련을 실시합니다</span>
 			</h2>
@@ -116,8 +117,8 @@
 		<div class="fixed-wrap inner">
 			<div class="form-inline">
 				<ul class="col-2">
-					<li class="service"><span><em>We:Project 기업 서비스</em></span></li>
-					<li class="training on"><span><em>맞춤형 교육훈련 요청</em></span></li>
+					<li class="service"><a href="#"><em>We:Project 기업 서비스</em></a></li>
+					<li class="training"><a href="#"><em>맞춤형 교육훈련 요청</em></a></li>
 				</ul>	
 			</div>	
 		</div>	
@@ -533,7 +534,7 @@
 							<dl class="table">
 								<dt><strong>근무지</strong></dt>
 								<dd class="add-list-wrap place-list">
-									<div class="list-item">
+									<div class="list-item is_animated animate__fade_In_Up">
 										<span class="select-wrap">
 											<label for="area1_1"><em class="hidden-txt">근무지</em></label>
 											<select id="area1_1">
@@ -580,7 +581,7 @@
 								<dd>
 									<div class="form-txt-wrap">
 										<textarea name="" id="" placeholder="2,000자 이내로 입력해주세요"></textarea>
-										<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">200</em></span>
+										<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">2,000</em></span>
 									</div>
 								</dd>
 							</dl>
@@ -590,18 +591,18 @@
 								<dd>
 									<div class="form-txt-wrap">
 										<textarea name="" id="" placeholder="2,000자 이내로 입력해주세요"></textarea>
-										<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">200</em></span>
+										<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">2,000</em></span>
 									</div>
 								</dd>
 							</dl>
 
 							<div class="btn-wrap align-c">
-								<button type="submit" class="btn-type-lg color-purple anchor-toolTip" data-toolTip=1><em class="txt-rendering ft-md">등록하기</em></button>
-								<button type="button" class="btn-type-sm color-white"><em class="txt-rendering ft-md">취소</em></button>
+								<button type="submit" class="btn-type-lg purple"><em class="txt-rendering ft-md">등록하기</em></button>
+								<button type="button" class="btn-type-mid"><em class="txt-rendering ft-md">취소</em></button>
 							</div>
 						</form>
 
-						<div class="toolTip" id="toolTip-1">
+						<div class="toolTip block up">
 							<div>
 								<p class="txt-rendering">
 									프로젝트 등록을 하시면 <span>1일 이내 위플즈 담당 매니저가 연락</span>을 드리겠습니다.<br/>
