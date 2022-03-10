@@ -1398,8 +1398,8 @@ dl.table dd {display:table-cell; width:auto;}
 @-webkit-keyframes fade_In_Down {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -30%, 0);
-    transform: translate3d(0, -30%, 0)
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0)
   }
   to {
     opacity: 1;
@@ -1411,8 +1411,8 @@ dl.table dd {display:table-cell; width:auto;}
 @keyframes fade_In_Down {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -30%, 0);
-    transform: translate3d(0, -30%, 0)
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0)
   }
   to {
     opacity: 1;
