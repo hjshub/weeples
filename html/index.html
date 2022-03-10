@@ -42,65 +42,73 @@
 
 	<header>
 		<div class="container">
-			<span class="logo-wrap"><em class="hidden-txt">로고 이미지</em></span>
+			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
-						<li><a href="#">프리랜서 등록</a></li>
-						<li><a href="#">프로젝트 등록</a></li>
-						<li><a href="#" class="search">프로젝트 검색</a></li>
+						<li><a href="/partner/create.html">프리랜서 등록</a></li>
+						<li><a href="/project/create.html">프로젝트 등록</a></li>
+						<li><a href="/project/search.html" class="search">프로젝트 검색</a></li>
 					</ul>
 				</div>
 				<div class="member">
 					<ul>
 						<!-- 로그인 전 -->
-						<li><a href="">회원가입</a></li>
-						<li><a href="">로그인</a></li>
+						<li class="join" tabindex=0>
+							<a href="">회원가입</a>
+							<div class="h-center">
+								<div class="animate fast fadeInUp_">
+									<span><a href="/partner/signup.html"><em class="txt-rendering">프리랜서</em></a></span>
+									<span><a href="/client/signup.html"><em class="txt-rendering">기업회원</em></a></span>
+								</div>
+							</div>
+						</li>
+						<li><a href="/member/signin.html">로그인</a></li>
 						<!-- 로그인 후 
-						<li><a href="">마이페이지</a></li>
-						<li><a href="">로그아웃</a></li>
+						<li><a href="/member/partners_mypage.html">마이페이지</a></li>
+						<li><a href="javascript:void(0);">로그아웃</a></li>
 						-->
 					</ul>
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
 				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
-				<ul>
-					<li class="prj-add"><a href="#"><em class="hidden-txt">메뉴추가</em></a></li>
-					<li class="prj-search"><a href="#"><em class="hidden-txt">메뉴검색</em></a></li>
+				<ul class="quick">
+					<li class="prj-add"><a href="/project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
+					<li class="prj-search"><a href="/project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fadeInDown">
+					<ul class="member animate fast fadeInDown">
 						<!-- 로그인 전 -->
-						<li><a href="#">로그인</a></li>
+						<li><a href="/member/signin.html">로그인</a></li>
 						<li class="join">
 							<ul>
-								<li><a href="#">프리랜서 가입</a></li>
-								<li><a href="#">기업회원 가입</a></li>
+								<li><a href="/partner/signup.html">프리랜서 가입</a></li>
+								<li><a href="/client/signup.html">기업회원 가입</a></li>
 							</ul>
 						</li>
 						<!-- 로그인 후 
-						<li><a href="#">로그아웃</a></li>
-						<li><a href="#">마이페이지</a></li>
+						<li><a href="javascript:void(0);">로그아웃</a></li>
+						<li><a href="/member/partners_mypage.html">마이페이지</a></li>
 						-->
 					</ul>
-					<ul class="category animate fadeInDown">
-							<li><a href="#">프로젝트 검색</a></li>
-							<li><a href="#">프로젝트 등록</a></li>
-							<li><a href="#">프리랜서 등록</a></li>
+					<ul class="category animate fast fadeInDown">
+							<li><a href="/project/search.html">프로젝트 검색</a></li>
+							<li><a href="/project/create.html">프로젝트 등록</a></li>
+							<li><a href="/partner/create.html">프리랜서 등록</a></li>
 							<li>
-								<a href="">위플즈 소개</a>
+								<a href="/introduce/we_people.html">위플즈 소개</a>
 								<ul class="depth2">
-									<li><a href="#">We:People</a></li>
-									<li><a href="#">We:Project</a></li>
+									<li><a href="/introduce/we_people.html">We:People</a></li>
+									<li><a href="/introduce/we_project.html">We:Project</a></li>
 								</ul>
 							</li>
 							<li>
-								<a href="">커뮤니티</a>
+								<a href="/community/list.html">커뮤니티</a>
 								<ul class="depth2">
-									<li><a href="#">1:1문의</a></li>
-									<li><a href="#">FAQ</a></li>
-									<li><a href="#">위플즈 커뮤니티</a></li>
+									<li><a href="/community/inquiry.html">1:1문의</a></li>
+									<li><a href="/community/faq.html">FAQ</a></li>
+									<li><a href="/community/list.html">위플즈 커뮤니티</a></li>
 								</ul>
 							</li>
 						</ul>	
@@ -138,9 +146,9 @@
 										</ul>
 									</div>
 									<div class="btn-wrap-inline button-area align-r">
-										<button type="button" class="btn-type-customed benefit"><em class="txt-rendering">프리랜서 혜택보기</em></button><br/>
-										<button type="button" class="btn-type-icon search"><em class="txt-rendering">프로젝트 검색</em></button><br/>
-										<button type="button" class="btn-type-icon enrollment"><em class="txt-rendering">프로젝트 등록</em></button>
+										<button type="button" class="btn-type-customed benefit" onclick="javascript:location.href='/introduce/we_people.html'"><em class="txt-rendering">프리랜서 혜택보기</em></button><br/>
+										<button type="button" class="btn-type-icon search" onclick="javascript:location.href='/project/search.html'"><em class="txt-rendering">프로젝트 검색</em></button><br/>
+										<button type="button" class="btn-type-icon enrollment" onclick="javascript:location.href='/project/create.html'"><em class="txt-rendering">프로젝트 등록</em></button>
 									</div>
 								</dd>
 							</dl> 
@@ -161,8 +169,8 @@
 										</ul>
 									</div>
 									<div class="btn-wrap-inline button-area align-r">
-										<button type="button" class="btn-type-customed benefit"><em class="txt-rendering">기업회원 혜택보기</em></button><br/>
-										<button type="button" class="btn-type-icon prj-enrollment"><em class="txt-rendering">프로젝트 등록</em></button>
+										<button type="button" class="btn-type-customed benefit" onclick="javascript:location.href='/introduce/we_project.html'"><em class="txt-rendering">기업회원 혜택보기</em></button><br/>
+										<button type="button" class="btn-type-icon prj-enrollment" onclick="javascript:location.href='/project/create.html'"><em class="txt-rendering">프로젝트 등록</em></button>
 									</div>
 								</dd>
 							</dl>
@@ -183,7 +191,7 @@
 										</ul>
 									</div>
 									<div class="btn-wrap-inline button-area align-r">
-										<button type="button" class="btn-type-customed dialog"><em class="txt-rendering">커뮤니티 바로가기</em></button>
+										<button type="button" class="btn-type-customed dialog" onclick="javascript:location.href='/community/list.html'"><em class="txt-rendering">커뮤니티 바로가기</em></button>
 									</div>
 								</dd>
 							</dl> 
@@ -204,7 +212,7 @@
 										</ul>
 									</div>
 									<div class="btn-wrap-inline button-area align-r">
-										<button type="button" class="btn-type-customed event"><em class="txt-rendering">이벤트 바로가기</em></button>
+										<button type="button" class="btn-type-customed event" onclick="javascript:location.href=''"><em class="txt-rendering">이벤트 바로가기</em></button>
 									</div>
 								</dd>
 							</dl>
@@ -264,8 +272,8 @@
 											</div>
 										</div>
 										<div class="btn-wrap col-2">
-											<button class="btn-type purple"><em class="txt-rendering ft-md">상세보기</em></button>
-											<button class="btn-type darkPurple"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
+											<button class="btn-type purple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
+											<button class="btn-type darkPurple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
 									</article>
 								</li>
@@ -311,8 +319,8 @@
 											</div>
 										</div>
 										<div class="btn-wrap col-2">
-											<button class="btn-type purple"><em class="txt-rendering ft-md">상세보기</em></button>
-											<button class="btn-type darkPurple"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
+											<button class="btn-type purple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
+											<button class="btn-type darkPurple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
 									</article>
 								</li>
@@ -361,8 +369,8 @@
 											</div>
 										</div>
 										<div class="btn-wrap col-2">
-											<button class="btn-type purple"><em class="txt-rendering ft-md">상세보기</em></button>
-											<button class="btn-type darkPurple"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
+											<button class="btn-type purple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
+											<button class="btn-type darkPurple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
 									</article>
 								</li>
@@ -409,8 +417,8 @@
 											</div>
 										</div>
 										<div class="btn-wrap col-2">
-											<button class="btn-type purple"><em class="txt-rendering ft-md">상세보기</em></button>
-											<button class="btn-type darkPurple"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
+											<button class="btn-type purple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
+											<button class="btn-type darkPurple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
 									</article>
 								</li>
@@ -454,8 +462,8 @@
 											</div>
 										</div>
 										<div class="btn-wrap col-2">
-											<button class="btn-type purple"><em class="txt-rendering ft-md">상세보기</em></button>
-											<button class="btn-type darkPurple"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
+											<button class="btn-type purple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
+											<button class="btn-type darkPurple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
 									</article>
 								</li>
@@ -501,8 +509,8 @@
 											</div>
 										</div>
 										<div class="btn-wrap col-2">
-											<button class="btn-type purple"><em class="txt-rendering ft-md">상세보기</em></button>
-											<button class="btn-type darkPurple"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
+											<button class="btn-type purple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
+											<button class="btn-type darkPurple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
 									</article>
 								</li>
@@ -551,8 +559,8 @@
 											</div>
 										</div>
 										<div class="btn-wrap col-2">
-											<button class="btn-type purple"><em class="txt-rendering ft-md">상세보기</em></button>
-											<button class="btn-type darkPurple"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
+											<button class="btn-type purple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
+											<button class="btn-type darkPurple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
 									</article>
 								</li>
@@ -599,8 +607,8 @@
 											</div>
 										</div>
 										<div class="btn-wrap col-2">
-											<button class="btn-type purple"><em class="txt-rendering ft-md">상세보기</em></button>
-											<button class="btn-type darkPurple"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
+											<button class="btn-type purple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
+											<button class="btn-type darkPurple" onclick="javascript:location.href='/project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
 									</article>
 								</li>
@@ -659,24 +667,24 @@
 									<dt><strong>1:1 문의</strong></dt>
 									<dd><span class="txt-rendering">프리랜서 &middot; 기업/공공기관 &middot; 제휴 등을<br/> 위플즈에게 문의하세요.</span></dd>
 								</dl>
-								<button class="btn-type-arrow"><em class="hidden-txt">바로가기</em></button>
+								<button class="btn-type-arrow" onclick="javascript:location.href='/community/inquiry.html'"><em class="hidden-txt">바로가기</em></button>
 							</li>
 							<li class="animate animate-delay-02 fadeInUp">
 								<dl>
 									<dt><strong>FAQ</strong></dt>
 									<dd><span class="txt-rendering">위플즈에게 자주 물어보는 질문에 대한<br/> 답변을 확인하세요.</span></dd>
 								</dl>
-								<button class="btn-type-arrow"><em class="hidden-txt">바로가기</em></button>
+								<button class="btn-type-arrow" onclick="javascript:location.href='/community/faq.html'"><em class="hidden-txt">바로가기</em></button>
 							</li>
 							<li class="animate animate-delay-03 fadeInUp">
 								<dl>
 									<dt><strong>Contact Us</strong></dt>
 									<dd>
-										<span class="phone-number txt-rendering">02-6925-4849 (10:00-18:00, 공휴일 제외</span><br/>
+										<span class="tel txt-rendering">02-6925-4849 (10:00-18:00, 공휴일 제외</span><br/>
 										<span class="e-mail txt-rendering">help@weples.com</span>
 									</dd>
 								</dl>
-								<button class="btn-type-arrow"><em class="hidden-txt">바로가기</em></button>
+								<!-- <button class="btn-type-arrow"><em class="hidden-txt">바로가기</em></button> -->
 							</li>
 						</ul>
 						<dl class="animate fadeInUp">
@@ -725,9 +733,9 @@
 			<footer>
 				<div class="inner-wrap">
 					<ul>
-						<li><a href="#">회사소개</a></li>
-						<li><a href="#">1:1문의</a></li>
-						<li><a href="#">FAQ</a></li>
+						<li><a href="/introduce/we_people.html">회사소개</a></li>
+						<li><a href="/community/inquiry.html">1:1문의</a></li>
+						<li><a href="/community/faq.html">FAQ</a></li>
 						<li><a href="#">이용약관</a></li>
 						<li><a href="#" class="privacy-policy">개인정보처리방침</a></li>
 						<li><a href="#">공지사항</a></li>
@@ -745,7 +753,7 @@
 
 					<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
 				</div>
-			</footer>
+			</footer><!-- // footer -->
 		</section><!-- // section-view 05 -->
 	</main><!-- // #main -->
 

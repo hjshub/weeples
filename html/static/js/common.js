@@ -75,6 +75,18 @@ function commonFunction(){
 					.removeClass('animation--start');
 				}
 			});
+
+			gb.header.find('#h-menu .join').on({
+				'mouseenter focusin' : function(){
+					$(this).find('> div')
+					.stop().fadeIn(300)
+					.find('div').addClass('animation--start');
+				},
+				'mouseleave focusout' : function(){
+					$(this).find('> div').stop().fadeOut(300)
+					.find('div').removeClass('animation--start');
+				}
+			});
 		},
 
 		tabMenu = function(){
@@ -359,6 +371,24 @@ function commonFunction(){
 			}
 		},
 
+		modal = function(){
+			$('.active-modal').on('click', function(){
+				var modalName = $(this).data('modal-name');
+
+				$.get('../pop/popup.html', function(data){
+					gb.result = $(data).filter('#' + modalName).html();
+
+					gb.body.append(gb.result);
+				});
+			});
+
+			$(document).on('click', '.modal-off', function(){
+				$('.dimmed').stop().fadeOut('200', function(){
+					$(this).remove();
+				});
+			});
+		},
+
 		mainSwiper = function(){ // 메인 스와이퍼
 			if(gb.introSwiper == undefined){
 				gb.introSwiper = new Swiper('.presentation > div', {
@@ -536,6 +566,7 @@ function commonFunction(){
 			filter();
 			dropDown();
 			dropDown2();
+			modal();
 			calendar();
 			toolTip();
 			tabMenu();
