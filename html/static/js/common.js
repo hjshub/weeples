@@ -181,7 +181,7 @@ function commonFunction(){
 		},
 
 		recruit = function(){
-			if(gb.detail){
+			if(gb.detail.length){
 				var trg = $('.prj-detail .info ul');
 				if(gb.isMobile){
 					trg.css({
@@ -422,15 +422,17 @@ function commonFunction(){
 		},
 
 		tabSwiper = function(){
-			if(gb.breakPoint && gb.tabSwiper == undefined){
-				gb.tabSwiper = new Swiper(gb.menuSwiper[0], {
-					loop : false,
-					speed : 600,
-					slidesPerView: 'auto',
-				});
-			}else if(!gb.breakPoint && gb.tabSwiper != undefined){
-				gb.tabSwiper.destroy();
-				gb.tabSwiper = undefined;
+			if(gb.menuSwiper.length){
+				if(gb.breakPoint && gb.tabSwiper == undefined){
+					gb.tabSwiper = new Swiper(gb.menuSwiper[0], {
+						loop : false,
+						speed : 600,
+						slidesPerView: 'auto',
+					});
+				}else if(!gb.breakPoint && gb.tabSwiper != undefined){
+					gb.tabSwiper.destroy();
+					gb.tabSwiper = undefined;
+				}
 			}
 		},
 
