@@ -170,9 +170,13 @@ header .menu-all > div .category > ul > li > a {font-size:3.2rem;}
 
 	.introduce .education li {width:100%; min-height:auto;}
 	.introduce .education li + li {margin-left:0; margin-top:80px;}
-	.introduce .education li + li:before {left:50%; top:-50px; width:33px; height:20px; margin-left:-16px; background-image:url(../img/icon/ico-arrow-nxt2.png); background-position:center; background-repeat:no-repeat;}
+	.introduce .education li + li:before {left:50%; top:-50px; width:33px; height:20px; margin-left:-16px; background-image:url(../img/icon/ico-arrow-down-purple.png); background-position:center; background-repeat:no-repeat;}
 	.introduce .education li span {padding:60px 60px 60px 40%; text-align:left;}
 	.introduce .education li span:before {width:40%; height:100%;}
+
+	.toolTip.certification {right:-20px; left:auto; transform:none; -webkit-transform:none;}
+	.toolTip.certification:before,
+	.toolTip.certification:after {left:auto; right:17px;}
 }
 @media only screen and (max-width:920px){
 	.main-section-wrap-01 {min-height:-webkit-calc(100vh - 85px); min-height:-moz-calc(100vh - 85px); min-height:calc(100vh - 85px);}
@@ -300,6 +304,14 @@ header .menu-all > div .category > ul > li > a {font-size:3.2rem;}
 	.add-list-wrap.place-list .btn-wrap-inline {margin-left:0;}
 	.add-list-wrap.certificate .list-item {position:relative; padding-bottom:40px;}
 	.add-list-wrap.certificate .list-item .btn-wrap-inline {position:absolute; bottom:0; left:0;}
+
+	.form-list .modify-list-wrap .list-item {border-bottom:2px solid #7b38b8;}
+	.form-list .modify-list-wrap .list-item .btn-fold,
+	.form-list .modify-list-wrap .list-item.fold .btn-fold {width:35px; height:35px; top:25px; bottom:auto; background-size:20px auto;}
+	.form-list .modify-list-wrap .list-item .heading {padding:25px 35px 25px 0; height:162px;}
+	.form-list .modify-list-wrap .list-item .heading dd span,
+	.form-list .modify-list-wrap .list-item .heading dd span:nth-of-type(2) {width:100%; padding:0; text-align:left !important; margin-top:25px;}
+	.form-list .modify-list-wrap .list-item .modify-list {padding-top:25px;}
 
 	.view.detail .contents-head {padding-bottom:60px;}
 	.view:not(.detail) .contents-head {padding-bottom:50px;}
@@ -521,7 +533,8 @@ header .menu-all > div .category > ul > li > a {font-size:3.2rem;}
 	.contents-wrap .form-list {padding:35px 0 50px;}
 	.contents-wrap.list-type-01 .form-list {padding:35px 0 0;}
 	.form-list dl.table + dl {margin-top:35px;}
-	.form-list dl + div {margin-top:50px;}
+	.form-list dl + div {margin-top:35px;}
+	.form-list .modify-list-wrap + .add-list-wrap {margin-top:35px;}
 
 	.text-wrap.half,
 	.text-wrap.half2,
@@ -668,6 +681,10 @@ header .menu-all > div .category > ul > li > a {font-size:3.2rem;}
 	.board-contents .contents-head ul li + li {margin-left:0; margin-top:10px;}
 
 	.introduce .support li {margin:10px;}
+
+	.toolTip.certification {min-width:230px; right:auto; left:50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%);}
+	.toolTip.certification:before,
+	.toolTip.certification:after {left:50%; right:auto;}
 }
 @media only screen and (max-width:375px){
 	footer ul li + li {margin-left:15px;}

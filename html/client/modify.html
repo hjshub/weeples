@@ -37,8 +37,8 @@
 	</dl>
 
 	<header>
-		<div class="container">
-			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
+		<div class="inner-wrap">
+			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
@@ -68,46 +68,50 @@
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
-				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
 					<li class="prj-add"><a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
 					<li class="prj-search"><a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fast fadeInDown">
+					<div>
+						<ul class="member animate fast fadeInDown">
 						<!-- 로그인 전 -->
-						<li><a href="../member/signin.html">로그인</a></li>
-						<li class="join">
+							<li><a href="../member/signin.html">로그인</a></li>
+							<li class="join">
+								<ul>
+									<li><a href="../partner/signup.html">프리랜서 가입</a></li>
+									<li><a href="../client/signup.html">기업회원 가입</a></li>
+								</ul>
+							</li>
+							<!-- 로그인 후 
+							<li><a href="javascript:void(0);">로그아웃</a></li>
+							<li><a href="../member/partners_mypage.html">마이페이지</a></li>
+							-->
+						</ul>
+						<div class="category animate fast fadeInDown">
 							<ul>
-								<li><a href="../partner/signup.html">프리랜서 가입</a></li>
-								<li><a href="../client/signup.html">기업회원 가입</a></li>
+								<li><a href="../project/search.html">프로젝트 검색</a></li>
+								<li><a href="../project/create.html">프로젝트 등록</a></li>
+								<li><a href="../partner/create.html">프리랜서 등록</a></li>
+								<li>
+									<a href="../introduce/we_people.html">위플즈 소개</a>
+									<ul class="depth2">
+										<li><a href="../introduce/we_people.html">We:People</a></li>
+										<li><a href="../introduce/we_project.html">We:Project</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../community/list.html">커뮤니티</a>
+									<ul class="depth2">
+										<li><a href="../community/inquiry.html">1:1문의</a></li>
+										<li><a href="../community/faq.html">FAQ</a></li>
+										<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
+									</ul>
+								</li>
 							</ul>
-						</li>
-						<!-- 로그인 후 
-						<li><a href="javascript:void(0);">로그아웃</a></li>
-						<li><a href="../member/partners_mypage.html">마이페이지</a></li>
-						-->
-					</ul>
-					<ul class="category animate fast fadeInDown">
-							<li><a href="../project/search.html">프로젝트 검색</a></li>
-							<li><a href="../project/create.html">프로젝트 등록</a></li>
-							<li><a href="../partner/create.html">프리랜서 등록</a></li>
-							<li>
-								<a href="../introduce/we_people.html">위플즈 소개</a>
-								<ul class="depth2">
-									<li><a href="../introduce/we_people.html">We:People</a></li>
-									<li><a href="../introduce/we_project.html">We:Project</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../community/list.html">커뮤니티</a>
-								<ul class="depth2">
-									<li><a href="../community/inquiry.html">1:1문의</a></li>
-									<li><a href="../community/faq.html">FAQ</a></li>
-									<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
-								</ul>
-							</li>
-						</ul>	
+						</div>
+					</div>	
 				</div>
 			</nav>	
 		</div>
@@ -117,15 +121,15 @@
 		<h1 class="hidden-txt">기업정보등록</h1>
 		<div class="sub-top-wrap">
 			<h2 class="heading-wrap-02 long-txt">
-				위플즈 기업회원이 되시면 다양한 기업지원 서비스를 받으실 수 있습니다<br/>
+				위플즈 기업회원이 되시면<br class="mob-only" /> 다양한 기업지원 서비스를 받으실 수 있습니다<br/>
 				<span>위플스는 성공적인 프로젝트를 위해 교육훈련지원, 제안서작성 및 프로젝트 전 단계 업무를 지원합니다</span>
 			</h2>
 		</div>
 		<div class="fixed-wrap inner">
 			<div class="form-inline">
 				<ul class="col-2">
-					<li class="service"><a href="../introduce/we_project.html"><em>We:Project 기업 서비스</em></a></li>
-					<li class="training"><a href="#"><em>맞춤형 교육훈련 요청</em></a></li>
+					<li class="service"><a href="../introduce/we_project.html"><em class="txt-rendering">We:Project<br class="mob-only" /> 기업 서비스</em></a></li>
+					<li class="training"><a href="#"><em class="txt-rendering">맞춤형<br class="mob-only" /> 교육훈련 요청</em></a></li>
 				</ul>	
 			</div>	
 		</div>	
@@ -159,7 +163,7 @@
 							<dl class="table">
 								<dt><strong>기업구분</strong></dt>
 								<dd>
-									<div class="form-wrap">
+									<div class="form-wrap col-2">
 										<span>
 											<input id="corporation" name="contract" type="radio" checked>
 											<label for="corporation"><em class="txt-rendering">법인</em></label>
@@ -181,6 +185,7 @@
 											<input class="hidden-txt" type="file" id="imgAttach" value="" title="이미지 첨부" onchange="commonFunction().fileUpload(this, 'image');">
 											<img src="../static/img/client-default-image.gif" alt="기본 이미지">
 										</span>
+										<br class="mob-only" />
 										<em class="txt-rendering">(최적 사진 사이즈 : 200X200px &#47; 권장 파일 포맷 : gif, png, jpg)</em>
 									</div>
 								</dd>
@@ -266,7 +271,7 @@
 								<dt><strong>기업소개</strong></dt>
 								<dd>
 									<div class="form-txt-wrap">
-										<textarea name="" id="" placeholder="500자 이내로 입력해주세요"></textarea>
+										<textarea name="" id="" placeholder="500자 이내로 입력해주세요" title="기업소개 - 500자 이내로 입력해주세요"></textarea>
 										<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">500</em></span>
 									</div>
 								</dd>
@@ -346,11 +351,11 @@
 							</dl>
 							<dl class="table">
 								<dt><strong>이메일</strong></dt>
-								<dd>
+								<dd class="email">
 									<span class="text-wrap half">
 										<input type="text" class="txt-rendering" id="" value="" placeholder="이메일 아이디" title="이메일 - 이메일 아이디">
 									</span>
-									<span class="email txt-rendering">@</span>
+									<span class="txt-rendering">@</span>
 									<span class="select-wrap half">
 										<label for="email"><em class="hidden-txt">이메일 주소 폼</em></label>
 										<select id="email" class="txt-rendering">
@@ -383,11 +388,19 @@
 						</div>	
 					</div><!-- // contents-body (담당자정보)-->
 
-					<div class="btn-wrap align-c">
+					<div class="btn-wrap align-c col-mid-2-2">
 						<button type="submit" class="btn-type-lg purple"><em class="txt-rendering ft-md">수정하기</em></button>
 						<button type="button" class="btn-type-mid"><em class="txt-rendering ft-md">취소</em></button>
 					</div>
 				</form>
+
+				<div class="toolTip block up">
+					<div>
+						<p class="txt-rendering">
+							회원가입을 하시면 <span>무료로 프로젝트 등록</span>을 하실 수 있습니다
+						</p>
+					</div>
+				</div>
 			</div><!-- // contents -->
 		</div><!-- // contents-wrap -->
 	</div><!-- // #wrap -->

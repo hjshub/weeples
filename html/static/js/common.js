@@ -301,6 +301,24 @@ function commonFunction(){
 			}
 		},
 
+		foldList = function(t){ // 리스트 접기, 펼치기
+			var Item = $(t).closest('.list-item');
+
+			if(Item.hasClass('fold')){
+				Item
+				.removeClass('fold')
+				.find('.heading').stop().fadeOut(0);
+
+				Item.find('.modify-list').slideDown('300');
+			}else {
+				Item
+				.addClass('fold')
+				.find('.heading').stop().fadeIn(300);
+				
+				Item.find('.modify-list').slideUp('300');
+			}
+		},
+
 		fileUpload = function(el, type){
 		  var pathpoint = el.value.lastIndexOf('.'),
 	    		filepoint = el.value.substring(pathpoint + 1, el.length),
@@ -627,6 +645,7 @@ function commonFunction(){
 			tabSwiper : tabSwiper,
 			addList : addList,
 			removeList : removeList,
+			foldList : foldList,
 			fileUpload : fileUpload,
 			recruit : recruit,
 			motion : motion
