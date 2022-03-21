@@ -16,12 +16,16 @@ var _gb = function(){
 	this.menuAll = $('.menu-all');
 	this.filter = $('.filter');
 	this.sideMenu = $('.side-menu');
+	this.detail = $('.detail');
 	this.dropDown = $('.dropDown');
 	this.dropDown2 = $('.dropDown2');
 	this.tabMenu = $('.tab--active');
 	this.tabCtsWrap = $('.tabCts-wrap');
+	this.menuSwiper = $('.menu-swiper > div');
 	this.dimmed = $('<div class="dimmed"></div>');
-	this.isMobile = this.wW <= 850 ? true : false;
+	this.dimmed2 = $('<div class="dimmed2"></div>');
+	this.isMobile = this.wW <= 768 ? true : false;
+	this.breakPoint = this.wW <= 1200 ? true : false;
 },
 
 gb = new _gb();
@@ -43,35 +47,33 @@ function commonFunction(){
 				e.preventDefault();
 				e.stopPropagation();
 
-				gb.menuAll.toggleClass('open');
-
-				if(gb.menuAll.hasClass('open')){
+				if(!gb.header.hasClass('open')){
+					gb.header.addClass('open');
 					gb.menuAll.find('> div')
 					.stop().fadeIn('300', function(){
 						if(gb.main.length){
 							$.fn.fullpage.setAllowScrolling(false);
-						}else{
-							gb.body.css({
-								'height': '100vh',
-								'overflow' : 'hidden' 
-							});
 						}
+						gb.body.css({
+							'height': gb.menuAll.find('> div').height() + 'px',
+							'overflow' : 'hidden' 
+						});
 					});
-					gb.menuAll.find('> div ul')
+					gb.menuAll.find('.animate')
 					.addClass('animation--start');
 				}else {
+					gb.header.removeClass('open');
 					gb.menuAll.find('> div')
 					.stop().fadeOut('300', function(){
 						if(gb.main.length){
 							$.fn.fullpage.setAllowScrolling(true);
-						}else{
-							gb.body.css({
-								'height': 'auto',
-								'overflow' : 'auto' 
-							});
 						}
+						gb.body.css({
+							'height': 'auto',
+							'overflow' : 'auto' 
+						});
 					});
-					gb.menuAll.find('> div ul')
+					gb.menuAll.find('.animate')
 					.removeClass('animation--start');
 				}
 			});
@@ -106,9 +108,34 @@ function commonFunction(){
 			});
 		},
 
-		filter = function(){ // 프로젝트 리스트 필터
+		filter = function(){ // 프로젝트 필터
+			gb.activeFilter = $('.activeFilter');
+
 			var radio = gb.filter.find('.sort-wrap input[type=radio]'),
 			checkbox = gb.filter.find('.sort-wrap input[type=checkbox]');
+
+
+			gb.activeFilter.on('click', function(){
+				var trg = $(this);
+				if(trg.hasClass('on')){
+					trg.removeClass('on');
+					$('#side-menu').removeClass('fold');
+					$('.dimmed2').remove();
+				}else{
+					trg.addClass('on');
+					$('#side-menu').addClass('fold');
+					gb.body.append(gb.dimmed2);
+					$('.dimmed2').fadeIn(400);
+				}
+			});
+
+			$(document).on('click', '.dimmed2', function(){
+				$('#side-menu').removeClass('fold');
+				$(this).fadeOut(400, function(){
+					$(this).remove();
+					gb.activeFilter.removeClass('on');
+				});
+			});
 
 			gb.workArea = new Array;
 
@@ -117,12 +144,14 @@ function commonFunction(){
 				txt_value = trg.next('label').text();
 				if(trg.prop('checked')){
 					trg.closest('dl').find('dt em').html(txt_value);
+					$('.sort-info').find('.' + trg.attr('name')).html(txt_value);
 				}
 
 				trg.on('change', function(){
 					txt_value = trg.next('label').text();
 					if(trg.prop('checked')){
 						trg.closest('dl').find('dt em').html(txt_value);
+						$('.sort-info').find('.' + trg.attr('name')).html(txt_value);
 					}
 				});
 			});
@@ -135,6 +164,7 @@ function commonFunction(){
 					gb.workArea.push(txt_value);
 				}
 				trg.closest('dl').find('dt em').html(gb.workArea.join(', '));
+				$('.sort-info').find('.' + trg.attr('name')).html(gb.workArea.join(', '));
 
 				trg.on('change', function(){
 					txt_value = trg.next('label').text();
@@ -145,8 +175,24 @@ function commonFunction(){
 						gb.workArea.splice(idx, 1);
 					}
 					trg.closest('dl').find('dt em').html(gb.workArea.join(', '));
+					$('.sort-info').find('.' + trg.attr('name')).html(gb.workArea.join(', '));
 				});
 			});
+		},
+
+		recruit = function(){
+			if(gb.detail){
+				var trg = $('.prj-detail .info ul');
+				if(gb.isMobile){
+					trg.css({
+						'width' : trg.find('li').length * 200 + (trg.find('li').length - 1) * 10 + 'px'
+					});
+				}else {
+					trg.css({
+						'width' : 'auto'
+					});
+				}	
+			}
 		},
 
 		dropDown = function(){
@@ -297,45 +343,30 @@ function commonFunction(){
 			$('.anchor-toolTip').on({
 				'mouseenter focusin' : function(){
 					var trgAnchor = $(this),
-					dataToolTip = trgAnchor.attr('data-toolTip'),
-					currentToolTip = $('.toolTip#' + dataToolTip),
 					anchorOffsetTop = trgAnchor.offset().top,
-					anchorOffsetLeft = trgAnchor.offset().left,
 					currentScrollTop = document.documentElement.scrollTop,
 					clientHeight = document.documentElement.clientHeight,
 					scrollHeight = currentScrollTop + clientHeight,
 					_clientY = anchorOffsetTop - currentScrollTop,
-					clientY = scrollHeight - anchorOffsetTop,
-					clientX = anchorOffsetLeft + trgAnchor.width() / 2;
+					clientY = scrollHeight - anchorOffsetTop;
+
+					gb.currentToolTip = trgAnchor.find('.toolTip');
 
 					if(_clientY >= clientY){
-						currentToolTip
+						gb.currentToolTip
 						.removeClass('up')
 						.addClass('down')
-						.css({
-							'top' : _clientY - 20 + 'px',
-							'bottom' : 'auto',
-							'left' : clientX + 'px'
-						})
 						.stop().fadeIn(300);
 					}else {
-						currentToolTip
+						gb.currentToolTip
 						.removeClass('down')
 						.addClass('up')
-						.css({
-							'bottom' : clientY - (trgAnchor.height() + 20) + 'px',
-							'top' : 'auto',
-							'left' : clientX + 'px'
-						})
 						.stop().fadeIn(300);
 					}
 				},
-				'mouseleave focusout' : function(){
-					var trgAnchor_ = $(this),
-					dataToolTip_ = trgAnchor_.attr('data-toolTip'),
-					currentToolTip_ = $('.toolTip#' + dataToolTip_);
 
-					currentToolTip_.stop().fadeOut(300);
+				'mouseleave focusout' : function(){
+					gb.currentToolTip.stop().fadeOut(300);
 				}
 			});
 		},
@@ -356,7 +387,8 @@ function commonFunction(){
 					duration:1, 
 					delay:0.4, 
 					onComplete:function(){
-						$('.section-wrap-01 dl dt').addClass('active')
+						$('.section-wrap-01 dl dt').addClass('active');
+						gsap.fromTo(".section-wrap-01 .btn-wrap", {opacity:0, y:50}, {opacity:1, duration:1, y:0});
 					}
 				});
 				gsap.fromTo(".section-wrap-01 dl dd", {
@@ -387,6 +419,19 @@ function commonFunction(){
 					$(this).remove();
 				});
 			});
+		},
+
+		tabSwiper = function(){
+			if(gb.breakPoint && gb.tabSwiper == undefined){
+				gb.tabSwiper = new Swiper(gb.menuSwiper[0], {
+					loop : false,
+					speed : 600,
+					slidesPerView: 'auto',
+				});
+			}else if(!gb.breakPoint && gb.tabSwiper != undefined){
+				gb.tabSwiper.destroy();
+				gb.tabSwiper = undefined;
+			}
 		},
 
 		mainSwiper = function(){ // 메인 스와이퍼
@@ -426,11 +471,11 @@ function commonFunction(){
 			if(gb.prjSwiper == undefined){
 				gb.prjSwiper = new Swiper('.project-list > div', {
 					// Optional parameters
-					loop : true,
+					loop : false,
 					speed : 600,
 					direction : 'horizontal',
-					slidesPerView: 4,
-        	slidesPerGroup: 4,
+					slidesPerView: 'auto',
+        	slidesPerGroup: 1,
 					spaceBetween : 0,
 					centeredSlides : false,
 					debugger: true, // Enable debugger
@@ -442,12 +487,20 @@ function commonFunction(){
 						nextEl: ".swiper-nxt",
           	prevEl: ".swiper-prev",
         	},
-        	//breakpoints: {
-			    //when window width is >= 320px
-			    //320: {
-			    //  slidesPerView: 4,
-        	//	slidesPerGroup: 4,
-			    //},
+        	breakpoints: {
+				    1024: {
+				      slidesPerView: 2,
+	        		slidesPerGroup: 2,
+				    },
+				    1480: {
+				      slidesPerView: 3,
+	        		slidesPerGroup: 3,
+				    },
+				    1920: {
+				      slidesPerView: 4,
+	        		slidesPerGroup: 4,
+				    },
+					}
 				});
 			}
 		},
@@ -491,7 +544,7 @@ function commonFunction(){
 				scrollingSpeed: 700,
 				autoScrolling: true,
 				scrollBar: false,
-				fitToSection: false,
+				fitToSection: true,
 				fitToSectionDelay: 1000,
 				easing: 'easeInOutCubic',
 				easingcss3: 'ease-in-out',
@@ -499,7 +552,7 @@ function commonFunction(){
 				resetSliders: false,
 				touchSensitivity: 15,
 				bigSectionsDestination: null,
-				resize:false,
+				resize:true,
 		 
 				//접근성
 				keyboardScrolling: true,
@@ -509,7 +562,7 @@ function commonFunction(){
 				//디자인
 				controlArrows: true,
 				verticalCentered: false,
-				responsiveWidth: 850,
+				responsiveWidth: 1201,
 				responsiveHeight: 0,
 				responsiveSlides: false,
 		 
@@ -525,17 +578,6 @@ function commonFunction(){
 						if(!gb.html.hasClass('activeScroll')){
 							gb.html.addClass('activeScroll');
 
-							if(!gb.isMobile){
-								gsap.set(gb.header,{top:0, bottom:'auto'});
-								gsap.from(gb.header, 0.5,{
-									top:'-90px'
-								});
-							}else{
-								gsap.set(gb.header,{bottom:0, top:'auto'});
-								gsap.from(gb.header, 0.5,{
-									bottom:'-90px'
-								});
-							}
 							setTimeout(function(){
 								$('.main-section-wrap-02').addClass('motion');
 							},300);
@@ -549,7 +591,7 @@ function commonFunction(){
 						$('.main-section-wrap-0' + origin).find('.animate').removeClass('animation--start');
 						setTimeout(function(){
 							$('.main-section-wrap-0' + destination).find('.animate').addClass('animation--start');
-						},500);
+						},200);
 					}
 				}
 			})
@@ -570,6 +612,7 @@ function commonFunction(){
 			calendar();
 			toolTip();
 			tabMenu();
+			recruit();
 			//contextMenu_cancel();
 		}
 
@@ -579,29 +622,28 @@ function commonFunction(){
 			mainSwiper : mainSwiper,
 			prjSwiper : prjSwiper,
 			ntcSwiper : ntcSwiper,
+			tabSwiper : tabSwiper,
 			addList : addList,
 			removeList : removeList,
 			fileUpload : fileUpload,
+			recruit : recruit,
 			motion : motion
 		}
 	}
-	/*
-	window.addEventListener('resize', function(){
-		gb.isMobile = window.innerWidth <= 850 ? true : false;
 
-		if(!gb.isMobile){
-			gsap.set(gb.header,{top:0, bottom:'auto'});
-			gsap.from(gb.header, 0.5,{
-				top:'-90px'
-			});
-		}else{
-			gsap.set(gb.header,{bottom:0, top:'auto'});
-			gsap.from(gb.header, 0.5,{
-				bottom:'-90px'
-			});
+	window.addEventListener('resize', function(){
+		gb.isMobile = window.innerWidth <= 768 ? true : false;
+		gb.breakPoint = window.innerWidth <= 1200 ? true : false;
+
+		commonFunction().tabSwiper();
+		commonFunction().recruit();
+
+		if(!gb.breakPoint){
+			$('#side-menu').removeClass('fold');
+			$('.dimmed2').remove();
+			gb.activeFilter.removeClass('on');
 		}
 	});
-	*/
 
 	if(!gb.main.length){
 		window.addEventListener('scroll', function(){

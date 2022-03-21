@@ -41,7 +41,7 @@
 	</dl>
 
 	<header>
-		<div class="container">
+		<div class="inner-wrap">
 			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
@@ -72,46 +72,50 @@
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
-				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
 					<li class="prj-add"><a href="project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
 					<li class="prj-search"><a href="project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fast fadeInDown">
-						<!-- 로그인 전 -->
-						<li><a href="member/signin.html">로그인</a></li>
-						<li class="join">
+					<div>
+						<ul class="member animate fast fadeInDown">
+							<!-- 로그인 전 -->
+							<li><a href="member/signin.html">로그인</a></li>
+							<li class="join">
+								<ul>
+									<li><a href="partner/signup.html">프리랜서 가입</a></li>
+									<li><a href="client/signup.html">기업회원 가입</a></li>
+								</ul>
+							</li>
+							<!-- 로그인 후 
+							<li><a href="javascript:void(0);">로그아웃</a></li>
+							<li><a href="member/partners_mypage.html">마이페이지</a></li>
+							-->
+						</ul>
+						<div class="category animate fast fadeInDown">
 							<ul>
-								<li><a href="partner/signup.html">프리랜서 가입</a></li>
-								<li><a href="client/signup.html">기업회원 가입</a></li>
+								<li><a href="project/search.html">프로젝트 검색</a></li>
+								<li><a href="project/create.html">프로젝트 등록</a></li>
+								<li><a href="partner/create.html">프리랜서 등록</a></li>
+								<li>
+									<a href="introduce/we_people.html">위플즈 소개</a>
+									<ul class="depth2">
+										<li><a href="introduce/we_people.html">We:People</a></li>
+										<li><a href="introduce/we_project.html">We:Project</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="community/list.html">커뮤니티</a>
+									<ul class="depth2">
+										<li><a href="community/inquiry.html">1:1문의</a></li>
+										<li><a href="community/faq.html">FAQ</a></li>
+										<li><a href="community/list.html">위플즈 커뮤니티</a></li>
+									</ul>
+								</li>
 							</ul>
-						</li>
-						<!-- 로그인 후 
-						<li><a href="javascript:void(0);">로그아웃</a></li>
-						<li><a href="member/partners_mypage.html">마이페이지</a></li>
-						-->
-					</ul>
-					<ul class="category animate fast fadeInDown">
-							<li><a href="project/search.html">프로젝트 검색</a></li>
-							<li><a href="project/create.html">프로젝트 등록</a></li>
-							<li><a href="partner/create.html">프리랜서 등록</a></li>
-							<li>
-								<a href="introduce/we_people.html">위플즈 소개</a>
-								<ul class="depth2">
-									<li><a href="introduce/we_people.html">We:People</a></li>
-									<li><a href="introduce/we_project.html">We:Project</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="community/list.html">커뮤니티</a>
-								<ul class="depth2">
-									<li><a href="community/inquiry.html">1:1문의</a></li>
-									<li><a href="community/faq.html">FAQ</a></li>
-									<li><a href="community/list.html">위플즈 커뮤니티</a></li>
-								</ul>
-							</li>
-						</ul>	
+						</div>
+					</div>	
 				</div>
 			</nav>	
 		</div>
@@ -136,7 +140,7 @@
 										당신이 원하는 일과 생활의 균형을 누리세요
 									</div>
 									<div class="info-02">
-										<em class="txt-rendering">퇴직금, 대출에서 각종 복지, 교육, 법률, 세무 지원까지<br/> 지속적인 프리랜서 활동에 필요한 다양한 업무지원 서비스 제공</em><br />
+										<em class="txt-rendering">퇴직금, 대출에서 각종 복지, 교육, 법률, 세무 지원까지<br class="pc-only" /> 지속적인 프리랜서 활동에 필요한 다양한 업무지원 서비스 제공</em><br />
 										<ul>
 											<li><span><img src="./static/img/icon/ico-support-01-1x.png" alt="금융지원"></span><br /><em class="txt-rendering">금융지원</em></li>
 											<li><span><img src="./static/img/icon/ico-support-02-1x.png" alt="복지지원"></span><br /><em class="txt-rendering">복지지원</em></li>
@@ -161,7 +165,7 @@
 										당신이 원하는 일과 생활의 균형을 누리세요
 									</div>
 									<div class="info-02">
-										<em class="txt-rendering">성공적인 프로젝트를 위해 고객의 시스템과 업무를 이해하는 맞춤형 인재 제공<br /> 프로젝트 투입 전 자체 교육기관에서 교육훈련 후 투입</em><br />
+										<em class="txt-rendering">성공적인 프로젝트를 위해 고객의 시스템과 업무를 이해하는 맞춤형 인재 제공<br class="pc-only" /> 프로젝트 투입 전 자체 교육기관에서 교육훈련 후 투입</em><br />
 										<ul class="step">
 											<li><span><img src="./static/img/icon/ico-prj-01-1x.png" alt="교육훈련"></span><br /><em class="txt-rendering">교육훈련</em></li>
 											<li><span><img src="./static/img/icon/ico-prj-02-1x.png" alt="프로젝트 투입"></span><br /><em class="txt-rendering">프로젝트 투입</em></li>
@@ -169,7 +173,7 @@
 										</ul>
 									</div>
 									<div class="btn-wrap-inline button-area align-r">
-										<button type="button" class="btn-type-customed benefit" onclick="javascript:location.href='introduce/we_project.html'"><em class="txt-rendering">기업회원 혜택보기</em></button><br/>
+										<button type="button" class="btn-type-customed chart" onclick="javascript:location.href='introduce/we_project.html'"><em class="txt-rendering">기업회원 혜택보기</em></button><br/>
 										<button type="button" class="btn-type-icon prj-enrollment" onclick="javascript:location.href='project/create.html'"><em class="txt-rendering">프로젝트 등록</em></button>
 									</div>
 								</dd>
@@ -228,8 +232,8 @@
 				<h2 class="hidden-txt">project</h2>
 				<button class="scroll" type="button"><em class="hidden-txt">프로젝트 리스트로 이동</em></button>
 				<div class="project inner-wrap">
-					<div class="project-list center">
-						<h3 class="heading-wrap-03 animate fadeInUp">Weple’s Project List <span>위플스가 엄선한 프로젝트를 만나보세요.</span></h3>
+					<div class="project-list">
+						<h3 class="heading-wrap-03 animate fadeInUp">Weple’s Project List<br class="mob-only" /> <span>위플스가 엄선한 프로젝트를 만나보세요.</span></h3>
 						<div class="animate fadeInUp">
 							<ul class="swiper-wrapper">
 								<li class="swiper-slide">
@@ -271,7 +275,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="btn-wrap col-2">
+										<div class="btn-wrap col-lg-2">
 											<button class="btn-type purple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
 											<button class="btn-type darkPurple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
@@ -287,7 +291,7 @@
 											<div class="info">
 												<h4 class="heading-wrap-04">
 													<span class="txt-color-purple3">지방근무에 따른 숙식 제공</span><br/>
-													<strong>KT&G 담배인삼공제회 홈페이지 운영 사업</strong>
+													<strong>KT&amp;G 담배인삼공제회 홈페이지 운영 사업</strong>
 												</h4>
 												<div>
 													<dl>
@@ -318,7 +322,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="btn-wrap col-2">
+										<div class="btn-wrap col-lg-2">
 											<button class="btn-type purple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
 											<button class="btn-type darkPurple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
@@ -368,7 +372,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="btn-wrap col-2">
+										<div class="btn-wrap col-lg-2">
 											<button class="btn-type purple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
 											<button class="btn-type darkPurple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
@@ -416,7 +420,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="btn-wrap col-2">
+										<div class="btn-wrap col-lg-2">
 											<button class="btn-type purple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
 											<button class="btn-type darkPurple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
@@ -461,7 +465,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="btn-wrap col-2">
+										<div class="btn-wrap col-lg-2">
 											<button class="btn-type purple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
 											<button class="btn-type darkPurple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
@@ -477,7 +481,7 @@
 											<div class="info">
 												<h4 class="heading-wrap-04">
 													<span class="txt-color-purple3">지방근무에 따른 숙식 제공</span><br/>
-													<strong>KT&G 담배인삼공제회 홈페이지 운영 사업</strong>
+													<strong>KT&amp;G 담배인삼공제회 홈페이지 운영 사업</strong>
 												</h4>
 												<div>
 													<dl>
@@ -508,7 +512,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="btn-wrap col-2">
+										<div class="btn-wrap col-lg-2">
 											<button class="btn-type purple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
 											<button class="btn-type darkPurple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
@@ -558,7 +562,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="btn-wrap col-2">
+										<div class="btn-wrap col-lg-2">
 											<button class="btn-type purple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
 											<button class="btn-type darkPurple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
@@ -606,7 +610,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="btn-wrap col-2">
+										<div class="btn-wrap col-lg-2">
 											<button class="btn-type purple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">상세보기</em></button>
 											<button class="btn-type darkPurple" onclick="javascript:location.href='project/detail.html'"><em class="txt-rendering ft-md">즉시 지원하기</em></button>
 										</div>
@@ -621,7 +625,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="bg-wrap"></div>
+				<div class="bg-wrap"><span class="txt-rendering">Project List</span></div>
 			</div>
 		</section><!-- // section-view 02 -->
 
@@ -629,7 +633,7 @@
 			<div class="main-section-wrap-03">
 				<h2 class="hidden-txt">partners</h2>
 				<div class="partners inner-wrap">
-					<div class="partners-list center">
+					<div class="partners-list">
 						<h3 class="heading-wrap-03 animate fadeInUp">Weple’s Partners</h3>
 						<ul class="animate fadeInUp">
 							<li><img src="./static/img/bi/bi-01.png" alt="bi-01"></li>
@@ -659,7 +663,7 @@
 		<section class="section-view">
 			<div class="main-section-wrap-04">
 				<div class="contact inner-wrap">
-					<div class="contact-list center">
+					<div class="contact-list">
 						<h2 class="heading-wrap-02 animate fadeInUp"><strong class="h-center">Perfect Project<br/> with Weple’s</strong></h2>
 						<ul>
 							<li class="animate animate-delay-01 fadeInUp">
@@ -693,27 +697,27 @@
 								<div class="notice-swiper">
 									<ul class="swiper-wrapper">
 										<li class="swiper-slide">
-											<span><a href="#">위플즈가 오픈하였습니다.</a></span>
+											<span><a href="#">위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다.</a></span>
 											<span class="date">2021-06-02</span>
 										</li>
 										<li class="swiper-slide">
-											<span><a href="#">...</a></span>
+											<span><a href="#">위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다.</a></span>
 											<span class="date">2021-06-02</span>
 										</li>
 										<li class="swiper-slide">
-											<span><a href="#">...</a></span>
+											<span><a href="#">위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다.</a></span>
 											<span class="date">2021-06-02</span>
 										</li>
 										<li class="swiper-slide">
-											<span><a href="#">...</a></span>
+											<span><a href="#">위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다.</a></span>
 											<span class="date">2021-06-02</span>
 										</li>
 										<li class="swiper-slide">
-											<span><a href="#">...</a></span>
+											<span><a href="#">위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다.</a></span>
 											<span class="date">2021-06-02</span>
 										</li>
 										<li class="swiper-slide">
-											<span><a href="#">...</a></span>
+											<span><a href="#">위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다. 위플즈가 오픈하였습니다.</a></span>
 											<span class="date">2021-06-02</span>
 										</li>
 									</ul>
@@ -756,7 +760,7 @@
 			</footer><!-- // footer -->
 		</section><!-- // section-view 05 -->
 	</main><!-- // #main -->
-
+		
 	<script>
 		$(function(){
 			commonFunction().mainSwiper();
@@ -768,7 +772,7 @@
 				e.preventDefault();
 				e.stopPropagation();
 
-				$.fn.fullpage.moveSectionDown();
+				$.fn.fullpage.moveTo(2);
 			});
 		});
 	</script>

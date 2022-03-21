@@ -38,8 +38,8 @@
 	</dl>
 
 	<header>
-		<div class="container">
-			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
+		<div class="inner-wrap">
+			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
@@ -69,46 +69,50 @@
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
-				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
 					<li class="prj-add"><a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
 					<li class="prj-search"><a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fast fadeInDown">
+					<div>
+						<ul class="member animate fast fadeInDown">
 						<!-- 로그인 전 -->
-						<li><a href="../member/signin.html">로그인</a></li>
-						<li class="join">
+							<li><a href="../member/signin.html">로그인</a></li>
+							<li class="join">
+								<ul>
+									<li><a href="../partner/signup.html">프리랜서 가입</a></li>
+									<li><a href="../client/signup.html">기업회원 가입</a></li>
+								</ul>
+							</li>
+							<!-- 로그인 후 
+							<li><a href="javascript:void(0);">로그아웃</a></li>
+							<li><a href="../member/partners_mypage.html">마이페이지</a></li>
+							-->
+						</ul>
+						<div class="category animate fast fadeInDown">
 							<ul>
-								<li><a href="../partner/signup.html">프리랜서 가입</a></li>
-								<li><a href="../client/signup.html">기업회원 가입</a></li>
+								<li><a href="../project/search.html">프로젝트 검색</a></li>
+								<li><a href="../project/create.html">프로젝트 등록</a></li>
+								<li><a href="../partner/create.html">프리랜서 등록</a></li>
+								<li>
+									<a href="../introduce/we_people.html">위플즈 소개</a>
+									<ul class="depth2">
+										<li><a href="../introduce/we_people.html">We:People</a></li>
+										<li><a href="../introduce/we_project.html">We:Project</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../community/list.html">커뮤니티</a>
+									<ul class="depth2">
+										<li><a href="../community/inquiry.html">1:1문의</a></li>
+										<li><a href="../community/faq.html">FAQ</a></li>
+										<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
+									</ul>
+								</li>
 							</ul>
-						</li>
-						<!-- 로그인 후 
-						<li><a href="javascript:void(0);">로그아웃</a></li>
-						<li><a href="../member/partners_mypage.html">마이페이지</a></li>
-						-->
-					</ul>
-					<ul class="category animate fast fadeInDown">
-							<li><a href="../project/search.html">프로젝트 검색</a></li>
-							<li><a href="../project/create.html">프로젝트 등록</a></li>
-							<li><a href="../partner/create.html">프리랜서 등록</a></li>
-							<li>
-								<a href="../introduce/we_people.html">위플즈 소개</a>
-								<ul class="depth2">
-									<li><a href="../introduce/we_people.html">We:People</a></li>
-									<li><a href="../introduce/we_project.html">We:Project</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../community/list.html">커뮤니티</a>
-								<ul class="depth2">
-									<li><a href="../community/inquiry.html">1:1문의</a></li>
-									<li><a href="../community/faq.html">FAQ</a></li>
-									<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
-								</ul>
-							</li>
-						</ul>	
+						</div>
+					</div>	
 				</div>
 			</nav>	
 		</div>
@@ -120,15 +124,15 @@
 			<h2 class="heading-wrap-02 long-txt">
 				<span class="thumbnail"><img src="../static/img/client-thumbnail.jpg" alt="기업회원 프로필 사진"></span><br/>
 				Intel <em>회원님 반갑습니다!</em><br/>
-				<span>회원님은 <b>총 10개의 프로젝트</b>를 등록하셨으며 현재 <b>2개의 프로젝트를 진행 중</b>에 있습니다
+				<span class="txt-rendering">회원님은 <b>총 10개의 프로젝트</b>를 등록하셨으며 현재 <b>2개의 프로젝트를 진행 중</b>에 있습니다</span>
 			</h2>
 		</div>
 		<div class="fixed-wrap inner">
 			<div class="form-inline">
 				<ul class="col-3">
-					<li class="activities"><a href="../member/progress.html"><em>프로젝트 진행내역</em></a></li>
-					<li class="modified"><a href="../client/modify.html"><em>기업정보수정</em></a></li>
-					<li class="inquiry"><a href="../community/inquiry.html"><em>1:1 문의</em></a></li>
+					<li class="activities"><a href="../member/progress.html"><em class="txt-rendering">프로젝트<br class="mob-only" /> 진행내역</em></a></li>
+					<li class="modified"><a href="../client/modify.html"><em class="txt-rendering">기업정보<br class="mob-only" />수정</em></a></li>
+					<li class="inquiry"><a href="../community/inquiry.html"><em class="txt-rendering">1:1<br class="mob-only" /> 문의</em></a></li>
 				</ul>	
 			</div>	
 		</div>	
@@ -140,11 +144,51 @@
 							<img src="../static/img/grade-e_gold.gif" alt="회원등급">
 							<figcaption class="hidden-txt">회원등급</figcaption>
 						</figure>
-						<p><strong>Intel</strong>님의 회원등급은 <b class="member-grade e_gold">eGold</b>입니다 <span class="anchor-toolTip help" data-toolTip="grade--info"><em>?</em></span></p>
+
 						<div>
+							<strong>Intel</strong>님의 회원등급은<br class="mob-only" /> <b class="member-grade e_gold">eGold</b>입니다<br class="mob-only" /> 
+							<div class="anchor-toolTip help">
+								<span>?</span>
+								<!-- 회원등급 부가설명 -->
+								<div class="toolTip focusable" id="grade--info">
+									<div>
+										<div>
+											<div>
+												<div class="grade-standard">
+													<div class="title"><strong>회원등급 기준</strong><span>(회원등급은 발주 당시 기준으로 업데이트가 됩니다)</span></div>
+													<ul>
+														<li><strong>eDiamond</strong><span>총 발주 금액 100억 이상</span></li>
+														<li><strong>eGold</strong><span>총 발주 금액 10억 이상</span></li>
+														<li><strong>eSilver</strong><span>총 발주 금액 1억 이상</span></li>
+														<li><strong>eBronze</strong><span>신입회원</span></li>
+													</ul>
+													<div class="description">
+														<p class="txt-rendering">회원등급은 신규 발주 사업 기준으로 갱신이 되며 1년 이내에 발주내역이 없거나 기준에 미달될 경우 회원등급은 강등될 수 있습니다</p>
+													</div>
+												</div>
+												<div class="grade-benefit">
+													<div class="title"><strong>등급 별 혜택</strong></div>
+													<ul>
+														<li><strong>eDiamond</strong><span>발주금액의 1%에 해당되는 프리미엄서비스 제공</span></li>
+														<li><strong>eGold</strong><span>발주금액의 0.5%에 해당되는 프리미엄서비스 제공</span></li>
+														<li><strong>eSilver</strong><span>발주금액의 0.1%에 해당되는 프리미엄서비스 제공</span></li>
+														<li><strong>eBronze</strong><span>일반 기업서비스 제공</span></li>
+													</ul>
+													<div class="description">
+														<p class="txt-rendering">프리미엄서비스의 기준은 상황에 따라 변동될 수 있으며 발주처와의 협의를 통해 서비스 내용이 정해질 수 있습니다</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="member-info">
 							<dl class="table">
-								<dt>총 발주금액 : </dt>
-								<dd><strong>10,000,000,000</strong>원</dd>
+								<dt class="txt-rendering">총 발주금액 : </dt>
+								<dd><strong class="txt-rendering">10,000,000,000</strong>원</dd>
 							</dl>
 						</div>
 					</div>
@@ -167,35 +211,6 @@
 						<button type="button" class="btn-type-lg darkPurple" onclick="javascript:location.href='../project/create.html'"><em class="txt-rendering ft-md">프로젝트 의뢰</em></button>
 					</div>
 				</div><!-- // contents-body-->
-
-				<div class="toolTip" id="grade--info">
-					<div>
-						<div class="grade-standard">
-							<div class="title"><strong>회원등급 기준</strong><span>(회원등급은 발주 당시 기준으로 업데이트가 됩니다)</span></div>
-							<ul>
-								<li><strong>eDiamond</strong><span>총 발주 금액 100억 이상</span></li>
-								<li><strong>eGold</strong><span>총 발주 금액 10억 이상</span></li>
-								<li><strong>eSilver</strong><span>총 발주 금액 1억 이상</span></li>
-								<li><strong>eBronze</strong><span>신입회원</span></li>
-							</ul>
-							<div class="description">
-								<p class="txt-rendering">회원등급은 신규 발주 사업 기준으로 갱신이 되며 1년 이내에 발주내역이 없거나 기준에 미달될 경우 회원등급은 강등될 수 있습니다</p>
-							</div>
-						</div>
-						<div class="grade-benefit">
-							<div class="title"><strong>등급 별 혜택</strong></div>
-							<ul>
-								<li><strong>eDiamond</strong><span>발주금액의 1%에 해당되는 프리미엄서비스 제공</span></li>
-								<li><strong>eGold</strong><span>발주금액의 0.5%에 해당되는 프리미엄서비스 제공</span></li>
-								<li><strong>eSilver</strong><span>발주금액의 0.1%에 해당되는 프리미엄서비스 제공</span></li>
-								<li><strong>eBronze</strong><span>일반 기업서비스 제공</span></li>
-							</ul>
-							<div class="description">
-								<p class="txt-rendering">프리미엄서비스의 기준은 상황에 따라 변동될 수 있으며 발주처와의 협의를 통해 서비스 내용이 정해질 수 있습니다</p>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div><!-- // contents -->
 		</div><!-- // contents-wrap -->
 	</div><!-- // #wrap -->

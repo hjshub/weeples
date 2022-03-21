@@ -11,11 +11,13 @@
 
 	<script src="../static/js/jquery-3.6.0.min.js"></script>
 	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/swiper.min.js"></script>
 	<script src="../static/js/gsap.min.js"></script>
 	<script defer="defer" src="../static/js/common.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
 	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
 	<link rel="stylesheet" media="all and (max-width:1680px)" type="text/css" href="../static/css/style_m.css">
 </head>
@@ -34,13 +36,12 @@
 	<dl id="skipNavigation">
 		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
 		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
-		<dd><a href="#side-menu"><em>사이드 메뉴 바로가기</em></a></dd>
 		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
 	</dl>
 
 	<header>
-		<div class="container">
-			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
+		<div class="inner-wrap">
+			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
@@ -70,46 +71,50 @@
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
-				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
 					<li class="prj-add"><a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
 					<li class="prj-search"><a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fast fadeInDown">
+					<div>
+						<ul class="member animate fast fadeInDown">
 						<!-- 로그인 전 -->
-						<li><a href="../member/signin.html">로그인</a></li>
-						<li class="join">
+							<li><a href="../member/signin.html">로그인</a></li>
+							<li class="join">
+								<ul>
+									<li><a href="../partner/signup.html">프리랜서 가입</a></li>
+									<li><a href="../client/signup.html">기업회원 가입</a></li>
+								</ul>
+							</li>
+							<!-- 로그인 후 
+							<li><a href="javascript:void(0);">로그아웃</a></li>
+							<li><a href="../member/partners_mypage.html">마이페이지</a></li>
+							-->
+						</ul>
+						<div class="category animate fast fadeInDown">
 							<ul>
-								<li><a href="../partner/signup.html">프리랜서 가입</a></li>
-								<li><a href="../client/signup.html">기업회원 가입</a></li>
+								<li><a href="../project/search.html">프로젝트 검색</a></li>
+								<li><a href="../project/create.html">프로젝트 등록</a></li>
+								<li><a href="../partner/create.html">프리랜서 등록</a></li>
+								<li>
+									<a href="../introduce/we_people.html">위플즈 소개</a>
+									<ul class="depth2">
+										<li><a href="../introduce/we_people.html">We:People</a></li>
+										<li><a href="../introduce/we_project.html">We:Project</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../community/list.html">커뮤니티</a>
+									<ul class="depth2">
+										<li><a href="../community/inquiry.html">1:1문의</a></li>
+										<li><a href="../community/faq.html">FAQ</a></li>
+										<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
+									</ul>
+								</li>
 							</ul>
-						</li>
-						<!-- 로그인 후 
-						<li><a href="javascript:void(0);">로그아웃</a></li>
-						<li><a href="../member/partners_mypage.html">마이페이지</a></li>
-						-->
-					</ul>
-					<ul class="category animate fast fadeInDown">
-							<li><a href="../project/search.html">프로젝트 검색</a></li>
-							<li><a href="../project/create.html">프로젝트 등록</a></li>
-							<li><a href="../partner/create.html">프리랜서 등록</a></li>
-							<li>
-								<a href="../introduce/we_people.html">위플즈 소개</a>
-								<ul class="depth2">
-									<li><a href="../introduce/we_people.html">We:People</a></li>
-									<li><a href="../introduce/we_project.html">We:Project</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../community/list.html">커뮤니티</a>
-								<ul class="depth2">
-									<li><a href="../community/inquiry.html">1:1문의</a></li>
-									<li><a href="../community/faq.html">FAQ</a></li>
-									<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
-								</ul>
-							</li>
-						</ul>	
+						</div>
+					</div>	
 				</div>
 			</nav>	
 		</div>
@@ -141,16 +146,18 @@
 				<span><button type="button" class="btn-type-icon2 search darkPurple"><em class="hidden-txt">검색</em></button></span>
 			</div>	
 		</div>	
-		<div class="contents-wrap visible inner">
+		<div class="contents-wrap inner">
 			<div class="contents" id="contents">
-				<div class="contents-head tab-menu">
-					<ul>
-						<li class="selected"><a href="#li">전체</a></li>
-						<li><a href="#">퇴직금</a></li>
-						<li><a href="#">복지서비스</a></li>
-						<li><a href="#">회원가입</a></li>
-						<li><a href="#">기업서비스</a></li>
-					</ul>
+				<div class="contents-head tab-menu menu-swiper">
+					<div class="swiper-container">
+						<ul class="swiper-wrapper">
+							<li class="selected swiper-slide"><a href="#li">전체</a></li>
+							<li class="swiper-slide"><a href="#">퇴직금</a></li>
+							<li class="swiper-slide"><a href="#">복지서비스</a></li>
+							<li class="swiper-slide"><a href="#">회원가입</a></li>
+							<li class="swiper-slide"><a href="#">기업서비스</a></li>
+						</ul>
+					</div>
 					<div class="btn-wrap-inline regist"><button class="btn-type-sm purple" onclick="javascript:location.href='../community/inquiry.html'"><em class="txt-rendering">1:1 문의하기</em></button></div>
 				</div><!-- // contents-head -->
 
@@ -213,5 +220,11 @@
 			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
 		</div>
 	</footer><!-- // footer -->
+
+	<script>
+		$(function(){
+			commonFunction().tabSwiper();
+		});
+	</script>
 </body>
 </html>

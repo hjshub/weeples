@@ -34,13 +34,12 @@
 	<dl id="skipNavigation">
 		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
 		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
-		<dd><a href="#side-menu"><em>사이드 메뉴 바로가기</em></a></dd>
 		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
 	</dl>
 
 	<header>
-		<div class="container">
-			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
+		<div class="inner-wrap">
+			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
@@ -70,46 +69,50 @@
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
-				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
 					<li class="prj-add"><a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
 					<li class="prj-search"><a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fast fadeInDown">
+					<div>
+						<ul class="member animate fast fadeInDown">
 						<!-- 로그인 전 -->
-						<li><a href="../member/signin.html">로그인</a></li>
-						<li class="join">
+							<li><a href="../member/signin.html">로그인</a></li>
+							<li class="join">
+								<ul>
+									<li><a href="../partner/signup.html">프리랜서 가입</a></li>
+									<li><a href="../client/signup.html">기업회원 가입</a></li>
+								</ul>
+							</li>
+							<!-- 로그인 후 
+							<li><a href="javascript:void(0);">로그아웃</a></li>
+							<li><a href="../member/partners_mypage.html">마이페이지</a></li>
+							-->
+						</ul>
+						<div class="category animate fast fadeInDown">
 							<ul>
-								<li><a href="../partner/signup.html">프리랜서 가입</a></li>
-								<li><a href="../client/signup.html">기업회원 가입</a></li>
+								<li><a href="../project/search.html">프로젝트 검색</a></li>
+								<li><a href="../project/create.html">프로젝트 등록</a></li>
+								<li><a href="../partner/create.html">프리랜서 등록</a></li>
+								<li>
+									<a href="../introduce/we_people.html">위플즈 소개</a>
+									<ul class="depth2">
+										<li><a href="../introduce/we_people.html">We:People</a></li>
+										<li><a href="../introduce/we_project.html">We:Project</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../community/list.html">커뮤니티</a>
+									<ul class="depth2">
+										<li><a href="../community/inquiry.html">1:1문의</a></li>
+										<li><a href="../community/faq.html">FAQ</a></li>
+										<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
+									</ul>
+								</li>
 							</ul>
-						</li>
-						<!-- 로그인 후 
-						<li><a href="javascript:void(0);">로그아웃</a></li>
-						<li><a href="../member/partners_mypage.html">마이페이지</a></li>
-						-->
-					</ul>
-					<ul class="category animate fast fadeInDown">
-							<li><a href="../project/search.html">프로젝트 검색</a></li>
-							<li><a href="../project/create.html">프로젝트 등록</a></li>
-							<li><a href="../partner/create.html">프리랜서 등록</a></li>
-							<li>
-								<a href="../introduce/we_people.html">위플즈 소개</a>
-								<ul class="depth2">
-									<li><a href="../introduce/we_people.html">We:People</a></li>
-									<li><a href="../introduce/we_project.html">We:Project</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../community/list.html">커뮤니티</a>
-								<ul class="depth2">
-									<li><a href="../community/inquiry.html">1:1문의</a></li>
-									<li><a href="../community/faq.html">FAQ</a></li>
-									<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
-								</ul>
-							</li>
-						</ul>	
+						</div>
+					</div>	
 				</div>
 			</nav>	
 		</div>
@@ -120,7 +123,7 @@
 		<div class="sub-top-wrap">
 			<h2 class="heading-wrap-02">
 				1:1 문의하기<br/>
-				<span>위플즈는 고객님의 소중한 의견을 빠르고 정확하게 해결하기 위해 최선을 다하겠습니다</span>
+				<span>위플즈는 고객님의 소중한 의견을 빠르고<br class="mob-only" /> 정확하게 해결하기 위해 최선을 다하겠습니다</span>
 			</h2>
 		</div>
 		<div class="fixed-wrap inner">
@@ -152,19 +155,19 @@
 						<dt><strong>문의내용</strong></dt>
 						<dd>
 							<div class="form-txt-wrap">
-								<textarea name="" id="" placeholder="2,000자 이내로 입력해주세요"></textarea>
+								<textarea name="" id="" placeholder="2,000자 이내로 입력해주세요" title="문의내용 - 2,000자 이내로 입력해주세요"></textarea>
 								<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">2,000</em></span>
 							</div>
 						</dd>
 					</dl>
-					<div class="btn-wrap align-c">
+					<div class="btn-wrap align-c col-mid-2-2">
 						<button type="submit" class="btn-type-lg purple"><em class="txt-rendering ft-md">확인</em></button>
 						<button type="button" class="btn-type-mid xs"><em class="txt-rendering ft-md">취소</em></button>
 					</div>
 				</form>
 			</div>	
 		</div>	
-		<div class="contents-wrap visible inner">
+		<div class="contents-wrap inner">
 			<div class="contents" id="contents">
 				<div class="contents-head">
 					<strong>나의 1:1문의</strong>
@@ -188,23 +191,38 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td class="align-l"><em class="txt-color-purple type">[교육신청]</em><b class="txt-ellipsis"><a href="#">경력을 업데이트 하고자 합니다</a></b></td>
+									<td class="align-l">
+										<em class="txt-color-purple type">[교육신청]</em><br class="mob-only" />
+										<b><a href="#">경력을 업데이트 하고자 합니다</a></b><br class="mob-only" />
+										<span class="mob-only"><em>songc</em><em>2021-12-06</em></span>
+									</td>
 									<td><span>songc</span></td>
 									<td><span>2021-12-06</span></td>
 								</tr>
 								<!-- 관리자 답글 -->
 								<tr class="reply">
-									<td class="align-l"><b class="txt-color-purple">위플즈를 이용해 주셔서 감사합니다</b></td>
+									<td class="align-l">
+										<b class="txt-color-purple">위플즈를 이용해 주셔서 감사합니다</b><br class="mob-only" />
+										<span class="mob-only"><em>관리자</em><em>2021-12-06</em></span>
+									</td>
 									<td><span>관리자</span></td>
 									<td><span>2021-12-06</span></td>
 								</tr>
 								<tr>
-									<td class="align-l"><em class="txt-color-purple type">[퇴직금 문의]</em><b class="txt-ellipsis"><a href="#">위플즈에 가입 후 퇴직금을 받고 싶은데 어떻게 해야 하나요?</a></b></td>
+									<td class="align-l">
+										<em class="txt-color-purple type">[퇴직금 문의]</em><br class="mob-only" />
+										<b><a href="#">위플즈에 가입 후 퇴직금을 받고 싶은데 어떻게 해야 하나요?</a></b><br class="mob-only" />
+										<span class="mob-only"><em>songc</em><em>2021-12-06</em></span>
+									</td>
 									<td><span>songc</span></td>
 									<td><span>2021-12-06</span></td>
 								</tr>
 								<tr>
-									<td class="align-l"><em class="txt-color-purple type">[퇴직금 문의]</em><b class="txt-ellipsis"><a href="#">위플즈에 가입 후 퇴직금을 받고 싶은데 어떻게 해야 하나요?</a></b></td>
+									<td class="align-l">
+										<em class="txt-color-purple type">[퇴직금 문의]</em><br class="mob-only" />
+										<b><a href="#">위플즈에 가입 후 퇴직금을 받고 싶은데 어떻게 해야 하나요?</a></b><br class="mob-only" />
+										<span class="mob-only"><em>songc</em><em>2021-12-06</em></span>
+									</td>
 									<td><span>songc</span></td>
 									<td><span>2021-12-06</span></td>
 								</tr>
@@ -227,8 +245,8 @@
 						<a href="#" class="next"><span>다음 페이지</span></a>
 						<a href="#" class="last"><span>마지막 페이지</span></a>
 					</div>
-					<div class="btn-wrap mob-only">
-						<button type="button" class="btn-type-wide"><em>더보기</em></button>
+					<div class="btn-wrap align-c mob-only">
+						<button type="button" class="btn-type-lg more"><em class="ft-md txt-rendering">더보기</em></button>
 					</div>
 
 				</div><!-- // contents-body -->

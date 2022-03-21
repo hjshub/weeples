@@ -38,12 +38,12 @@
 	</dl>
 
 	<header>
-		<div class="container">
-			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
+		<div class="inner-wrap">
+			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
-						<li><a href="../partner/create.html" class="selected">프리랜서 등록</a></li>
+						<li><a href="../partner/create.html">프리랜서 등록</a></li>
 						<li><a href="../project/create.html">프로젝트 등록</a></li>
 						<li><a href="../project/search.html" class="search">프로젝트 검색</a></li>
 					</ul>
@@ -69,46 +69,50 @@
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
-				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
 					<li class="prj-add"><a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
 					<li class="prj-search"><a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fast fadeInDown">
+					<div>
+						<ul class="member animate fast fadeInDown">
 						<!-- 로그인 전 -->
-						<li><a href="../member/signin.html">로그인</a></li>
-						<li class="join">
+							<li><a href="../member/signin.html">로그인</a></li>
+							<li class="join">
+								<ul>
+									<li><a href="../partner/signup.html">프리랜서 가입</a></li>
+									<li><a href="../client/signup.html">기업회원 가입</a></li>
+								</ul>
+							</li>
+							<!-- 로그인 후 
+							<li><a href="javascript:void(0);">로그아웃</a></li>
+							<li><a href="../member/partners_mypage.html">마이페이지</a></li>
+							-->
+						</ul>
+						<div class="category animate fast fadeInDown">
 							<ul>
-								<li><a href="../partner/signup.html">프리랜서 가입</a></li>
-								<li><a href="../client/signup.html">기업회원 가입</a></li>
+								<li><a href="../project/search.html">프로젝트 검색</a></li>
+								<li><a href="../project/create.html">프로젝트 등록</a></li>
+								<li><a href="../partner/create.html">프리랜서 등록</a></li>
+								<li>
+									<a href="../introduce/we_people.html">위플즈 소개</a>
+									<ul class="depth2">
+										<li><a href="../introduce/we_people.html">We:People</a></li>
+										<li><a href="../introduce/we_project.html">We:Project</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../community/list.html">커뮤니티</a>
+									<ul class="depth2">
+										<li><a href="../community/inquiry.html">1:1문의</a></li>
+										<li><a href="../community/faq.html">FAQ</a></li>
+										<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
+									</ul>
+								</li>
 							</ul>
-						</li>
-						<!-- 로그인 후 
-						<li><a href="javascript:void(0);">로그아웃</a></li>
-						<li><a href="../member/partners_mypage.html">마이페이지</a></li>
-						-->
-					</ul>
-					<ul class="category animate fast fadeInDown">
-							<li><a href="../project/search.html">프로젝트 검색</a></li>
-							<li><a href="../project/create.html">프로젝트 등록</a></li>
-							<li><a href="../partner/create.html">프리랜서 등록</a></li>
-							<li>
-								<a href="../introduce/we_people.html">위플즈 소개</a>
-								<ul class="depth2">
-									<li><a href="../introduce/we_people.html">We:People</a></li>
-									<li><a href="../introduce/we_project.html">We:Project</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../community/list.html">커뮤니티</a>
-								<ul class="depth2">
-									<li><a href="../community/inquiry.html">1:1문의</a></li>
-									<li><a href="../community/faq.html">FAQ</a></li>
-									<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
-								</ul>
-							</li>
-						</ul>	
+						</div>
+					</div>	
 				</div>
 			</nav>	
 		</div>
@@ -118,14 +122,14 @@
 		<h1 class="hidden-txt">프리랜서 등록 완료</h1>
 		<div class="sub-top-wrap">
 			<h2 class="heading-wrap-02 long-txt">
-				위플즈 회원이 되시면 다양한 활동지원 서비스를 받으실 수 있습니다<br/>
-				<span>프리랜서 여러분에게 금융지원, 복지지원, 법률상담, 세무대행 서비스를 제공합니다</span>
+				위플즈 회원이 되시면<br class="mob-only" /> 다양한 활동지원 서비스를 받으실 수 있습니다<br/>
+				<span class="txt-rendering">프리랜서 여러분에게 금융지원, 복지지원, 법률상담, 세무대행 서비스를 제공합니다</span>
 			</h2>
 		</div>
 		<div class="fixed-wrap inner">
 			<div class="form-inline">
 				<ul class="col-1">
-					<li class="benefit"><a href="../introduce/we_people.html"><em>We:People 프리랜서 혜택</em></a></li>
+					<li class="benefit"><a href="../introduce/we_people.html"><em class="txt-rendering">We:People<br class="mob-only" /> 프리랜서 혜택</em></a></li>
 				</ul>	
 			</div>	
 		</div>	
@@ -135,11 +139,11 @@
 					<div class="sub-mid-wrap align-c">
 						<img src="../static/img/bg-peopleEnrollment-finish.gif" alt="프리랜서 등록 완료">
 						<p>
-							<strong>프리랜서 등록이 완료되었습니다!</strong><br/>
-							<span><b>프리랜서 등록완료 후 프로젝트 지원</b>을 하실 수 있습니다<br/> 단, 등록된 회원정보의 사실 여부 확인을 위해 담당 매니저가 연락을 드릴 수도 있습니다.</span>
+							<strong class="txt-rendering">프리랜서 등록이 완료되었습니다!</strong><br/>
+							<span class="txt-rendering"><b>프리랜서 등록완료 후 프로젝트 지원</b>을 하실 수 있습니다<br/> 단, 등록된 회원정보의 사실 여부 확인을 위해 담당 매니저가 연락을 드릴 수도 있습니다.</span>
 						</p>
 					</div>
-					<div class="btn-wrap align-c">
+					<div class="btn-wrap align-c col-mid-2-2">
 						<button type="submit" class="btn-type-lg purple" onclick="javascript:location.href='../index.html'"><em class="txt-rendering ft-md">위플즈 메인</em></button>
 						<button type="button" class="btn-type-mid" onclick="javascript:location.href='../member/partners_mypage.html'"><em class="txt-rendering ft-md">마이페이지</em></button>
 					</div>

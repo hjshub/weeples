@@ -36,10 +36,10 @@
 		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
 		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
 	</dl>
-
+	
 	<header>
-		<div class="container">
-			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
+		<div class="inner-wrap">
+			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
@@ -69,52 +69,56 @@
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
-				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
 					<li class="prj-add"><a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
 					<li class="prj-search"><a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fast fadeInDown">
+					<div>
+						<ul class="member animate fast fadeInDown">
 						<!-- 로그인 전 -->
-						<li><a href="../member/signin.html">로그인</a></li>
-						<li class="join">
+							<li><a href="../member/signin.html">로그인</a></li>
+							<li class="join">
+								<ul>
+									<li><a href="../partner/signup.html">프리랜서 가입</a></li>
+									<li><a href="../client/signup.html">기업회원 가입</a></li>
+								</ul>
+							</li>
+							<!-- 로그인 후 
+							<li><a href="javascript:void(0);">로그아웃</a></li>
+							<li><a href="../member/partners_mypage.html">마이페이지</a></li>
+							-->
+						</ul>
+						<div class="category animate fast fadeInDown">
 							<ul>
-								<li><a href="../partner/signup.html">프리랜서 가입</a></li>
-								<li><a href="../client/signup.html">기업회원 가입</a></li>
+								<li><a href="../project/search.html">프로젝트 검색</a></li>
+								<li><a href="../project/create.html">프로젝트 등록</a></li>
+								<li><a href="../partner/create.html">프리랜서 등록</a></li>
+								<li>
+									<a href="../introduce/we_people.html">위플즈 소개</a>
+									<ul class="depth2">
+										<li><a href="../introduce/we_people.html">We:People</a></li>
+										<li><a href="../introduce/we_project.html">We:Project</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../community/list.html">커뮤니티</a>
+									<ul class="depth2">
+										<li><a href="../community/inquiry.html">1:1문의</a></li>
+										<li><a href="../community/faq.html">FAQ</a></li>
+										<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
+									</ul>
+								</li>
 							</ul>
-						</li>
-						<!-- 로그인 후 
-						<li><a href="javascript:void(0);">로그아웃</a></li>
-						<li><a href="../member/partners_mypage.html">마이페이지</a></li>
-						-->
-					</ul>
-					<ul class="category animate fast fadeInDown">
-							<li><a href="../project/search.html">프로젝트 검색</a></li>
-							<li><a href="../project/create.html">프로젝트 등록</a></li>
-							<li><a href="../partner/create.html">프리랜서 등록</a></li>
-							<li>
-								<a href="../introduce/we_people.html">위플즈 소개</a>
-								<ul class="depth2">
-									<li><a href="../introduce/we_people.html">We:People</a></li>
-									<li><a href="../introduce/we_project.html">We:Project</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../community/list.html">커뮤니티</a>
-								<ul class="depth2">
-									<li><a href="../community/inquiry.html">1:1문의</a></li>
-									<li><a href="../community/faq.html">FAQ</a></li>
-									<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
-								</ul>
-							</li>
-						</ul>	
+						</div>
+					</div>	
 				</div>
 			</nav>	
 		</div>
 	</header><!-- // header -->
 	
-	<div id="wrap" class="view activities">
+	<div id="wrap" class="view applicant">
 		<h1 class="hidden-txt">프로젝트 지원자</h1>
 		<div class="sub-top-wrap"></div>	
 		<div class="contents-wrap inner">
@@ -182,7 +186,21 @@
 										</dl>
 										<dl class="table">
 											<dt><strong>등급</strong></dt>
-											<dd><span>고급</span><button type="button" class="btn-type-xs line round txt-color-purple"><em class="txt-rendering">위플즈 인증</em></button> <span class="anchor-toolTip help" data-toolTip="grade--info"><em>?</em></span></dd>
+											<dd>
+												<span>고급</span><button type="button" class="btn-type-xs line round txt-color-purple"><em class="txt-rendering">위플즈 인증</em></button> 
+												<div class="anchor-toolTip help">
+													<span>?</span>
+													<!-- 위플즈 인증 부가설명 -->
+													<div class="toolTip small focusable">
+														<div>
+															<div class="title"><strong>위플즈 인증</strong><span>이란?</span></div>
+															<div class="description">
+																<p class="txt-rendering">프리랜서가 등록한 경력증명(KOSA, 학력, 자격증 등)을 바탕으로 소프트웨어 기술자 등급을 산정하고 위플즈가 확인한 인증입니다.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</dd>
 										</dl>
 										<dl class="table">
 											<dt><strong>보유기술</strong></dt>
@@ -229,7 +247,21 @@
 										</dl>
 										<dl class="table">
 											<dt><strong>등급</strong></dt>
-											<dd><span>고급</span><button type="button" class="btn-type-xs line round txt-color-purple"><em class="txt-rendering">위플즈 인증</em></button> <span class="anchor-toolTip help" data-toolTip="grade--info"><em>?</em></span></dd>
+											<dd>
+												<span>고급</span><button type="button" class="btn-type-xs line round txt-color-purple"><em class="txt-rendering">위플즈 인증</em></button>
+												<div class="anchor-toolTip help" data-toolTip="certification02">
+													<span>?</span>
+													<!-- 위플즈 인증 부가설명 -->
+													<div class="toolTip small focusable">
+														<div>
+															<div class="title"><strong>위플즈 인증</strong><span>이란?</span></div>
+															<div class="description">
+																<p class="txt-rendering">프리랜서가 등록한 경력증명(KOSA, 학력, 자격증 등)을 바탕으로 소프트웨어 기술자 등급을 산정하고 위플즈가 확인한 인증입니다.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</dd>
 										</dl>
 										<dl class="table">
 											<dt><strong>보유기술</strong></dt>
@@ -271,26 +303,17 @@
 						<a href="#" class="next"><span>다음 페이지</span></a>
 						<a href="#" class="last"><span>마지막 페이지</span></a>
 					</div>
-					<div class="btn-wrap mob-only">
-						<button type="button" class="btn-type-wide"><em>더보기</em></button>
+					<div class="btn-wrap align-c mob-only">
+						<button type="button" class="btn-type-lg more"><em class="ft-md txt-rendering">더보기</em></button>
 					</div>
 					<div class="btn-wrap align-c">
-						<button type="button" class="btn-type-mid" onclick="javascript:location.href='../member/progress.html'"><em class="ft-md">목록</em></button>
+						<button type="button" class="btn-type-mid" onclick="javascript:location.href='../member/progress.html'"><em class="ft-md txt-rendering">목록</em></button>
 					</div>
 				</div><!-- // contents-body -->
-
-				<div class="toolTip" id="grade--info">
-					<div>
-						<div class="title"><strong>위플즈 인증</strong><span>이란?</span></div>
-						<div class="description">
-							<p class="txt-rendering">프리랜서가 등록한 경력증명(KOSA, 학력, 자격증 등)을 바탕으로<br/> 소프트웨어 기술자 등급을 산정하고 위플즈가 확인한 인증입니다.</p>
-						</div>
-					</div>
-				</div>
-
 			</div><!-- // contents -->
 		</div><!-- // contents-wrap -->
 	</div><!-- // #wrap -->
+
 	<footer>
 		<div class="inner-wrap">
 			<ul>
@@ -315,5 +338,6 @@
 			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
 		</div>
 	</footer><!-- // footer -->
+
 </body>
 </html>

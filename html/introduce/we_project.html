@@ -35,12 +35,12 @@
 	<dl id="skipNavigation">
 		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
 		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
-		<dd><a href="#main"><em>본문으로 바로가기</em></a></dd>
+		<dd><a href="#wrap"><em>본문으로 바로가기</em></a></dd>
 	</dl>
 
 	<header>
-		<div class="container">
-			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
+		<div class="inner-wrap">
+			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
@@ -70,46 +70,50 @@
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
-				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
 					<li class="prj-add"><a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
 					<li class="prj-search"><a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fast fadeInDown">
+					<div>
+						<ul class="member animate fast fadeInDown">
 						<!-- 로그인 전 -->
-						<li><a href="../member/signin.html">로그인</a></li>
-						<li class="join">
+							<li><a href="../member/signin.html">로그인</a></li>
+							<li class="join">
+								<ul>
+									<li><a href="../partner/signup.html">프리랜서 가입</a></li>
+									<li><a href="../client/signup.html">기업회원 가입</a></li>
+								</ul>
+							</li>
+							<!-- 로그인 후 
+							<li><a href="javascript:void(0);">로그아웃</a></li>
+							<li><a href="../member/partners_mypage.html">마이페이지</a></li>
+							-->
+						</ul>
+						<div class="category animate fast fadeInDown">
 							<ul>
-								<li><a href="../partner/signup.html">프리랜서 가입</a></li>
-								<li><a href="../client/signup.html">기업회원 가입</a></li>
+								<li><a href="../project/search.html">프로젝트 검색</a></li>
+								<li><a href="../project/create.html">프로젝트 등록</a></li>
+								<li><a href="../partner/create.html">프리랜서 등록</a></li>
+								<li>
+									<a href="../introduce/we_people.html">위플즈 소개</a>
+									<ul class="depth2">
+										<li><a href="../introduce/we_people.html">We:People</a></li>
+										<li><a href="../introduce/we_project.html">We:Project</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../community/list.html">커뮤니티</a>
+									<ul class="depth2">
+										<li><a href="../community/inquiry.html">1:1문의</a></li>
+										<li><a href="../community/faq.html">FAQ</a></li>
+										<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
+									</ul>
+								</li>
 							</ul>
-						</li>
-						<!-- 로그인 후 
-						<li><a href="javascript:void(0);">로그아웃</a></li>
-						<li><a href="../member/partners_mypage.html">마이페이지</a></li>
-						-->
-					</ul>
-					<ul class="category animate fast fadeInDown">
-							<li><a href="../project/search.html">프로젝트 검색</a></li>
-							<li><a href="../project/create.html">프로젝트 등록</a></li>
-							<li><a href="../partner/create.html">프리랜서 등록</a></li>
-							<li>
-								<a href="../introduce/we_people.html">위플즈 소개</a>
-								<ul class="depth2">
-									<li><a href="../introduce/we_people.html">We:People</a></li>
-									<li><a href="../introduce/we_project.html">We:Project</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../community/list.html">커뮤니티</a>
-								<ul class="depth2">
-									<li><a href="../community/inquiry.html">1:1문의</a></li>
-									<li><a href="../community/faq.html">FAQ</a></li>
-									<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
-								</ul>
-							</li>
-						</ul>	
+						</div>
+					</div>	
 				</div>
 			</nav>	
 		</div>
@@ -121,20 +125,24 @@
 			<div class="inner">
 				<h2><span>We&nbsp;:&nbsp;</span><strong>Project</strong></h2>	
 				<dl>
-					<dt><strong>안정되고 성공적인 프로젝트를 위해 맞춤형 교육훈련을 실시합니다</strong></dt>
+					<dt><strong>안정되고 성공적인 프로젝트를 위해<br class="mob-only" /> 맞춤형 교육훈련을 실시합니다</strong></dt>
 					<dd>
 						<ul class="training">
-							<li><a href="#">교육훈련</a></li>
-							<li><a href="#">프로젝트 투입</a></li>
-							<li><a href="#">프로젝트 완수</a></li>
+							<li><a href="#"><em class="txt-rendering">교육훈련</em></a></li>
+							<li><a href="#"><em class="txt-rendering">프로젝트 투입</em></a></li>
+							<li><a href="#"><em class="txt-rendering">프로젝트 완수</em></a></li>
 						</ul>
 					</dd>
-				</dl> 
+				</dl>
+				<div class="btn-wrap align-r">
+					<button type="button" class="btn-type line transparent type01 scroll"><em class="txt-rendering">Detail</em></button>
+					<button type="button" class="btn-type line transparent type02" onclick="javascript:location.href='we_people.html'"><em class="txt-rendering">프리랜서혜택보기</em></button>
+				</div> 
 				<div class="story">
-					<span class="animate fadeInUp"><em class="hidden-txt">아이콘 영역</em></span>
-					<p class="animate fadeInUp">
-						<b>위플즈 아카데미</b>에서 프로젝트 투입 전 기업의 시스템과 업무에 대한<br class="pc-only" />
-						교육훈련 진행 후 인력을 투입하며 기업의 시스템과 업무에 대한 이해를 위해<br class="pc-only" />
+					<span class="animate fadeInUp_row"><em class="hidden-txt">아이콘 영역</em></span>
+					<p class="animate fadeInUp_row">
+						<b>위플즈 아카데미</b>에서 프로젝트 투입 전 기업의 시스템과 업무에 대한
+						교육훈련 진행 후 인력을 투입하며 기업의 시스템과 업무에 대한 이해를 위해
 						위플즈 각 분야별 매니저가 사전 미팅 후 시스템과 업무 및 요구사항 분석을 진행합니다
 					</p>
 				</div>  
@@ -142,82 +150,88 @@
 		</section><!-- // section-wrap-01 -->
 
 		<section class="section-wrap-02">
-			<div class="inner animate fadeInUp">
-				<h3>맞춤형 교육훈련 실시 <span>(5인 이상 투입인력 요청 시 진행)</span></h3>
-				<ul class="education">
-					<li><span><strong>업무분석</strong><br /><em class="txt-rendering">시스템 및 업무 요구사항분석<br /> (위플즈 각 분야별 매니저가 진행)</em></span></li>
-					<li><span><strong>인재선발</strong><br /><em class="txt-rendering">프로젝트에 적합한 인재 선발<br /> (2배 수로 1차 선발 후 인터뷰를 통해 최종 선정)</em></span></li>
-					<li><span><strong>교육훈련</strong><br /><em class="txt-rendering">교육 진행은 위플즈 매니저 또는<br /> 수요 기업의 교육훈련 담당자가 실시</em></span></li>
-				</ul>
-				<p class="description align-r txt-rendering">(교육훈련은 프로젝트 진행 단계에서도 업무 능력 향상을 위해 계속 지원)</p>
-			</div>
-			<div class="inner animate fadeInUp">
-				<h3>프로젝트 의뢰 감사 서비스 제공</h3>
-				<ul class="service">
-					<li><span><em class="txt-rendering">프로젝트 의뢰 기업 담당자에게<br /> 위플즈에서 제공하는 소정의 기념품을 제공합니다.</em></span></li>
-					<li><span><em class="txt-rendering">프로젝트 연속 의뢰 시 프리미엄 기업 서비스의<br /> 혜택을 제공 받으실 수 있습니다.</em></span></li>
-				</ul>
-				<div class="btn-wrap align-c"><button class="btn-type-lg purple" onclick="javascript:location.href='../project/create.html'"><em class="ft-md">프로젝트 등록하기</em></button></div>
+			<div class="contents-wrap inner">
+				<div class="contents">
+					<div class="animate fadeInUp_row">
+						<h3>맞춤형 교육훈련 실시<br class="mob-only" /> <span>(5인 이상 투입인력 요청 시 진행)</span></h3>
+						<ul class="education">
+							<li><span><strong>업무분석</strong><br /><em class="txt-rendering">시스템 및 업무 요구사항분석<br /> (위플즈 각 분야별 매니저가 진행)</em></span></li>
+							<li><span><strong>인재선발</strong><br /><em class="txt-rendering">프로젝트에 적합한 인재 선발<br /> (2배 수로 1차 선발 후 인터뷰를 통해 최종 선정)</em></span></li>
+							<li><span><strong>교육훈련</strong><br /><em class="txt-rendering">교육 진행은 위플즈 매니저 또는<br /> 수요 기업의 교육훈련 담당자가 실시</em></span></li>
+						</ul>
+						<p class="description align-r txt-rendering">(교육훈련은 프로젝트 진행 단계에서도 업무 능력 향상을 위해 계속 지원)</p>
+					</div>
+					<div class="animate fadeInUp_row">
+						<h3>프로젝트 의뢰 감사 서비스 제공</h3>
+						<ul class="service">
+							<li><span><em class="txt-rendering">프로젝트 의뢰 기업 담당자에게<br /> 위플즈에서 제공하는 소정의 기념품을 제공합니다.</em></span></li>
+							<li><span><em class="txt-rendering">프로젝트 연속 의뢰 시 프리미엄 기업 서비스의<br /> 혜택을 제공 받으실 수 있습니다.</em></span></li>
+						</ul>
+						<div class="btn-wrap align-c"><button class="btn-type-lg purple" onclick="javascript:location.href='../project/create.html'"><em class="ft-md txt-rendering">프로젝트 등록하기</em></button></div>
+					</div>
+				</div>
 			</div>
 		</section><!-- // section-wrap-02 -->
 
 		<section class="section-wrap-03">
-			<div class="inner">
-				<h3>프로젝트 전 단계 업무 지원</h3>
-				<ul class="business-support">
-					<li class="clear">
-						<div class="img-cts animate animate-delay-01 fadeInLeft"><img src="../static/img/illustration-05.png" alt="사업계획서 작성 지원"></div>
-						<div class="txt-cts animate animate-delay-01 fadeInRight">
-							<div>
-								<h4>사업계획서 작성 지원</h4>
-								<ul class="dot-list">
-									<li class="txt-rendering">
-										사업 예산 수립을 위한 <b>사업계획서 작성 및 컨설팅을 지원</b>합니다.
-									</li>
-									<li class="txt-rendering">
-										위플즈는 <b>시스템, 기획, 디자인, 개발 등 IT 전 분야의 전문가를 자체 보유</b>하고 있으며
-										IT 외 업무에 대한 컨설팅도 전문 업체와의 협력을 통해 지원이 가능합니다.
-									</li>
-								</ul>
+			<div class="contents-wrap inner">
+				<div class="contents">
+					<h3>프로젝트 전 단계 업무 지원</h3>
+					<ul class="business-support">
+						<li class="clear">
+							<div class="img-cts animate animate-delay-01 fadeInLeft"><img src="../static/img/illustration-05.png" alt="사업계획서 작성 지원"></div>
+							<div class="txt-cts animate animate-delay-01 fadeInRight">
+								<div>
+									<h4>사업계획서 작성 지원</h4>
+									<ul class="dot-list">
+										<li class="txt-rendering">
+											사업 예산 수립을 위한 <b>사업계획서 작성 및 컨설팅을 지원</b>합니다.
+										</li>
+										<li class="txt-rendering">
+											위플즈는 <b>시스템, 기획, 디자인, 개발 등 IT 전 분야의 전문가를 자체 보유</b>하고 있으며
+											IT 외 업무에 대한 컨설팅도 전문 업체와의 협력을 통해 지원이 가능합니다.
+										</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-					</li>
-					<li class="clear">
-						<div class="img-cts animate animate-delay-01 fadeInRight"><img src="../static/img/illustration-06.png" alt="제안서 작성 지원"></div>
-						<div class="txt-cts animate animate-delay-01 fadeInLeft">
-							<div>
-								<h4>제안서 작성 지원</h4>
-								<ul class="dot-list">
-									<li class="txt-rendering">
-										프로젝트 참여를 위한 제안서 작성 요청 시 <b>각 분야별 전문가가 제안서 작성 지원</b>을 합니다.
-									</li>
-									<li class="txt-rendering">
-										위플즈는 기술부문에 대한 <b>제안서 작성이 가능한 인력을 보유</b>하고 있으며 시스템, 기획, 개발, 디자인시안 작업까지 지원 가능합니다.
-									</li>
-								</ul>	
+						</li>
+						<li class="clear">
+							<div class="img-cts animate animate-delay-01 fadeInRight"><img src="../static/img/illustration-06.png" alt="제안서 작성 지원"></div>
+							<div class="txt-cts animate animate-delay-01 fadeInLeft">
+								<div>
+									<h4>제안서 작성 지원</h4>
+									<ul class="dot-list">
+										<li class="txt-rendering">
+											프로젝트 참여를 위한 제안서 작성 요청 시 <b>각 분야별 전문가가 제안서 작성 지원</b>을 합니다.
+										</li>
+										<li class="txt-rendering">
+											위플즈는 기술부문에 대한 <b>제안서 작성이 가능한 인력을 보유</b>하고 있으며 시스템, 기획, 개발, 디자인시안 작업까지 지원 가능합니다.
+										</li>
+									</ul>	
+								</div>
 							</div>
-						</div>
-					</li>
-					<li class="clear">
-						<div class="img-cts animate animate-delay-01 fadeInLeft"><img src="../static/img/illustration-07.png" alt="프로젝트 수행 지원"></div>
-						<div class="txt-cts animate animate-delay-01 fadeInRight">
-							<div>
-								<h4>프로젝트 수행 지원</h4>
-								<ul class="dot-list">
-									<li class="txt-rendering">
-										<b>단독 프로젝트 수행 및 프로젝트 수행 지원</b>이 가능합니다.
-									</li>
-									<li class="txt-rendering">
-										위플즈는 <b>다양한 분야의 IT 프로젝트 수행 경험이 있는 인력을 보유</b>하고 있으며
-										위플즈IT 와의 협력을 통해 기업이 요구하는 프로젝트를 성공적으로
-										수행할 수 있습니다.
-									</li>
-								</ul>
+						</li>
+						<li class="clear">
+							<div class="img-cts animate animate-delay-01 fadeInLeft"><img src="../static/img/illustration-07.png" alt="프로젝트 수행 지원"></div>
+							<div class="txt-cts animate animate-delay-01 fadeInRight">
+								<div>
+									<h4>프로젝트 수행 지원</h4>
+									<ul class="dot-list">
+										<li class="txt-rendering">
+											<b>단독 프로젝트 수행 및 프로젝트 수행 지원</b>이 가능합니다.
+										</li>
+										<li class="txt-rendering">
+											위플즈는 <b>다양한 분야의 IT 프로젝트 수행 경험이 있는 인력을 보유</b>하고 있으며
+											위플즈IT 와의 협력을 통해 기업이 요구하는 프로젝트를 성공적으로
+											수행할 수 있습니다.
+										</li>
+									</ul>
+								</div>
 							</div>
-						</div>
-					</li>
-				</ul>
-				<div class="btn-wrap align-c"><button class="btn-type-lg purple" onclick="javascript:location.href='../project/create.html'"><em class="ft-md">프로젝트 의뢰하기</em></button></div>
+						</li>
+					</ul>
+					<div class="btn-wrap align-c"><button class="btn-type-lg purple" onclick="javascript:location.href='../project/create.html'"><em class="ft-md txt-rendering">프로젝트 의뢰하기</em></button></div>
+				</div>
 			</div>
 		</section><!-- // section-wrap-03 -->
 	</div><!-- // #wrap -->
@@ -252,6 +266,17 @@
 	<script>
 		$(function(){
 			commonFunction().motion();
+
+			document.querySelector('.scroll').addEventListener('click', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+
+				var setTop = $('.story').offset().top - $('header').height();
+
+				$('body, html').animate({
+					scrollTop : setTop + 'px'
+				});
+			});
 		});
 	</script>
 </body>

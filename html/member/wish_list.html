@@ -38,8 +38,8 @@
 	</dl>
 
 	<header>
-		<div class="container">
-			<span class="logo-wrap"><a href="index.html"><em class="hidden-txt">로고 이미지</em></a></span>
+		<div class="inner-wrap">
+			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고 이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
@@ -69,46 +69,50 @@
 				</div>
 			</hgroup>	
 			<nav class="menu-all">
-				<a href="#menu-all"><span><em class="hidden-txt">전체메뉴</em></span></a>
+				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
 					<li class="prj-add"><a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
 					<li class="prj-search"><a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
 				</ul>
 				<div>
-					<ul class="member animate fast fadeInDown">
+					<div>
+						<ul class="member animate fast fadeInDown">
 						<!-- 로그인 전 -->
-						<li><a href="../member/signin.html">로그인</a></li>
-						<li class="join">
+							<li><a href="../member/signin.html">로그인</a></li>
+							<li class="join">
+								<ul>
+									<li><a href="../partner/signup.html">프리랜서 가입</a></li>
+									<li><a href="../client/signup.html">기업회원 가입</a></li>
+								</ul>
+							</li>
+							<!-- 로그인 후 
+							<li><a href="javascript:void(0);">로그아웃</a></li>
+							<li><a href="../member/partners_mypage.html">마이페이지</a></li>
+							-->
+						</ul>
+						<div class="category animate fast fadeInDown">
 							<ul>
-								<li><a href="../partner/signup.html">프리랜서 가입</a></li>
-								<li><a href="../client/signup.html">기업회원 가입</a></li>
+								<li><a href="../project/search.html">프로젝트 검색</a></li>
+								<li><a href="../project/create.html">프로젝트 등록</a></li>
+								<li><a href="../partner/create.html">프리랜서 등록</a></li>
+								<li>
+									<a href="../introduce/we_people.html">위플즈 소개</a>
+									<ul class="depth2">
+										<li><a href="../introduce/we_people.html">We:People</a></li>
+										<li><a href="../introduce/we_project.html">We:Project</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="../community/list.html">커뮤니티</a>
+									<ul class="depth2">
+										<li><a href="../community/inquiry.html">1:1문의</a></li>
+										<li><a href="../community/faq.html">FAQ</a></li>
+										<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
+									</ul>
+								</li>
 							</ul>
-						</li>
-						<!-- 로그인 후 
-						<li><a href="javascript:void(0);">로그아웃</a></li>
-						<li><a href="../member/partners_mypage.html">마이페이지</a></li>
-						-->
-					</ul>
-					<ul class="category animate fast fadeInDown">
-							<li><a href="../project/search.html">프로젝트 검색</a></li>
-							<li><a href="../project/create.html">프로젝트 등록</a></li>
-							<li><a href="../partner/create.html">프리랜서 등록</a></li>
-							<li>
-								<a href="../introduce/we_people.html">위플즈 소개</a>
-								<ul class="depth2">
-									<li><a href="../introduce/we_people.html">We:People</a></li>
-									<li><a href="../introduce/we_project.html">We:Project</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="../community/list.html">커뮤니티</a>
-								<ul class="depth2">
-									<li><a href="../community/inquiry.html">1:1문의</a></li>
-									<li><a href="../community/faq.html">FAQ</a></li>
-									<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
-								</ul>
-							</li>
-						</ul>	
+						</div>
+					</div>	
 				</div>
 			</nav>	
 		</div>
@@ -122,13 +126,13 @@
 				<div class="contents-head">
 					<h2 class="heading-wrap-02">
 						<strong>관심 프로젝트</strong><br/>
-						<em class="txt-color-gray">회원님께서 찜하신 프로젝트 목록입니다</em>
+						<em class="txt-color-gray txt-rendering">회원님께서 찜하신 프로젝트 목록입니다</em>
 					</h2>
 				</div><!-- // contents-head -->
 
 				<div class="contents-body">
 					<div class="project-info">
-						<div class="list">
+						<div class="list clear">
 							<div class="tag-wrap">
 								<span class="icon-tag green"><em>신규</em></span>
 							</div>
@@ -162,14 +166,14 @@
 									<dd><span>2021. 02. 17.</span></dd>
 								</dl>
 							</div>
-							<div class="btn-wrap">
+							<div class="btn-wrap  clear">
 								<button type="button" class="btn-type-icon2 mid wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 								<button type="button" class="btn-type-sm purple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">상세보기</em></button>
 								<button type="button" class="btn-type-sm darkPurple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">즉시지원</em></button>
 							</div>
 						</div>
 
-						<div class="list">
+						<div class="list clear">
 							<div class="tag-wrap">
 								<span class="icon-tag red"><em>긴급</em></span>
 								<span class="icon-tag green"><em>신규</em></span>
@@ -208,14 +212,14 @@
 									<dd><span>2021. 01. 18.</span></dd>
 								</dl>
 							</div>
-							<div class="btn-wrap">
+							<div class="btn-wrap clear">
 								<button type="button" class="btn-type-icon2 mid wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 								<button type="button" class="btn-type-sm purple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">상세보기</em></button>
 								<button type="button" class="btn-type-sm darkPurple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">즉시지원</em></button>
 							</div>
 						</div>
 
-						<div class="list">
+						<div class="list clear">
 							<div class="tag-wrap">
 								<span class="icon-tag red"><em>긴급</em></span>
 								<span class="icon-tag orange"><em>마감임박</em></span>
@@ -253,14 +257,14 @@
 									<dd><span>2021. 01. 18.</span></dd>
 								</dl>
 							</div>
-							<div class="btn-wrap">
+							<div class="btn-wrap clear">
 								<button type="button" class="btn-type-icon2 mid wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 								<button type="button" class="btn-type-sm purple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">상세보기</em></button>
 								<button type="button" class="btn-type-sm darkPurple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">즉시지원</em></button>
 							</div>
 						</div>
 
-						<div class="list">
+						<div class="list clear">
 							<div class="tag-wrap">
 								<span class="icon-tag purple"><em>단독</em></span>
 								<span class="icon-tag darkGray"><em>마감</em></span>
@@ -296,14 +300,14 @@
 									<dd><span>2021. 01. 01.</span></dd>
 								</dl>
 							</div>
-							<div class="btn-wrap">
+							<div class="btn-wrap clear">
 								<button type="button" class="btn-type-icon2 mid wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 								<button type="button" class="btn-type-sm purple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">상세보기</em></button>
 								<button type="button" class="btn-type-sm darkPurple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">즉시지원</em></button>
 							</div>
 						</div>
 
-						<div class="list">
+						<div class="list clear">
 							<div class="tag-wrap">
 								<span class="icon-tag purple"><em>단독</em></span>
 								<span class="icon-tag darkGray"><em>마감</em></span>
@@ -339,7 +343,7 @@
 									<dd><span>2021. 01. 01.</span></dd>
 								</dl>
 							</div>
-							<div class="btn-wrap">
+							<div class="btn-wrap clear">
 								<button type="button" class="btn-type-icon2 mid wish color-white selected"><em class="txt-rendering hidden-txt">관심 프로젝트 등록</em></button>
 								<button type="button" class="btn-type-sm purple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">상세보기</em></button>
 								<button type="button" class="btn-type-sm darkPurple" onclick="javascript:location.href='../project/detail.html'"><em class="txt-rendering">즉시지원</em></button>
@@ -363,17 +367,18 @@
 						<a href="#" class="next"><span>다음 페이지</span></a>
 						<a href="#" class="last"><span>마지막 페이지</span></a>
 					</div>
-					<div class="btn-wrap mob-only">
-						<button type="button" class="btn-type-wide"><em>더보기</em></button>
+					<div class="btn-wrap align-c mob-only">
+						<button type="button" class="btn-type-lg more"><em class="ft-md txt-rendering">더보기</em></button>
 					</div>
 					<div class="btn-wrap align-c">
-						<button type="button" class="btn-type-lg purple" onclick="javascript:location.href='../member/partners_mypage.html'"><em class="ft-md">마이페이지 홈</em></button>
+						<button type="button" class="btn-type-lg purple" onclick="javascript:location.href='../member/partners_mypage.html'"><em class="ft-md txt-rendering">마이페이지 홈</em></button>
 					</div>
 				</div><!-- // contents-body -->
 
 			</div><!-- // contents -->
 		</div><!-- // contents-wrap -->
 	</div><!-- // #wrap -->
+	
 	<footer>
 		<div class="inner-wrap">
 			<ul>
@@ -398,5 +403,6 @@
 			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
 		</div>
 	</footer><!-- // footer -->
+	
 </body>
 </html>
