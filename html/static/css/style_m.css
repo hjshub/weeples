@@ -308,7 +308,7 @@ header .menu-all > div .category > ul > li > a {font-size:3.2rem;}
 	.form-list .modify-list-wrap .list-item {border-bottom:2px solid #7b38b8;}
 	.form-list .modify-list-wrap .list-item .btn-fold,
 	.form-list .modify-list-wrap .list-item.fold .btn-fold {width:35px; height:35px; top:25px; bottom:auto; background-size:20px auto;}
-	.form-list .modify-list-wrap .list-item .heading {padding:25px 35px 25px 0; height:162px;}
+	.form-list .modify-list-wrap .list-item .heading {padding:25px 35px 25px 0; height:auto;}
 	.form-list .modify-list-wrap .list-item .heading dd span,
 	.form-list .modify-list-wrap .list-item .heading dd span:nth-of-type(2) {width:100%; padding:0; text-align:left !important; margin-top:25px;}
 	.form-list .modify-list-wrap .list-item .modify-list {padding-top:25px;}
