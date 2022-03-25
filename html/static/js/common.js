@@ -391,7 +391,7 @@ function commonFunction(){
 
 		motion = function(){
 			gsap.to(".bg-area", {width:0, opacity:0, duration:0.7});
-			gsap.fromTo("h2", {opacity:0, y:100, scale:1.3}, {opacity:1, duration:1.5, delay:0.7});
+			gsap.fromTo("h2", {opacity:0, y:150, scale:1.3}, {opacity:1, duration:1.5, delay:0.7});
 			gsap.delayedCall(1.5, addMotion);
 
 			function addMotion(){
@@ -406,7 +406,7 @@ function commonFunction(){
 					delay:0.4, 
 					onComplete:function(){
 						$('.section-wrap-01 dl dt').addClass('active');
-						gsap.fromTo(".section-wrap-01 .btn-wrap", {opacity:0, y:50}, {opacity:1, duration:1, y:0});
+						gsap.fromTo(".section-wrap-01 .btn-wrap", {opacity:0, x:50}, {opacity:1, duration:1, x:0});
 					}
 				});
 				gsap.fromTo(".section-wrap-01 dl dd", {
@@ -693,7 +693,7 @@ function commonFunction(){
 			window.addEventListener('scroll', function(){
 				var trgTop = trg.offset().top;
 
-				if(document.documentElement.scrollTop + document.documentElement.clientHeight - gb.header.height() >= trgTop){
+				if(document.documentElement.scrollTop + document.documentElement.clientHeight - 100 >= trgTop){
 					trg.addClass('animation--start');
 				}else {
 					trg.removeClass('animation--start');
