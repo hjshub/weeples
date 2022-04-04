@@ -13,6 +13,7 @@ var _gb = function(){
 	this.body =  $('body');
 	this.main = $('#main');
 	this.header = $('header');
+	this.footer = $('footer');
 	this.menuAll = $('.menu-all');
 	this.filter = $('.filter');
 	this.sideMenu = $('.side-menu');
@@ -97,8 +98,8 @@ function commonFunction(){
 				e.stopPropagation();
 
 				var trg = $(this),
-						id = trg.attr('href').substr(1),
-						tabCtsWrap = trg.closest(gb.tabMenu).next(gb.tabCtsWrap);
+					id = trg.attr('href').substr(1),
+					tabCtsWrap = trg.closest(gb.tabMenu).next(gb.tabCtsWrap);
 
 				trg.closest('li').addClass('selected');
 				gb.tabMenu.find('a').not(trg).closest('li').removeClass('selected');
@@ -390,9 +391,9 @@ function commonFunction(){
 		},
 
 		motion = function(){
-			gsap.to(".bg-area", {width:0, opacity:0, duration:0.7});
-			gsap.fromTo("h2", {opacity:0, y:150, scale:1.3}, {opacity:1, duration:1.5, delay:0.7});
-			gsap.delayedCall(1.5, addMotion);
+			gsap.to(".bg-area", {width:0, opacity:0, duration:0.6});
+			gsap.fromTo("h2", {opacity:0, y:100, scale:1.3}, {opacity:1, duration:1, delay:0.6});
+			gsap.delayedCall(1, addMotion);
 
 			function addMotion(){
 				gsap.to("h2", {y:0, scale:1});
@@ -406,7 +407,7 @@ function commonFunction(){
 					delay:0.4, 
 					onComplete:function(){
 						$('.section-wrap-01 dl dt').addClass('active');
-						gsap.fromTo(".section-wrap-01 .btn-wrap", {opacity:0, x:50}, {opacity:1, duration:1, x:0});
+						gsap.fromTo(".section-wrap-01 .btn-wrap", {opacity:0, x:50}, {opacity:1, duration:0.8, x:0});
 					}
 				});
 				gsap.fromTo(".section-wrap-01 dl dd", {
@@ -416,7 +417,7 @@ function commonFunction(){
 					opacity:1, 
 					y:0, 
 					duration:1, 
-					delay:0.4
+					delay:0.6
 				});
 			}
 		},
@@ -466,23 +467,14 @@ function commonFunction(){
 						crossFade: true
 					},
 					pagination: {
-	          el: ".swiper-pagination",
-	          clickable: true,
-	          renderBullet: function (index, className) {
-	            return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
-	          },
-	        },
+			          el: ".swiper-pagination",
+			          clickable: true,
+			          renderBullet: function (index, className) {
+			            return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+			          },
+	        		},
 					slidesPerView: 1,
 					debugger: true, // Enable debugger
-
-					// Auto play
-					/*
-						autoplay: {
-						delay: 3000,
-						disableOnInteraction : false,
-						pauseOnMouseEnter : true
-					},
-					*/
 				});
 			}
 		},
@@ -495,31 +487,31 @@ function commonFunction(){
 					speed : 600,
 					direction : 'horizontal',
 					slidesPerView: 'auto',
-        	slidesPerGroup: 1,
+        			slidesPerGroup: 1,
 					spaceBetween : 0,
 					centeredSlides : false,
 					debugger: true, // Enable debugger
 					pagination: {
-	          el: ".swiper-pagination2",
-	          clickable: true,
-	        },
-	        navigation: {
+						el: ".swiper-pagination2",
+						clickable: true,
+			        },
+			        navigation: {
 						nextEl: ".swiper-nxt",
-          	prevEl: ".swiper-prev",
-        	},
-        	breakpoints: {
-				    1024: {
-				      slidesPerView: 2,
-	        		slidesPerGroup: 2,
-				    },
-				    1480: {
-				      slidesPerView: 3,
-	        		slidesPerGroup: 3,
-				    },
-				    1920: {
-				      slidesPerView: 4,
-	        		slidesPerGroup: 4,
-				    },
+		          		prevEl: ".swiper-prev",
+		        	},
+        			breakpoints: {
+					    1024: {
+					      slidesPerView: 2,
+		        		slidesPerGroup: 2,
+					    },
+					    1480: {
+					      slidesPerView: 3,
+		        		slidesPerGroup: 3,
+					    },
+					    1920: {
+					      slidesPerView: 4,
+		        		slidesPerGroup: 4,
+					    },
 					}
 				});
 			}
@@ -538,8 +530,8 @@ function commonFunction(){
 					pagination: false,
 					navigation: {
 						nextEl: ".swiper-nxt",
-          	prevEl: ".swiper-prev",
-        	},
+		          		prevEl: ".swiper-prev",
+		        	},
 
 					// Auto play
 					autoplay: {
@@ -651,6 +643,10 @@ function commonFunction(){
 			motion : motion
 		}
 	}
+	
+	window.addEventListener('load', function(){
+		setTimeout(scrollTo, 0, 0, 1);
+	}, false);
 
 	window.addEventListener('resize', function(){
 		gb.isMobile = window.innerWidth <= 768 ? true : false;
@@ -668,7 +664,8 @@ function commonFunction(){
 
 	if(!gb.main.length){
 		window.addEventListener('scroll', function(){
-			if(document.documentElement.scrollTop >= gb.header.height()){
+			if(document.documentElement.scrollTop 
+				>= gb.header.height()){
 				gb.html.addClass('activeScroll');
 			}else {
 				gb.html.removeClass('activeScroll');
@@ -678,10 +675,22 @@ function commonFunction(){
 
 	if(gb.sideMenu.length){
 		window.addEventListener('scroll', function(){
-			if(document.documentElement.scrollTop >= $('.contents-wrap').offset().top - gb.header.height()){
+			if(document.documentElement.scrollTop 
+				>= $('.contents-wrap').offset().top - gb.header.height()){
 				gb.sideMenu.addClass('l-fixed');
 			}else{
 				gb.sideMenu.removeClass('l-fixed');
+			}
+
+			if(document.documentElement.scrollTop 
+				>= document.documentElement.scrollHeight - document.documentElement.clientHeight){
+				gb.sideMenu
+				.addClass('reverse')
+				.css('bottom', gb.footer.outerHeight() + 'px');
+			}else{
+				gb.sideMenu
+				.removeClass('reverse')
+				.css('bottom', 'auto');
 			}
 		});
 	}
@@ -693,7 +702,9 @@ function commonFunction(){
 			window.addEventListener('scroll', function(){
 				var trgTop = trg.offset().top;
 
-				if(document.documentElement.scrollTop + document.documentElement.clientHeight - 100 >= trgTop){
+				if(document.documentElement.scrollTop 
+					+ document.documentElement.clientHeight - 100 
+					>= trgTop){
 					trg.addClass('animation--start');
 				}else {
 					trg.removeClass('animation--start');

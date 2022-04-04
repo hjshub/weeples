@@ -7,7 +7,7 @@
 	<meta name="Keywords" content="">
 	<meta name="Description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>프리랜서 등록 | 위플즈</title>
+	<title>프리랜서 개인정보수정 | 위플즈</title>
 
 	<script src="../static/js/jquery-3.6.0.min.js"></script>
 	<script src="../static/js/jquery-ui.min.js"></script>
@@ -118,7 +118,7 @@
 	</header><!-- // header -->
 	
 	<div id="wrap">
-		<h1 class="hidden-txt">프리랜서 등록</h1>
+		<h1 class="hidden-txt">프리랜서 개인정보수정</h1>
 		<div class="sub-top-wrap">
 			<h2 class="heading-wrap-02 long-txt">
 				위플즈 회원이 되시면<br class="mob-only" /> 다양한 활동지원 서비스를 받으실 수 있습니다<br/>
@@ -141,38 +141,6 @@
 					</div>
 					<div class="contents-body">
 						<div class="form-list">
-							<dl class="table">
-								<dt><strong>이름</strong></dt>
-								<dd>
-									<div class="text-wrap purple">
-										<input type="text" class="txt-rendering" id="" value="" placeholder="홍길동" title="이름 - 예)홍길동">
-									</div>
-								</dd>
-							</dl>
-
-							<dl class="table">
-								<dt><strong>전화번호</strong></dt>
-								<dd>
-									<div class="text-wrap purple">
-										<input type="text" class="txt-rendering" id="" value="" placeholder="010-1234-5678" title="이름 - 예)010-1234-5678">
-									</div>
-								</dd>
-							</dl>
-
-							<dl class="table">
-								<dt><strong>사진등록</strong></dt>
-								<dd>
-									<div class="file-attach-image">
-										<span class="img-wrap">
-											<label for="imgAttach"><em class="hidden-txt">이미지 첨부</em></label>
-											<input class="hidden-txt" type="file" id="imgAttach" value="" title="이미지 첨부" onchange="commonFunction().fileUpload(this, 'image');">
-											<img src="../static/img/partners-default-image.gif" alt="기본 이미지">
-										</span>
-										<em class="txt-rendering">(최적 사진 사이즈 : 150X200px &#47; 권장 파일 포맷 : gif, png, jpg)</em>
-									</div>
-								</dd>
-							</dl>
-
 							<dl class="table">
 								<dt><strong>아이디</strong></dt>
 								<dd>
@@ -199,22 +167,6 @@
 							</dl>
 
 							<dl class="table">
-								<dt><strong>성별</strong></dt>
-								<dd>
-									<div class="form-wrap col-2">
-										<span>
-											<input id="male" name="contract" type="radio" checked>
-											<label for="male"><em class="txt-rendering">남</em></label>
-										</span>
-										<span>
-											<input id="female" name="contract" type="radio">
-											<label for="female"><em class="txt-rendering">여</em></label>
-										</span>
-									</div>
-								</dd>
-							</dl>
-
-							<dl class="table">
 								<dt><strong>이메일</strong></dt>
 								<dd class="email">
 									<span class="text-wrap half">
@@ -229,6 +181,57 @@
 											<option value="">hanmail.net</option>
 										</select>
 									</span>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>주소</strong></dt>
+								<dd>
+									<div>
+										<span class="text-wrap has-button">
+											<input type="text" id="" class="txt-rendering" value="" placeholder="우편번호를 검색하세요" title="우편번호 - 예)우편번호를 검색하세요">
+										</span>
+										<span class="btn-wrap-inline">
+											<button type="button" class="btn-type-sm darkPurple"><em class="txt-rendering">우편번호 검색</em></button>
+										</span>
+									</div>
+									<div class="text-wrap">
+										<input type="text" id="" class="txt-rendering" value="" placeholder="상세주소를 입력하세요" title="상세주소 - 예)상세주소를 입력하세요">
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>이름</strong></dt>
+								<dd>
+									<div class="text-wrap purple">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="홍길동" title="이름 - 예)홍길동">
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>전화번호</strong></dt>
+								<dd>
+									<div class="text-wrap purple">
+										<input type="text" class="txt-rendering" id="" value="" placeholder="010-1234-5678" title="이름 - 예)010-1234-5678">
+									</div>
+								</dd>
+							</dl>
+
+							<dl class="table">
+								<dt><strong>성별</strong></dt>
+								<dd>
+									<div class="form-wrap col-2">
+										<span>
+											<input id="male" name="contract" type="radio" checked>
+											<label for="male"><em class="txt-rendering">남</em></label>
+										</span>
+										<span>
+											<input id="female" name="contract" type="radio">
+											<label for="female"><em class="txt-rendering">여</em></label>
+										</span>
+									</div>
 								</dd>
 							</dl>
 
@@ -253,435 +256,13 @@
 									</span>
 								</dd>
 							</dl>
-
-							<dl class="table">
-								<dt><strong>주소</strong></dt>
-								<dd>
-									<div>
-										<span class="text-wrap has-button">
-											<input type="text" id="" class="txt-rendering" value="" placeholder="우편번호를 검색하세요" title="우편번호 - 예)우편번호를 검색하세요">
-										</span>
-										<span class="btn-wrap-inline">
-											<button type="button" class="btn-type-sm darkPurple"><em class="txt-rendering">우편번호 검색</em></button>
-										</span>
-									</div>
-									<div class="text-wrap">
-										<input type="text" id="" class="txt-rendering" value="" placeholder="상세주소를 입력하세요" title="상세주소 - 예)상세주소를 입력하세요">
-									</div>
-								</dd>
-							</dl>
-
-							<dl class="table">
-								<dt><strong>학력정보</strong></dt>
-								<dd class="add-list-wrap baccalaureate">
-									<div class="list-item is_animated animate__fade_In_Up">
-										<div>
-											<span class="select-wrap col-3">
-												<label for="graduation1_1"><em class="hidden-txt">학력</em></label>
-												<select id="graduation1_1">
-													<option value="" selected>대졸</option>
-													<option value="">전문대졸</option>
-													<option value="">고졸</option>
-													<option value="">중졸</option>
-												</select>
-											</span>
-											<span class="btn-wrap-inline">
-												<button type="button" class="btn-type-icon add add-list" onclick="commonFunction().addList(this);"><em class="txt-rendering">학력 추가</em></button>
-												<button type="button" class="btn-type-icon delete delete-list" onclick="commonFunction().removeList(this);"><em class="txt-rendering">학력 삭제</em></button>
-											</span>
-										</div>
-										<div>
-											<span class="text-wrap col-3 search">
-												<input type="text" id="university_1" class="txt-rendering" value="" placeholder="학교검색" title="학력정보 - 학교검색">
-												<img src="../static/img/icon/ico-search-xs.png" alt="검색">
-											</span>
-											<span class="text-wrap col-3 search">
-												<input type="text" id="major_1" class="txt-rendering" value="" placeholder="전공검색" title="학력정보 - 전공검색">
-												<img src="../static/img/icon/ico-search-xs.png" alt="검색">
-											</span>
-											<span class="select-wrap col-3">
-												<label for="graduation2_1"><em class="hidden-txt">졸업여부</em></label>
-												<select id="graduation2_1">
-													<option value="" selected>졸업</option>
-													<option value="">중퇴</option>
-												</select>
-											</span>	
-										</div>
-									</div>
-								</dd>
-							</dl>
 						</div>
 					</div><!-- // contents-body (기본정보)-->
-
-					<!--보유기술-->
-					<div class="contents-head">
-						<strong>보유기술</strong><em class="txt-color-purple txt-rendering">(필수등록)</em>
-					</div>
-					<div class="contents-body">
-						<div class="form-list">
-							<div class="dropDown">
-								<div class="form-wrap wide task">
-									<span>
-										<input id="task01" name="" type="checkbox" checked>
-										<label for="task01"><em class="txt-rendering">개발</em></label>
-									</span>
-								</div>
-								<div class="skill dropDown-list">
-									<div>
-										<div class="chk-wrap">
-											<span>
-												<input id="dev_01" type="checkbox">
-												<label for="dev_01"><em class="txt-rendering">JAVA/JSP</em></label>
-											</span>
-											<span>
-												<input id="dev_02" type="checkbox">
-												<label for="dev_02"><em class="txt-rendering">PHP</em></label>
-											</span>
-											<span>
-												<input id="dev_03" type="checkbox">
-												<label for="dev_03"><em class="txt-rendering">ASP</em></label>
-											</span>
-											<span>
-												<input id="dev_04" type="checkbox">
-												<label for="dev_04"><em class="txt-rendering">C&#47;C#</em></label>
-											</span>
-											<span>
-												<input id="dev_05" type="checkbox">
-												<label for="dev_05"><em class="txt-rendering">기타</em></label>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="dropDown">
-								<div class="form-wrap wide task">
-									<span>
-										<input id="task02" name="" type="checkbox">
-										<label for="task02"><em class="txt-rendering">디자인</em></label>
-									</span>
-								</div>
-								<div class="skill dropDown-list">
-									<div>
-										<div class="chk-wrap">
-											<span>
-												<input id="des_01" type="checkbox">
-												<label for="des_01"><em class="txt-rendering">JAVA/JSP</em></label>
-											</span>
-											<span>
-												<input id="des_02" type="checkbox">
-												<label for="des_02"><em class="txt-rendering">PHP</em></label>
-											</span>
-											<span>
-												<input id="des_03" type="checkbox">
-												<label for="des_03"><em class="txt-rendering">ASP</em></label>
-											</span>
-											<span>
-												<input id="des_04" type="checkbox">
-												<label for="des_04"><em class="txt-rendering">C&#47;C#</em></label>
-											</span>
-											<span>
-												<input id="des_05" type="checkbox">
-												<label for="des_05"><em class="txt-rendering">기타</em></label>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="dropDown">
-								<div class="form-wrap wide task">
-									<span>
-										<input id="task03" name="" type="checkbox">
-										<label for="task03"><em class="txt-rendering">퍼블리싱</em></label>
-									</span>
-								</div>
-								<div class="skill dropDown-list">
-									<div>
-										<div class="chk-wrap">
-											<span>
-												<input id="pub_01" type="checkbox">
-												<label for="pub_01"><em class="txt-rendering">JAVA/JSP</em></label>
-											</span>
-											<span>
-												<input id="pub_02" type="checkbox">
-												<label for="pub_02"><em class="txt-rendering">PHP</em></label>
-											</span>
-											<span>
-												<input id="pub_03" type="checkbox">
-												<label for="pub_03"><em class="txt-rendering">ASP</em></label>
-											</span>
-											<span>
-												<input id="pub_04" type="checkbox">
-												<label for="pub_04"><em class="txt-rendering">C&#47;C#</em></label>
-											</span>
-											<span>
-												<input id="pub_05" type="checkbox">
-												<label for="pub_05"><em class="txt-rendering">기타</em></label>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="dropDown">
-								<div class="form-wrap wide task">
-									<span>
-										<input id="task04" name="" type="checkbox">
-										<label for="task04"><em class="txt-rendering">기획</em></label>
-									</span>
-								</div>
-								<div class="skill dropDown-list">
-									<div>
-										<div class="chk-wrap">
-											<span>
-												<input id="plan_01" type="checkbox">
-												<label for="plan_01"><em class="txt-rendering">JAVA/JSP</em></label>
-											</span>
-											<span>
-												<input id="plan_02" type="checkbox">
-												<label for="plan_02"><em class="txt-rendering">PHP</em></label>
-											</span>
-											<span>
-												<input id="plan_03" type="checkbox">
-												<label for="plan_03"><em class="txt-rendering">ASP</em></label>
-											</span>
-											<span>
-												<input id="plan_04" type="checkbox">
-												<label for="plan_04"><em class="txt-rendering">C&#47;C#</em></label>
-											</span>
-											<span>
-												<input id="plan_05" type="checkbox">
-												<label for="plan_05"><em class="txt-rendering">기타</em></label>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="dropDown">
-								<div class="form-wrap wide task">
-									<span>
-										<input id="task05" name="" type="checkbox">
-										<label for="task05"><em class="txt-rendering">PM</em></label>
-									</span>
-								</div>
-								<div class="skill dropDown-list">
-									<div>
-										<div class="chk-wrap">
-											<span>
-												<input id="pm_01" type="checkbox">
-												<label for="pm_01"><em class="txt-rendering">JAVA/JSP</em></label>
-											</span>
-											<span>
-												<input id="pm_02" type="checkbox">
-												<label for="pm_02"><em class="txt-rendering">PHP</em></label>
-											</span>
-											<span>
-												<input id="pm_03" type="checkbox">
-												<label for="pm_03"><em class="txt-rendering">ASP</em></label>
-											</span>
-											<span>
-												<input id="pm_04" type="checkbox">
-												<label for="pm_04"><em class="txt-rendering">C&#47;C#</em></label>
-											</span>
-											<span>
-												<input id="pm_05" type="checkbox">
-												<label for="pm_05"><em class="txt-rendering">기타</em></label>
-											</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div><!-- // contents-body (보유기술)-->
-
-					<!--경력등록-->
-					<div class="contents-head">
-						<strong>경력등록</strong><em class="txt-color-purple txt-rendering">(필수등록)</em>
-						<span class="total-career">경력 <strong>10년 8개월</strong></span>
-					</div>
-					<div class="contents-body">
-						<div class="form-list pd-none">
-							<!-- 경력 수정 -->
-							<div class="modify-list-wrap">
-								<div class="list-item fold">
-									<div class="heading">
-										<dl class="table pd-none">
-											<dt><strong>프로젝트명</strong></dt>
-											<dd>
-												<span class="txt-rendering">미래에셋생명 퇴직연금 플랫폼 구축 프로젝트 개발자 모집</span>
-												<span class="txt-rendering txt-color-purple align-r">2018-02-20 ~ 2018-06-20</span>
-											</dd>
-										</dl>
-									</div>
-									<button type="button" class="btn-fold" onclick="commonFunction().foldList(this);"><em class="hidden-txt">경력 보기</em></button>
-
-									<div class="modify-list">
-										<dl class="table">
-											<dt><strong>프로젝트명</strong></dt>
-											<dd>
-												<div class="text-wrap">
-													<input type="text" class="txt-rendering" id="" value="" placeholder="50자 이내로 입력해주세요" title="프로젝트명 - 50자 이내로 입력해주세요">
-												</div>
-											</dd>
-										</dl>
-										<dl class="table">
-											<dt><strong>직무내용</strong></dt>
-											<dd>
-												<div class="text-wrap">
-													<input type="text" class="txt-rendering" id="" value="" placeholder="50자 이내로 입력해주세요" title="직무내용 - 50자 이내로 입력해주세요">
-												</div>
-											</dd>
-										</dl>
-										<dl class="table">
-											<dt><strong>프로젝트 기간</strong></dt>
-											<dd>
-												<span class="text-wrap half">
-													<input type="text" id="startDate_1" class="datePick startDate txt-rendering" value="" placeholder="날짜를 선택하세요" title="프로젝트 기간(시작) - 날짜를 선택하세요">
-												</span>
-												<span class="etc">-</span>
-												<span class="text-wrap half">
-													<input type="text" id="endDate_1" class="datePick endDate txt-rendering" value="" placeholder="날짜를 선택하세요" title="프로젝트 기간(종료) - 날짜를 선택하세요">
-												</span>
-											</dd>
-										</dl>
-										<dl class="table">
-											<dt><strong>발주기관</strong></dt>
-											<dd>
-												<div class="text-wrap">
-													<input type="text" class="txt-rendering" id="" value="" placeholder="프로젝트 발주기관을 입력해주세요" title="발주기관 - 프로젝트 발주기관을 입력해주세요">
-												</div>
-											</dd>
-										</dl>
-										<dl class="table">
-											<dt><strong>수행기업</strong></dt>
-											<dd>
-												<div class="text-wrap">
-													<input type="text" class="txt-rendering" id="" value="" placeholder="프로젝트 수행기업을 입력해주세요" title="발주기관 - 프로젝트 수행기업을 입력해주세요">
-												</div>
-											</dd>
-										</dl>
-										<div class="btn-wrap align-c col-mid-2">
-											<button type="button" class="btn-type-mid sm add-list darkPurple"><em class="txt-rendering">수정</em></button>
-											<button type="button" class="btn-type-mid sm delete-list" onclick="commonFunction().removeList(this);"><em class="txt-rendering">삭제</em></button>
-										</div>	
-									</div>
-								</div>
-							</div>
-
-							<!-- 경력 추가 -->
-							<div class="add-list-wrap career">
-								<div class="list-item is_animated animate__fade_In_Up">
-									<dl class="table">
-										<dt><strong>프로젝트명</strong></dt>
-										<dd>
-											<div class="text-wrap">
-												<input type="text" class="txt-rendering" id="" value="" placeholder="50자 이내로 입력해주세요" title="프로젝트명 - 50자 이내로 입력해주세요">
-											</div>
-										</dd>
-									</dl>
-									<dl class="table">
-										<dt><strong>직무내용</strong></dt>
-										<dd>
-											<div class="text-wrap">
-												<input type="text" class="txt-rendering" id="" value="" placeholder="50자 이내로 입력해주세요" title="직무내용 - 50자 이내로 입력해주세요">
-											</div>
-										</dd>
-									</dl>
-									<dl class="table">
-										<dt><strong>프로젝트 기간</strong></dt>
-										<dd>
-											<span class="text-wrap half">
-												<input type="text" id="startDate_1" class="datePick startDate txt-rendering" value="" placeholder="날짜를 선택하세요" title="프로젝트 기간(시작) - 날짜를 선택하세요">
-											</span>
-											<span class="etc">-</span>
-											<span class="text-wrap half">
-												<input type="text" id="endDate_1" class="datePick endDate txt-rendering" value="" placeholder="날짜를 선택하세요" title="프로젝트 기간(종료) - 날짜를 선택하세요">
-											</span>
-										</dd>
-									</dl>
-									<dl class="table">
-										<dt><strong>발주기관</strong></dt>
-										<dd>
-											<div class="text-wrap">
-												<input type="text" class="txt-rendering" id="" value="" placeholder="프로젝트 발주기관을 입력해주세요" title="발주기관 - 프로젝트 발주기관을 입력해주세요">
-											</div>
-										</dd>
-									</dl>
-									<dl class="table">
-										<dt><strong>수행기업</strong></dt>
-										<dd>
-											<div class="text-wrap">
-												<input type="text" class="txt-rendering" id="" value="" placeholder="프로젝트 수행기업을 입력해주세요" title="발주기관 - 프로젝트 수행기업을 입력해주세요">
-											</div>
-										</dd>
-									</dl>
-									<div class="btn-wrap align-c col-mid-2">
-										<button type="button" class="btn-type-mid sm add-list purple" onclick="commonFunction().addList(this);"><em class="txt-rendering">경력추가</em></button>
-										<button type="button" class="btn-type-mid sm delete-list" onclick="commonFunction().removeList(this);"><em class="txt-rendering">취소</em></button>
-									</div>
-								</div>
-							</div>
-						</div>	
-					</div><!-- // contents-body (경력등록)-->
-
-					<!--자기소개서-->
-					<div class="contents-head">
-						<strong>자기소개서</strong><em class="txt-color-gray txt-rendering">(선택사항)</em>
-					</div>
-					<div class="contents-body">
-						<div class="form-list">
-							<div class="form-txt-wrap">
-								<textarea name="" id="" placeholder="간략한 자기소개와 추가할 경력과 보유기술을 2,000자 이내로 입력해주세요" title="자기소개서 - 간략한 자기소개와 추가할 경력과 보유기술을 2,000자 이내로 입력해주세요"></textarea>
-								<span><em class="txt-rendering">0</em>&nbsp;&#47;&nbsp;<em class="maxLength txt-rendering">2,000</em></span>
-							</div>
-						</div>	
-					</div><!-- // contents-body (자기소개서)-->
-
-					<!--자격증등록-->
-					<div class="contents-head">
-						<strong>자격증등록</strong><em class="txt-color-gray txt-rendering">(선택사항)</em>
-					</div>
-					<div class="contents-body">
-						<div class="form-list">
-							<dl class="table">
-								<dt><strong>보유 자격증</strong></dt>
-								<dd class="add-list-wrap certificate">
-									<div class="list-item is_animated animate__fade_In_Up">
-										<div>
-											<span class="text-wrap col-3x2 search">
-												<input type="text" id="certSearch_1" class="txt-rendering" value="" placeholder="자격증검색" title="자격증검색">
-												<img src="../static/img/icon/ico-search-xs.png" alt="검색">
-											</span>
-											<span class="btn-wrap-inline">
-												<button type="button" class="btn-type-icon add add-list" onclick="commonFunction().addList(this);"><em class="txt-rendering">자격증 추가</em></button>
-												<button type="button" class="btn-type-icon delete delete-list" onclick="commonFunction().removeList(this);"><em class="txt-rendering">삭제</em></button>
-											</span>
-										</div>
-										<div class="file-attach">
-											<span class="file-wrap">
-												<label for="certificate_1"><em class="txt-rendering">자격증 사본 첨부</em></label>
-												<input class="hidden-txt" type="file" id="certificate_1" value="" title="이미지 첨부" onchange="commonFunction().fileUpload(this);">
-											</span>
-											<em class="fileName txt-rendering txt-color-purple"></em>
-										</div>
-									</div>
-								</dd>
-							</dl>	
-						</div>	
-					</div><!-- // contents-body (자격증등록)-->
-
 					<div class="btn-wrap align-c col-mid-2-2">
 						<button type="submit" class="btn-type-lg purple"><em class="txt-rendering ft-md">수정하기</em></button>
 						<button type="button" class="btn-type-mid"><em class="txt-rendering ft-md">취소</em></button>
 					</div>
 				</form>
-
-				<div class="toolTip block up">
-					<div>
-						<p class="txt-rendering">
-							<span>회원 등록</span>을 하시면 <span>프로젝트 지원</span>을 하실 수 있습니다<br/>
-							단, 등록된 회원정보의 사실 여부 확인을 위해 담당 매니저가 연락을 드릴 수도 있습니다.
-						</p>
-					</div>
-				</div>
 			</div><!-- // contents -->
 		</div><!-- // contents-wrap -->
 	</div><!-- // #wrap -->

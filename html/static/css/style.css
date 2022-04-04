@@ -6,8 +6,8 @@
 /*-----------------------------------------------------------------*/
 
 html, body {width:100%; height:100%;}
-html {font-size:62.5%; -webkit-text-size-adjust:none;}
-body {font:400 1.4em 'NanumSquare', '맑은 고딕', '나눔 고딕', sans-serif; vertical-align:middle; min-width:320px; color: #000; letter-spacing: -0.7px; overflow:hidden; overflow-y:scroll;   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: auto;}
+html {font-size:62.5%; -webkit-text-size-adjust: none; -moz-text-size-adjust: none; text-size-adjust: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: auto;}
+body {font:400 1.4em 'NanumSquare', '맑은 고딕', '나눔 고딕', sans-serif; vertical-align:middle; min-width:320px; color: #000; letter-spacing: -0.7px; overflow:hidden; overflow-y:scroll;}
 em, b, span, p, strong {word-break:keep-all; white-space:normal; word-wrap:break-word; overflow-wrap:break-word;}
 button, input, select {font:inherit;}
 
@@ -378,7 +378,7 @@ footer address span + span:before {margin:0 8px; width:1px; height:10px; backgro
 footer .copy span {font-size:1.4rem; color:#666; line-height:1; transform:rotate(-0.03deg); -webkit-transform:rotate(-0.03deg); -moz-transform:rotate(-0.03deg); -ms-transform:rotate(-0.03deg);}
 
 /*sub page*/
-.sub-top-wrap {width:100%; padding:65px 40px; background:#6222ce url('../img/section-project-bg.gif') center 20% no-repeat;}
+.sub-top-wrap {width:100%; padding:65px 40px; background-color:#6222ce; background-image:url('../img/section-project-bg.gif'); background-position:center 20%; background-repeat:no-repeat;}
 .view .sub-top-wrap {height:90px; padding:0;}
 .community .sub-top-wrap {background:#311f9d url('../img/sub-top-bg.gif') center 0 no-repeat;}
 
@@ -465,8 +465,10 @@ footer .copy span {font-size:1.4rem; color:#666; line-height:1; transform:rotate
 .subject strong {display:inline-block; font-size:2.4rem; color:#010101;}
 
 /*프로젝트 검색*/
-.contents-wrap .side-menu {position:absolute; top:0; left:50%; margin-left:-598px; width:282px; transition:all ease-in-out 0.3s; -webkit-transition:all ease-in-out 0.3s; -moz-transition:all ease-in-out 0.3s; -ms-transition:all ease-in-out 0.3s; background-color:#fff;}
-.contents-wrap .side-menu.l-fixed {position:fixed; z-index:99; top:20px; transition-delay:0.2s;}
+.contents-wrap .side-menu {position:absolute; top:0; left:50%; margin-left:-598px; width:282px; overflow:hidden; overflow-y:auto; max-height:100%; transition:all ease-in-out 0.3s; -webkit-transition:all ease-in-out 0.3s; -moz-transition:all ease-in-out 0.3s; -ms-transition:all ease-in-out 0.3s; background-color:#fff;}
+.contents-wrap .side-menu.l-fixed {position:fixed; z-index:99; top:20px; transition-delay:0.2s; -webkit-transition-delay:0.2s;}
+.contents-wrap .side-menu.l-fixed .title-wrap {opacity:0;}
+.contents-wrap .side-menu.reverse {top:auto !important;}
 
 .contents-wrap .sub-title-wrap {margin-top:40px; margin-bottom:20px;}
 .contents-wrap .sub-title-wrap strong {display:inline-block; font-size:1.4rem; line-height:1; transform:rotate(-0.03deg); -webkit-transform:rotate(-0.03deg); -moz-transform:rotate(-0.03deg); -ms-transform:rotate(-0.03deg);}
@@ -812,7 +814,7 @@ footer .copy span {font-size:1.4rem; color:#666; line-height:1; transform:rotate
 .introduce .bg-area:nth-of-type(3) {left:50%;}
 .introduce .bg-area:nth-of-type(4) {left:75%;}
 
-.introduce .section-wrap-01 {position:relative; width:100%; /*min-height:100vh;*/ padding-top:90px; background-position:center 0; background-size:cover; background-repeat:no-repeat;}
+.introduce .section-wrap-01 {position:relative; width:100%; padding-top:90px; background-position:center 0; background-attachment:fixed; background-size:cover; background-repeat:no-repeat; }
 .introduce .people .section-wrap-01 {background-image:url('../img/intro-top-bg-01.jpg');}
 .introduce .project .section-wrap-01 {background-image:url('../img/intro-top-bg-02.jpg');}
 
@@ -822,10 +824,10 @@ footer .copy span {font-size:1.4rem; color:#666; line-height:1; transform:rotate
 .introduce .section-wrap-01 .inner .story {position:absolute; width:80%; max-width:1200px; height:400px; line-height:1.5; padding:160px 40px 0 40px; background-image:url('../img/intro-mid-bg-02.jpg'); background-position:center 0; background-size:auto 100%; left:50%; bottom:-300px; font-size:3rem; color:#fff; font-weight:300; text-align:center; transform:translateX(-50%); -webkit-transform:translateX(-50%); -moz-transform:translateX(-50%); -ms-transform:translateX(-50%); z-index:10;}
 .introduce .section-wrap-01 .inner .story span {width:66px; height:62px; background-image:url('../img/icon/ico-people-benefit-2x.png'); background-repeat:no-repeat; background-size:100% auto; background-position:0 0; position: absolute; top:75px; left:50%; margin-left:-33px;}
 
-.introduce .section-wrap-01 h2 {font-size:15rem; color:#dda1ff; text-align:center; line-height:1;}
+.introduce .section-wrap-01 h2 {font-size:15rem; color:#dda1ff; text-align:center; line-height:1.3;}
 .introduce .section-wrap-01 h2 * {display:inline-block; line-height:1;}
 .introduce .section-wrap-01 h2 span {font-weight:300;}
-.introduce .section-wrap-01 dl {margin-top:55px; text-align:center;}
+.introduce .section-wrap-01 dl {margin-top:40px; text-align:center;}
 .introduce .section-wrap-01 dl dt,
 .introduce .section-wrap-01 dl dd {opacity:0;}
 .introduce .section-wrap-01 dl dt strong {font-size:3rem; color:#fff; position:relative; padding-bottom:5px;}
@@ -847,7 +849,7 @@ footer .copy span {font-size:1.4rem; color:#666; line-height:1; transform:rotate
 .introduce [class*= section-wrap] h3 span {font-size:2.4rem; vertical-align:bottom;}
 .introduce [class*= section-wrap] h4 {font-size:3.2rem; color:#010101; font-weight:800;}
 .introduce [class*= section-wrap] h4 span {font-size:2rem; vertical-align:bottom;}
-.introduce [class*= section-wrap] .btn-wrap {margin-top:40px;}
+.introduce [class*= section-wrap] .btn-wrap {margin-top:70px;}
 
 .introduce .section-wrap-03 {padding:80px 0 100px; background-color:#311f38;}
 .introduce .section-wrap-03 h3 {color:#fff;}
@@ -911,7 +913,7 @@ footer .copy span {font-size:1.4rem; color:#666; line-height:1; transform:rotate
 
 .introduce .business-support {margin-top:30px;}
 .introduce .business-support > li {background-color:#fff; padding:0; height:288px;}
-.introduce .business-support > li + li {margin-top:20px;}
+.introduce .business-support > li + li {margin-top:70px;}
 .introduce .business-support > li > div {width:50%; height:100%; position:relative;}
 .introduce .business-support > li:nth-of-type(odd) > div {float:right;}
 .introduce .business-support > li:nth-of-type(even) > div {float:left;}
