@@ -1,60 +1,80 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="Author" content="">
-	<meta name="Keywords" content="">
-	<meta name="Description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="Author" content="" />
+	<meta name="Keywords" content="" />
+	<meta name="Description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
 	<title>마이페이지_기업회원 | 위플즈</title>
 
 	<script src="../static/js/jquery-3.6.0.min.js"></script>
 	<script src="../static/js/jquery-ui.min.js"></script>
 	<script defer="defer" src="../static/js/common.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="../static/css/base.css"> <!-- reset -->
-	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
-	<link rel="stylesheet" media="all and (max-width:1680px)" type="text/css" href="../static/css/style_m.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/base.css" />
+	<!-- reset -->
+	<link rel="stylesheet" type="text/css" href="../static/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+	<link rel="stylesheet" media="all and (max-width:1680px)" type="text/css" href="../static/css/style_m.css" />
 </head>
+
 <body>
 	<!--[if lt IE 10]>
-	<div id="legacy-IE">
-		<div class="info">
-		본 사이트는 Internet Explorer 10 기준(웹표준)으로 제작 된 사이트 입니다.
-		현재 고객님이 이용중인 브라우저는 곧 지원이 중단 됩니다.
-		<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">Internet Explorer 최신 버전</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">Chrome</a>과 같은 최신 브라우저를 이용해 주세요.
-		</div>
-	</div>
-	<![endif]-->
+      <div id="legacy-IE">
+        <div class="info">
+          본 사이트는 Internet Explorer 10 기준(웹표준)으로 제작 된 사이트
+          입니다. 현재 고객님이 이용중인 브라우저는 곧 지원이 중단 됩니다.
+          <a
+            href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages"
+            target="_blank"
+            >Internet Explorer 최신 버전</a
+          >으로 업그레이드하시거나
+          <a
+            href="https://www.google.com/intl/ko/chrome/browser/"
+            target="_blank"
+            >Chrome</a
+          >과 같은 최신 브라우저를 이용해 주세요.
+        </div>
+      </div>
+    <![endif]-->
 
 	<!-- 건너띄기 링크 -->
 	<dl id="skipNavigation">
 		<dt class="hidden-txt">바로가기 및 건너띄기 링크</dt>
-		<dd><a href="#h-menu"><em>주 메뉴 바로가기</em></a></dd>
-		<dd><a href="#contents"><em>본문으로 바로가기</em></a></dd>
+		<dd>
+			<a href="#h-menu"><em>주 메뉴 바로가기</em></a>
+		</dd>
+		<dd>
+			<a href="#contents"><em>본문으로 바로가기</em></a>
+		</dd>
 	</dl>
 
 	<header>
 		<div class="inner-wrap">
-			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고 이미지</em></a></span>
+			<span class="logo-wrap"><a href="../index.html"><em class="hidden-txt">로고
+						이미지</em></a></span>
 			<hgroup id="h-menu" class="inner-cts clear">
 				<div class="gnb">
 					<ul>
 						<li><a href="../partner/create.html">프리랜서 등록</a></li>
 						<li><a href="../project/create.html">프로젝트 등록</a></li>
-						<li><a href="../project/search.html" class="search">프로젝트 검색</a></li>
+						<li>
+							<a href="../project/search.html" class="search">프로젝트 검색</a>
+						</li>
 					</ul>
 				</div>
 				<div class="member">
 					<ul>
 						<!-- 로그인 전 -->
-						<li class="join" tabindex=0>
+						<li class="join" tabindex="0">
 							<a href="javascript:void(0);">회원가입</a>
 							<div class="h-center">
 								<div class="animate fast fadeInUp_">
-									<span><a href="../partner/signup.html"><em class="txt-rendering">프리랜서</em></a></span>
+									<span><a href="../partner/signup.html"><em
+												class="txt-rendering">프리랜서</em></a></span>
 									<span><a href="../client/signup.html"><em class="txt-rendering">기업회원</em></a></span>
 								</div>
 							</div>
@@ -66,17 +86,23 @@
 						-->
 					</ul>
 				</div>
-			</hgroup>	
+			</hgroup>
 			<nav class="menu-all">
 				<a href="javascript:void(0);"><span><em class="hidden-txt">전체메뉴</em></span></a>
 				<ul class="quick">
-					<li class="prj-add"><a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵 메뉴</em></a></li>
-					<li class="prj-search"><a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵 메뉴</em></a></li>
+					<li class="prj-add">
+						<a href="../project/create.html"><em class="hidden-txt">프로젝트 등록 퀵
+								메뉴</em></a>
+					</li>
+					<li class="prj-search">
+						<a href="../project/search.html"><em class="hidden-txt">프로젝트 검색 퀵
+								메뉴</em></a>
+					</li>
 				</ul>
 				<div>
 					<div>
 						<ul class="member animate fast fadeInDown">
-						<!-- 로그인 전 -->
+							<!-- 로그인 전 -->
 							<li><a href="../member/signin.html">로그인</a></li>
 							<li class="join">
 								<ul>
@@ -97,8 +123,12 @@
 								<li>
 									<a href="../introduce/we_people.html">위플즈 소개</a>
 									<ul class="depth2">
-										<li><a href="../introduce/we_people.html">We:People</a></li>
-										<li><a href="../introduce/we_project.html">We:Project</a></li>
+										<li>
+											<a href="../introduce/we_people.html">We:People</a>
+										</li>
+										<li>
+											<a href="../introduce/we_project.html">We:Project</a>
+										</li>
 									</ul>
 								</li>
 								<li>
@@ -106,46 +136,59 @@
 									<ul class="depth2">
 										<li><a href="../community/inquiry.html">1:1문의</a></li>
 										<li><a href="../community/faq.html">FAQ</a></li>
-										<li><a href="../community/list.html">위플즈 커뮤니티</a></li>
+										<li>
+											<a href="../community/list.html">위플즈 커뮤니티</a>
+										</li>
 									</ul>
 								</li>
 							</ul>
 						</div>
-					</div>	
+					</div>
 				</div>
-			</nav>	
+			</nav>
 		</div>
-	</header><!-- // header -->
-	
+	</header>
+	<!-- // header -->
+
 	<div id="wrap" class="mypage">
 		<h1 class="hidden-txt">마이페이지(기업회원)</h1>
 		<div class="sub-top-wrap">
 			<h2 class="heading-wrap-02 long-txt">
-				<span class="thumbnail"><img src="../static/img/client-thumbnail.jpg" alt="기업회원 프로필 사진"></span><br/>
-				Intel <em>회원님 반갑습니다!</em><br/>
-				<span class="txt-rendering">회원님은 <b>총 10개의 프로젝트</b>를 등록하셨으며 현재 <b>2개의 프로젝트를 진행 중</b>에 있습니다</span>
+				<span class="thumbnail"><img src="../static/img/client-thumbnail.jpg" alt="기업회원 프로필 사진" /></span><br />
+				Intel <em>회원님 반갑습니다!</em><br />
+				<span class="txt-rendering">회원님은 <b>총 10개의 프로젝트</b>를 등록하셨으며 현재
+					<b>2개의 프로젝트를 진행 중</b>에 있습니다</span>
 			</h2>
 		</div>
 		<div class="fixed-wrap inner">
 			<div class="form-inline">
 				<ul class="col-3">
-					<li class="activities"><a href="../member/progress.html"><em class="txt-rendering">프로젝트<br class="mob-only" /> 진행내역</em></a></li>
-					<li class="modified"><a href="../client/modify.html"><em class="txt-rendering">기업정보<br class="mob-only" />수정</em></a></li>
-					<li class="inquiry"><a href="../community/inquiry.html"><em class="txt-rendering">1:1<br class="mob-only" /> 문의</em></a></li>
-				</ul>	
-			</div>	
-		</div>	
+					<li class="activities">
+						<a href="../member/progress.html"><em class="txt-rendering">프로젝트<br class="mob-only" />
+								진행내역</em></a>
+					</li>
+					<li class="modified">
+						<a href="../client/modify.html"><em class="txt-rendering">기업정보<br class="mob-only" />수정</em></a>
+					</li>
+					<li class="inquiry">
+						<a href="../community/inquiry.html"><em class="txt-rendering">1:1<br class="mob-only" />
+								문의</em></a>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<div class="contents-wrap inner">
 			<div class="contents" id="contents">
 				<div class="terms-box">
 					<div class="feature">
 						<figure>
-							<img src="../static/img/grade-e_gold.gif" alt="회원등급">
+							<img src="../static/img/grade-e_gold.gif" alt="회원등급" />
 							<figcaption class="hidden-txt">회원등급</figcaption>
 						</figure>
 
 						<div>
-							<strong>Intel</strong>님의 회원등급은<br class="mob-only" /> <b class="member-grade e_gold">eGold</b>입니다<br class="mob-only" /> 
+							<strong>Intel</strong>님의 회원등급은<br class="mob-only" />
+							<b class="member-grade e_gold">eGold</b>입니다<br class="mob-only" />
 							<div class="anchor-toolTip help">
 								<span>?</span>
 								<!-- 회원등급 부가설명 -->
@@ -154,27 +197,67 @@
 										<div>
 											<div>
 												<div class="grade-standard">
-													<div class="title"><strong>회원등급 기준</strong><span>(회원등급은 발주 당시 기준으로 업데이트가 됩니다)</span></div>
+													<div class="title">
+														<strong>회원등급 기준</strong><span>(회원등급은 발주 당시
+															기준으로 업데이트가
+															됩니다)</span>
+													</div>
 													<ul>
-														<li><strong>eDiamond</strong><span>총 발주 금액 100억 이상</span></li>
-														<li><strong>eGold</strong><span>총 발주 금액 10억 이상</span></li>
-														<li><strong>eSilver</strong><span>총 발주 금액 1억 이상</span></li>
-														<li><strong>eBronze</strong><span>신입회원</span></li>
+														<li>
+															<strong>eDiamond</strong><span>총 발주 금액
+																100억 이상</span>
+														</li>
+														<li>
+															<strong>eGold</strong><span>총 발주 금액 10억
+																이상</span>
+														</li>
+														<li>
+															<strong>eSilver</strong><span>총 발주 금액 1억
+																이상</span>
+														</li>
+														<li>
+															<strong>eBronze</strong><span>신입회원</span>
+														</li>
 													</ul>
 													<div class="description">
-														<p class="txt-rendering">회원등급은 신규 발주 사업 기준으로 갱신이 되며 1년 이내에 발주내역이 없거나 기준에 미달될 경우 회원등급은 강등될 수 있습니다</p>
+														<p class="txt-rendering">
+															회원등급은 신규 발주 사업 기준으로 갱신이 되며
+															1년 이내에 발주내역이 없거나 기준에 미달될 경우
+															회원등급은 강등될 수 있습니다
+														</p>
 													</div>
 												</div>
 												<div class="grade-benefit">
-													<div class="title"><strong>등급 별 혜택</strong></div>
+													<div class="title">
+														<strong>등급 별 혜택</strong>
+													</div>
 													<ul>
-														<li><strong>eDiamond</strong><span>발주금액의 1%에 해당되는 프리미엄서비스 제공</span></li>
-														<li><strong>eGold</strong><span>발주금액의 0.5%에 해당되는 프리미엄서비스 제공</span></li>
-														<li><strong>eSilver</strong><span>발주금액의 0.1%에 해당되는 프리미엄서비스 제공</span></li>
-														<li><strong>eBronze</strong><span>일반 기업서비스 제공</span></li>
+														<li>
+															<strong>eDiamond</strong><span>발주금액의 1%에
+																해당되는 프리미엄서비스
+																제공</span>
+														</li>
+														<li>
+															<strong>eGold</strong><span>발주금액의 0.5%에
+																해당되는 프리미엄서비스
+																제공</span>
+														</li>
+														<li>
+															<strong>eSilver</strong><span>발주금액의
+																0.1%에 해당되는 프리미엄서비스
+																제공</span>
+														</li>
+														<li>
+															<strong>eBronze</strong><span>일반 기업서비스
+																제공</span>
+														</li>
 													</ul>
 													<div class="description">
-														<p class="txt-rendering">프리미엄서비스의 기준은 상황에 따라 변동될 수 있으며 발주처와의 협의를 통해 서비스 내용이 정해질 수 있습니다</p>
+														<p class="txt-rendering">
+															프리미엄서비스의 기준은 상황에 따라 변동될 수
+															있으며 발주처와의 협의를 통해 서비스 내용이
+															정해질 수 있습니다
+														</p>
 													</div>
 												</div>
 											</div>
@@ -186,8 +269,10 @@
 
 						<div class="member-info">
 							<dl class="table">
-								<dt class="txt-rendering">총 발주금액 : </dt>
-								<dd><strong class="txt-rendering">10,000,000,000</strong>원</dd>
+								<dt class="txt-rendering">총 발주금액 :</dt>
+								<dd>
+									<strong class="txt-rendering">10,000,000,000</strong>원
+								</dd>
 							</dl>
 						</div>
 					</div>
@@ -195,24 +280,43 @@
 				<div class="contents-head">
 					<strong>기업지원 서비스</strong>
 					<div class="btn-wrap-inline">
-						<button type="button" class="btn-type-icon benefit" onclick="javascript:location.href='../introduce/we_project.html'"><em class="txt-rendering">We:Project 기업서비스 보기</em></button>
+						<button type="button" class="btn-type-icon benefit"
+							onclick="javascript:location.href='../introduce/we_project.html'">
+							<em class="txt-rendering">We:Project 기업서비스 보기</em>
+						</button>
 					</div>
 				</div>
 				<div class="contents-body">
 					<ul class="client-benefit">
-						<li><span>5인 이상 투입인력 요청 및<br /> 총 발주금액 10억 이상일 때 맞춤형<br /> 교육훈련 실시 후 프로젝트 투입</span></li>
-						<li><span>사업계획서 및<br /> 제안서 작성 지원</span></li>
-						<li><span>프로젝트 전 단계 업무 지원 및<br /> 품질관리 진행</span></li>
+						<li>
+							<span>5인 이상 투입인력 요청 및<br />
+								총 발주금액 10억 이상일 때 맞춤형<br />
+								교육훈련 실시 후 프로젝트 투입</span>
+						</li>
+						<li>
+							<span>사업계획서 및<br />
+								제안서 작성 지원</span>
+						</li>
+						<li>
+							<span>프로젝트 전 단계 업무 지원 및<br />
+								품질관리 진행</span>
+						</li>
 					</ul>
 
 					<div class="btn-wrap align-c">
-						<button type="submit" class="btn-type-lg purple" onclick="javascript:location.href='../project/create.html'"><em class="txt-rendering ft-md">프로젝트 등록</em></button>
-						<button type="button" class="btn-type-lg darkPurple" onclick="javascript:location.href='../project/create.html'"><em class="txt-rendering ft-md">프로젝트 의뢰</em></button>
+						<button type="submit" class="btn-type-lg purple"
+							onclick="javascript:location.href='../project/create.html'">
+							<em class="txt-rendering ft-md">프로젝트 등록</em>
+						</button>
 					</div>
-				</div><!-- // contents-body-->
-			</div><!-- // contents -->
-		</div><!-- // contents-wrap -->
-	</div><!-- // #wrap -->
+				</div>
+				<!-- // contents-body-->
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // contents-wrap -->
+	</div>
+	<!-- // #wrap -->
 	<footer>
 		<div class="inner-wrap">
 			<ul>
@@ -228,7 +332,8 @@
 
 			<address>
 				<span>주식회사 위플즈</span>
-				<span>서울특별시 강남구 테헤란로 211 한국고등교육재단빌딩 3층 (주)위플즈</span>
+				<span>서울특별시 강남구 테헤란로 211 한국고등교육재단빌딩 3층
+					(주)위플즈</span>
 				<span>사업자등록번호 : 209-81-57303</span>
 				<span>통신판매업신고 : 제2018-서울강남-02337 호</span>
 				<span>직업정보제공사업 신고번호 : J1200020180019</span>
@@ -236,6 +341,8 @@
 
 			<p class="copy"><span>&copy; 2022 Wipplz Corp.</span></p>
 		</div>
-	</footer><!-- // footer -->
+	</footer>
+	<!-- // footer -->
 </body>
+
 </html>
