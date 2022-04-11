@@ -25,6 +25,10 @@ body {
   letter-spacing: -0.7px;
   overflow: hidden;
   overflow-y: scroll;
+  /* -webkit-user-select:none; 
+  -moz-user-select:none; 
+  -ms-user-select:none; 
+  user-select:none; */
 }
 em,
 b,
@@ -208,6 +212,7 @@ select {
 .login .heading-wrap-02 {
   color: #010101;
   margin-bottom: 40px;
+  font-size:4.3rem;
 }
 .contents-head .heading-wrap-02 {
   margin-bottom: 40px;
@@ -2575,14 +2580,30 @@ footer .copy span {
 }
 #wrap.login .contents {
   padding: 80px;
+  min-height:560px;
   background-color: #fff;
   box-shadow: 1px 5px 15px 0 rgba(99, 31, 205, 0.1);
 }
 #wrap.login .form-list {
   padding: 35px 0 0 0;
 }
+#wrap.login .form-list p {
+  font-size:1.6rem;
+  margin-top:30px;
+}
+#wrap.login .form-list p a {
+  margin-left:15px;
+  color: #000;
+  text-decoration: underline;
+}
+#wrap.login .form-list.pd-none {
+  padding-top:0;
+}
 #wrap.login .form-list dl dt {
   width: 140px;
+}
+#wrap.login .form-list dl dt strong {
+  font-weight:700;
 }
 #wrap.login .form-list dl + dl {
   margin-top: 25px;
@@ -2597,8 +2618,70 @@ footer .copy span {
 #wrap.login .form-list ul li a {
   line-height: 1;
   font-size: 1.6rem;
-  color: #898989;
+  color: #000;
   text-decoration: underline;
+}
+#wrap.login .form-list ul li span {
+  line-height: 1;
+  font-size: 1.6rem;
+  color: #898989;
+  margin:0 10px;
+}
+
+/*아이디 찾기, 비밀번호 재설정*/
+#wrap.login.reset .form-list dl dt {
+  width: 180px;
+}
+#wrap.login.reset .form-list > div {
+  padding-left:180px;
+}
+#wrap.login.reset .contents-head p {
+  text-align:center;
+  padding-bottom:40px;
+}
+#wrap.login.reset .contents-head p * {
+  display:inline-block;
+  font-size:1.6rem;
+}
+#wrap.login.reset .contents-head p b {
+  margin-left:20px;
+  font-size:2.4rem;
+  font-weight:800;
+}
+#wrap.login .contents-body .find {
+  padding:60px 0;
+  margin-bottom:40px;
+  border-width:4px 0 1px;
+  border-style:solid;
+  border-color:#000;
+  text-align:center;
+}
+#wrap.login .contents-body .form-list + .find {
+  margin-top:50px;
+}
+#wrap.login .contents-body .find p {
+  font-size:2rem;
+  color:#898989;
+  margin:0;
+}
+#wrap.login .contents-body .find p * {
+  display:inline-block;
+  line-height:1.3;
+}
+#wrap.login .contents-body .find p strong {
+  color:#000;
+  font-size:2.4rem;
+}
+#wrap.login .contents-body .find p span {
+  margin-top:15px;
+}
+#wrap.login .contents-body .find ul {
+  display:inline-block;
+  text-align:left;
+  margin:35px 0 0 0;
+}
+#wrap.login .contents-body .find ul li + li {
+  margin-top:20px;
 }
 
 /*서비스 이용약관*/
@@ -4871,6 +4954,9 @@ dl.table dd {
   -moz-transition: all ease-out 0.2s;
   -ms-transition: all ease-out 0.2s;
 }
+[class*="btn-type"].bd-blk {
+  border-color:#000;
+}
 [class*="btn-type"] em {
   display: inline-block;
   line-height: 1 !important;
@@ -4879,6 +4965,10 @@ dl.table dd {
 }
 [class*="btn-type"] em.ft-md {
   font-size: 1.8rem;
+  font-weight: 700;
+}
+[class*="btn-type"] em.ft-md2 {
+  font-size: 2rem;
   font-weight: 700;
 }
 [class*="btn-type"] + button,
@@ -4893,7 +4983,13 @@ dl.table dd {
 [class*="btn-wrap"].col-lg-2 [class*="btn-type"] + button {
   margin-left: 0;
 }
-
+[class*="btn-wrap"].col-mid-2 [class*="btn-type"] {
+  width: 49%;
+  min-width: auto;
+}
+[class*="btn-wrap"].col-mid-2 [class*="btn-type"] + button {
+  margin-left: 2%;
+}
 .btn-type-full {
   width: 100%;
   height: 100px;

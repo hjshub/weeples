@@ -7,7 +7,7 @@
 	<meta name="Keywords" content="">
 	<meta name="Description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<title>로그인 | 위플즈</title>
+	<title>비밀번호 찾기 | 위플즈</title>
 
 	<script src="../static/js/jquery-3.6.0.min.js"></script>
 	<script src="../static/js/jquery-ui.min.js"></script>
@@ -119,78 +119,29 @@
 	
 	<div id="wrap" class="login">
 		<div class="contents-wrap">
-			<h2 class="heading-wrap-02">로그인</h2>
+			<h2 class="heading-wrap-02">비밀번호 찾기</h2>
 			<div class="contents" id="contents">
-				<div class="contents-head tab-menu tab--active">
-					<ul>
-						<li class="selected"><a href="#personalMember">개인회원 (프리랜서)</a></li>
-						<li><a href="#corporateMember">기업회원</a></li>
-					</ul>
-				</div><!-- // contents-head -->
-				<div class="contents-body tabCts-wrap">
-					<form action="" method="post">
-						<!-- 개인회원 -->
-						<div class="tabCts" id="personalMember">
-							<div class="form-list">
-								<dl class="table">
-									<dt><strong>아이디</strong></dt>
-									<dd>
-										<div class="text-wrap">
-											<input type="text" class="txt-rendering" id="" value="" placeholder="아이디를 입력하세요" title="아이디 - 아이디를 입력하세요">
-										</div>
-									</dd>
-								</dl>
-								<dl class="table">
-									<dt><strong>비밀번호</strong></dt>
-									<dd>
-										<div class="text-wrap">
-											<input type="text" class="txt-rendering" id="" value="" placeholder="9~12자 특수문자, 숫자포함 등록" title="비밀번호 입력 - 9~12자 특수문자, 숫자포함 등록">
-										</div>
-									</dd>
-								</dl>
-								<div class="btn-wrap align-r">
-									<button type="submit" class="btn-type-wide purple"><em class="txt-rendering ft-md2">Login</em></button>
+				<div class="contents-body">
+					<div class="form-list pd-none">
+						<dl class="table">
+							<dt><strong>아이디</strong></dt>
+							<dd>
+								<div class="text-wrap">
+									<input type="text" class="txt-rendering" id="" value="" placeholder="아이디를 입력하세요" title="아이디 - 아이디를 입력하세요">
 								</div>
-								<div>
-									<ul>
-										<li><a class="txt-rendering" href="#">ID 찾기</a><span class="txt-rendering">또는</span><a class="txt-rendering" href="#">비밀번호 변경</a></li>
-										<li><a class="txt-rendering" href="#">개인회원 가입</a><span class="txt-rendering">|</span><a class="txt-rendering" href="#">기업회원 가입</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-
-						<!-- 기업회원 -->
-						<div class="tabCts" id="corporateMember">
-							<div class="form-list">
-								<dl class="table">
-									<dt><strong>아이디</strong></dt>
-									<dd>
-										<div class="text-wrap">
-											<input type="text" class="txt-rendering" id="" value="" placeholder="아이디를 입력하세요" title="아이디 - 아이디를 입력하세요">
-										</div>
-									</dd>
-								</dl>
-								<dl class="table">
-									<dt><strong>비밀번호</strong></dt>
-									<dd>
-										<div class="text-wrap">
-											<input type="text" class="txt-rendering" id="" value="" placeholder="9~12자 특수문자, 숫자포함 등록" title="비밀번호 입력 - 9~12자 특수문자, 숫자포함 등록">
-										</div>
-									</dd>
-								</dl>
-								<div class="btn-wrap align-r">
-									<button type="submit" class="btn-type-wide purple"><em class="txt-rendering ft-md2">Login</em></button>
-								</div>
-								<div>
-									<ul>
-										<li><a class="txt-rendering" href="#">ID 찾기</a><span class="txt-rendering">또는</span><a class="txt-rendering" href="#">비밀번호 변경</a></li>
-										<li><a class="txt-rendering" href="#">기업회원 가입</a><span class="txt-rendering">|</span><a class="txt-rendering" href="#">개인회원 가입</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</form>
+								<p><em class="txt-rendering txt-color-gray">아이디가 기억나지 않으시나요?</em><a class="txt-rendering" href="#">ID 찾기</a></p>
+							</dd>
+						</dl>
+					</div>	
+					<div class="password-reset find">
+						<p class="description">
+							<strong class="txt-rendering">휴대폰으로 본인 인증하기</strong><br />
+							<span class="txt-rendering">휴대폰에 등록된 본인확인정보로 계정을 찾습니다.</span>
+						</p>
+					</div>
+					<div class="btn-wrap align-c">
+						<button type="submit" class="btn-type-lg purple"><em class="txt-rendering ft-md2">본인 인증하기</em></button>
+					</div>
 				</div><!-- // contents-body -->
 			</div><!-- // contents -->
 		</div><!-- // contents-wrap -->

@@ -701,6 +701,17 @@ header .menu-all > div .category > ul > li > a {
   .form-list dl.table dt {
     padding: 0;
   }
+
+  #wrap.login .form-list > div,
+  #wrap.login.reset .form-list > div {
+    padding-left: 0;
+  }
+  #wrap.login.reset .form-list dl dt {
+    width: 180px;
+  }
+  #wrap.login.reset .form-list > div {
+    padding-left:0;
+  }
 }
 @media only screen and (max-width: 768px) {
   .heading-wrap-02.long-txt {
@@ -859,10 +870,9 @@ header .menu-all > div .category > ul > li > a {
   #wrap.login .contents {
     padding: 60px 40px;
   }
-  #wrap.login .form-list > div {
-    padding-left: 0;
+  #wrap.login.reset .contents-head p {
+    padding-bottom:40px;
   }
-
   .form-wrap.inline,
   .form-wrap span {
     width: 100%;
@@ -1394,14 +1404,6 @@ header .menu-all > div .category > ul > li > a {
     margin-left: 0;
   }
 
-  [class*="btn-wrap"].col-mid-2 [class*="btn-type"] {
-    width: 49%;
-    min-width: auto;
-  }
-  [class*="btn-wrap"].col-mid-2 [class*="btn-type"] + button {
-    margin-left: 2%;
-  }
-
   [class*="btn-wrap"].col-mid-2-2 .btn-type-lg {
     width: 58%;
   }
@@ -1696,6 +1698,12 @@ header .menu-all > div .category > ul > li > a {
   #wrap.login .contents-wrap {
     padding: 40px 20px;
     margin-bottom: 20px;
+  }
+  #wrap.login .contents {
+    padding:40px 20px;
+  }
+  #wrap.login.reset .contents-head p {
+    padding-bottom:20px;
   }
 
   .form-list {
