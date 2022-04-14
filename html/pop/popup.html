@@ -10,23 +10,72 @@
 	<title>레이어 팝업</title>
 </head>
 <body>
+	<!-- 프로젝트 지원하기 -->
 	<div class="modal-wrap" id="apply">
 		<div class="dimmed">
 			<div class="modal">
 				<div class="modal-container is_animated animate__fade_In_Down">
 					<div class="modal-contents">
 						<div class="modal-header">
-							<h5 class="title">프로젝트 지원완료</h5>
-							<a class="modal-off" href="javascript:void(0);"><em class="hidden-txt">레이어 팝업 닫기</em></a>
+							<h4 class="title">프로젝트 지원완료</h4>
+							<a class="modal-off btn-close" href="javascript:void(0);"><em class="hidden-txt">레이어 팝업 닫기</em></a>
 						</div>
 						<div class="modal-body">
-							<p><b>미래에셋생명 퇴직연금 플랫폼 구축 프로젝트 개발자 모집</b>에 지원을 완료하였습니다.</p>
+							<p><b class="txt-rendering">미래에셋생명 퇴직연금 플랫폼 구축 프로젝트 개발자 모집</b>에 지원을 완료하였습니다.</p>
 							<p><em class="txt-rendering">지원하신 프로젝트는 마이페이지에서 확인 가능합니다.</em></p>	
 						</div>
 					</div>
 					<div class="btn-wrap col-lg-2">
 						<button class="btn-type-sm purple"><em class="txt-rendering">확인</em></button>
 						<button class="btn-type-sm darkPurple" onclick="javascript:location.href='../member/partners_mypage.html'"><em class="txt-rendering">마이 페이지</em></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 프로젝트 즉시지원하기 -->
+	<div class="modal-wrap" id="immediatelyApply">
+		<div class="dimmed">
+			<div class="modal">
+				<div class="modal-container is_animated animate__fade_In_Down">
+					<div class="modal-contents">
+						<div class="modal-header type-02">
+							<h4 class="title">프로젝트 즉시지원</h4>
+							<a class="modal-off btn-close" href="javascript:void(0);"><em class="hidden-txt">레이어 팝업 닫기</em></a>
+						</div>
+						<div class="modal-body pd-none">
+							<h5>
+								<strong class="txt-rendering">미래에셋생명 퇴직연금 플랫폼 구축 프로젝트 개발자 모집</strong><br />
+								<em class="txt-rendering">지원분야를 선택 후 지원해주세요</em>
+							</h5>
+							<ul class="task">
+								<li>
+									<input id="task-01" name="task" type="radio">
+									<label for="task-01"><span class="task-pm"><b class="txt-rendering">PM</b></span></label>
+								</li>
+								<li>
+									<input id="task-02" name="task" type="radio">
+									<label for="task-02"><span class="task-plan"><b class="txt-rendering">기획</b></span></label>
+								</li>
+								<li>
+									<input id="task-03" name="task" type="radio">
+									<label for="task-03"><span class="task-dev"><b class="txt-rendering">개발</b></span></label>
+								</li>
+								<li>
+									<input id="task-04" name="task" type="radio">
+									<label for="task-04"><span class="task-des"><b class="txt-rendering">디자인</b></span></label>
+								</li>
+								<li>
+									<input id="task-05" name="task" type="radio">
+									<label for="task-05"><span class="task-pub"><b class="txt-rendering">퍼블리싱</b></span></label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn-wrap col-lg-2">
+						<button class="btn-type-sm purple"><em class="txt-rendering">지원하기</em></button>
+						<button class="btn-type-sm darkPurple modal-off"><em class="txt-rendering">취소</em></button>
 					</div>
 				</div>
 			</div>

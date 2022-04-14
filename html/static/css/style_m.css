@@ -1278,6 +1278,16 @@ header .menu-all > div .category > ul > li > a {
     left: 110px;
   }
 
+  .modal-header .btn-close {
+    width: 35px;
+    height: 35px;
+  }
+  .modal-header .btn-close:before,
+  .modal-header .btn-close:after {
+    right: -4px;
+    top: 16px;
+  }
+
   [class*="table-style"] table tr td:not(:first-of-type) {
     position: absolute;
     width: 1px;
@@ -1321,6 +1331,47 @@ header .menu-all > div .category > ul > li > a {
     height: 15px;
     top: 30px;
     left: 25px;
+  }
+  .inquiry-list dl dt {
+    padding-left: 0;
+  }
+  .inquiry-list dl dd {
+    padding-right:50px;
+  }
+  .inquiry-list dl dd .btn-fold {
+    right:15px;
+    width:28px;
+    height:28px;
+  }
+  .inquiry-list dl dd .btn-fold:before {
+    background-size:14px auto;
+  }
+  .inquiry-list dl.reply dt,
+  .inquiry-list dl.reply dd {
+    padding-left:60px;
+  }
+  .inquiry-list dl dt .summary {
+    width:100%;
+    margin-bottom:20px;
+  }
+  .inquiry-list dl dt .summary .type {
+    position:static;
+  }
+  .inquiry-list dl dt .author,
+  .inquiry-list dl dt .date {
+    width:auto;
+  }
+  .inquiry-list dl dt .date {
+    margin-left:20px;
+  }
+  .inquiry-list dl.reply dt .summary:before {
+    width: 15px;
+    left:25px;
+  }
+  .inquiry-list dl.reply dt .summary:after {
+    height: 15px;
+    left:25px;
+    top: -3px;
   }
 
   .select-wrap.wide,
@@ -2025,6 +2076,12 @@ header .menu-all > div .category > ul > li > a {
   .terms-of-use {
     padding: 40px 0;
   }
+  .modal-body .task li {
+    min-height:90px;
+  }
+  .modal-body .task li span b {
+    font-size:1.4rem;
+  }
 
   [class*="table-style"] table td a {
     max-height: 48px;
@@ -2156,7 +2213,7 @@ header .menu-all > div .category > ul > li > a {
     right: auto;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 376px) {
   footer ul li + li {
     margin-left: 15px;
   }
@@ -2215,6 +2272,4 @@ header .menu-all > div .category > ul > li > a {
   .main-section-wrap-02 .project.inner-wrap {
     padding: 0;
   }
-}
-@media only screen and (orientation: landscape) and (max-width: 921px) {
 }
