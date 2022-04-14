@@ -1776,6 +1776,13 @@ header .menu-all > div .category > ul > li > a {
     margin-top: 35px;
   }
 
+  .radio-wrap span input[type="radio"] + label::after {
+    top:-2px;
+  }
+  .radio-wrap span input[type="radio"] + label::before {
+    top:2px;
+  }
+
   .text-wrap.half,
   .text-wrap.half2,
   .select-wrap.half {
@@ -2076,8 +2083,17 @@ header .menu-all > div .category > ul > li > a {
   .terms-of-use {
     padding: 40px 0;
   }
+  .modal-contents {
+    padding:40px 20px;
+  }
   .modal-body .task li {
     min-height:90px;
+  }
+  .modal-body .task li label span {
+    background-size:18px auto;
+  }
+  .modal-body .task li label span.task-dev {
+    background-size:15px auto;
   }
   .modal-body .task li span b {
     font-size:1.4rem;

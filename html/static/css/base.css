@@ -218,6 +218,13 @@ select:-internal-autofill-selected {
   background-color: rgba(225, 225, 225, 0) !important;
 }
 
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+	outline:none;
+}
+
 button {
   cursor: pointer;
 }
