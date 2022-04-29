@@ -4629,6 +4629,7 @@ footer .copy span {
   height: 100%;
   padding: 0;
   font-size: 1.6rem;
+  background-color:transparent;
 }
 .text-wrap input[type="text"] + img {
   position: absolute;
