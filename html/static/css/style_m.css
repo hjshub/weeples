@@ -775,9 +775,9 @@ header .menu-all > div .category > ul > li > a {
     font-size: 6rem;
   }
   .main-section-wrap-01 {
-    height: -webkit-calc(100vh - 115px);
-    height: -moz-calc(100vh - 115px);
-    height: calc(100vh - 115px);
+    height: -webkit-calc(100vh - 150px);
+    height: -moz-calc(100vh - 150px);
+    height: calc(100vh - 150px);
   }
   .main-section-wrap-01 .presentation dl dt {
     font-size: 7rem;
