@@ -165,7 +165,7 @@ header .menu-all > div .category > ul > li > a {
     visibility: hidden;
   }
 
-  [class^="main-section-wrap"] {
+  [class^="main-section-wrap"]:not(.main-section-wrap-01) {
     padding: 120px 0;
     height: auto !important;
   }
@@ -211,7 +211,7 @@ header .menu-all > div .category > ul > li > a {
     margin-left: 0;
     width: 310px;
     height: 100%;
-    max-height: auto;
+    max-height: none;
     z-index: 130;
     transition: all ease-in-out 0.5s;
     -webkit-transition: all ease-in-out 0.5s;
@@ -355,7 +355,11 @@ header .menu-all > div .category > ul > li > a {
     width: 100%;
     max-width: none;
   }
-
+  .main-section-wrap-01 .presentation {
+    position:static;
+    top:auto;
+    transform:none;
+  }
   .main-section-wrap-01 .presentation dl dd .info-02 > ul li {
     width: 18%;
   }
@@ -585,11 +589,6 @@ header .menu-all > div .category > ul > li > a {
   }
 }
 @media only screen and (max-width: 920px) {
-  .main-section-wrap-01 {
-    min-height: -webkit-calc(100vh - 85px);
-    min-height: -moz-calc(100vh - 85px);
-    min-height: calc(100vh - 85px);
-  }
   .main-section-wrap-04 .contact-list > ul li {
     width: 100%;
   }
@@ -770,13 +769,15 @@ header .menu-all > div .category > ul > li > a {
   }
 
   [class^="main-section-wrap"] {
-    padding-top: 60px;
-  }
-  .main-section-wrap-01 {
-    padding-top: 60px;
+    padding-top: 60px !important;
   }
   .main .heading-wrap-02 {
     font-size: 6rem;
+  }
+  .main-section-wrap-01 {
+    height: -webkit-calc(100vh - 115px);
+    height: -moz-calc(100vh - 115px);
+    height: calc(100vh - 115px);
   }
   .main-section-wrap-01 .presentation dl dt {
     font-size: 7rem;
@@ -1540,10 +1541,10 @@ header .menu-all > div .category > ul > li > a {
   }
 
   [class^="main-section-wrap"] {
-    padding: 50px 0;
+    padding: 50px 0 !important;
   }
   .main-section-wrap-01 {
-    padding-top: 20px;
+    padding-top: 20px !important;
     min-height: auto;
   }
   .main-section-wrap-01 .presentation dl dd {
@@ -2287,5 +2288,10 @@ header .menu-all > div .category > ul > li > a {
 @media only screen and (orientation: landscape) and (max-width: 1024px) {
   .main-section-wrap-02 .project.inner-wrap {
     padding: 0;
+  }
+}
+@media only screen and (orientation: landscape) and (max-width: 921px) {
+  .main-section-wrap-01 {
+    height:auto;
   }
 }
